@@ -119,12 +119,41 @@ body {
   animation-play-state: paused;
 }
 
+/* Signature Hover-Blur focus field (inspired by editorial craft) */
+.hover-blur-group:hover .hover-blur-item:not(:hover) {
+  opacity: 0.38;
+  filter: blur(0.6px);
+  transition: opacity 0.35s ease, filter 0.35s ease;
+}
+
+.hover-blur-item {
+  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.25s ease;
+}
+
+/* Wavy underline decoration */
+.wavy-link {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(119, 138, 67, 0.45);
+  transition: text-decoration-color 0.25s ease, color 0.25s ease;
+}
+
+.wavy-link:hover {
+  text-decoration-color: #778A43;
+  color: #20221F;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
   .animate-ticker {
     animation: none;
+  }
+  .hover-blur-group:hover .hover-blur-item:not(:hover) {
+    opacity: 1;
+    filter: none;
   }
   * {
     animation-duration: 0.01ms !important;

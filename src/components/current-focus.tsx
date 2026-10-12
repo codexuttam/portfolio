@@ -41,12 +41,19 @@ export function CurrentFocus() {
               {profileData.focusSection.copy}
             </p>
 
-            {/* Focus areas */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-[#778A43]/20 font-mono text-xs text-[#20221F]/90">
+            {/* Focus areas with signature hover-blur & glyphs */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-[#778A43]/20 font-mono text-xs text-[#20221F]/90 hover-blur-group">
               {profileData.focusSection.areas.map((area, i) => (
-                <div key={i} className="flex items-start gap-2.5">
-                  <span className="text-[#55642F] font-semibold">0{i + 1}.</span>
-                  <span className="leading-relaxed">{area}</span>
+                <div
+                  key={i}
+                  className="group hover-blur-item flex items-start gap-2.5 p-2 rounded transition-colors"
+                >
+                  <span className="inline-block text-[#55642F] font-semibold transition-transform duration-300 group-hover:rotate-180">
+                    ✦
+                  </span>
+                  <span className="leading-relaxed group-hover:translate-x-1 transition-transform">
+                    {area}
+                  </span>
                 </div>
               ))}
             </div>

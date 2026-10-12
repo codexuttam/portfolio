@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { profileData } from "@/data/profile";
 import { Command, Menu, X, ArrowUpRight } from "lucide-react";
+import { soundManager } from "@/utils/audio";
 
 interface NavigationProps {
   onOpenCommandPalette?: () => void;
@@ -58,21 +59,36 @@ export function Navigation({ onOpenCommandPalette }: NavigationProps) {
           <nav className="hidden md:flex items-center space-x-8" aria-label="Main Navigation">
             <Link
               href="#work"
-              className="text-sm tracking-wide text-[#20221F]/80 hover:text-[#20221F] font-medium transition-colors"
+              onClick={() => soundManager.playClick()}
+              onMouseEnter={() => soundManager.playTick()}
+              className="group inline-flex items-center gap-1.5 text-sm tracking-wide text-[#20221F]/80 hover:text-[#20221F] font-medium transition-colors"
             >
-              Work
+              <span className="text-[10px] text-[#778A43] opacity-0 group-hover:opacity-100 group-hover:rotate-180 transition-all duration-300">
+                ✦
+              </span>
+              <span>Work</span>
             </Link>
             <Link
               href="#about"
-              className="text-sm tracking-wide text-[#20221F]/80 hover:text-[#20221F] font-medium transition-colors"
+              onClick={() => soundManager.playClick()}
+              onMouseEnter={() => soundManager.playTick()}
+              className="group inline-flex items-center gap-1.5 text-sm tracking-wide text-[#20221F]/80 hover:text-[#20221F] font-medium transition-colors"
             >
-              About
+              <span className="text-[10px] text-[#778A43] opacity-0 group-hover:opacity-100 group-hover:rotate-180 transition-all duration-300">
+                ✦
+              </span>
+              <span>About</span>
             </Link>
             <Link
               href="#contact"
-              className="text-sm tracking-wide text-[#20221F]/80 hover:text-[#20221F] font-medium transition-colors"
+              onClick={() => soundManager.playClick()}
+              onMouseEnter={() => soundManager.playTick()}
+              className="group inline-flex items-center gap-1.5 text-sm tracking-wide text-[#20221F]/80 hover:text-[#20221F] font-medium transition-colors"
             >
-              Contact
+              <span className="text-[10px] text-[#778A43] opacity-0 group-hover:opacity-100 group-hover:rotate-180 transition-all duration-300">
+                ✦
+              </span>
+              <span>Contact</span>
             </Link>
 
             {/* Availability Indicator */}

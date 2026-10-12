@@ -33,7 +33,7 @@ export function ProjectList({
       role="region"
       aria-label="Project showcase list"
       onKeyDown={handleKeyDown}
-      className="flex flex-col gap-3 focus:outline-none"
+      className="flex flex-col gap-3 focus:outline-none hover-blur-group"
     >
       {projects.map((project) => (
         <ProjectRow

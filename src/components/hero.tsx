@@ -5,6 +5,8 @@ import Image from "next/image";
 import { profileData } from "@/data/profile";
 import { ArrowDownRight, ArrowRight } from "lucide-react";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
+import { TextScramble } from "@/components/text-scramble";
+import { soundManager } from "@/utils/audio";
 
 export function Hero() {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -53,11 +55,11 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Editorial Statement & Actions */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Professional Descriptor */}
+            {/* Professional Descriptor with Scramble Effect */}
             <div className="inline-flex items-center gap-2 mb-6">
               <span className="h-1.5 w-1.5 rounded-full bg-[#778A43]" />
               <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#73756E]">
-                {profileData.role}
+                <TextScramble text={profileData.role} speed={25} />
               </span>
             </div>
 
@@ -78,6 +80,8 @@ export function Hero() {
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-14">
               <a
                 href="#work"
+                onClick={() => soundManager.playClick()}
+                onMouseEnter={() => soundManager.playTick()}
                 className="group inline-flex items-center gap-3 px-6 py-3.5 bg-[#20221F] text-[#E9E7E1] font-medium text-sm rounded-full hover:bg-[#778A43] transition-all duration-200 shadow-sm"
               >
                 <span>Explore selected work</span>
@@ -86,6 +90,8 @@ export function Hero() {
 
               <a
                 href="#about"
+                onClick={() => soundManager.playClick()}
+                onMouseEnter={() => soundManager.playTick()}
                 className="group inline-flex items-center gap-2 px-6 py-3.5 border border-[#20221F]/20 text-[#20221F] font-medium text-sm rounded-full hover:border-[#20221F] hover:bg-[#20221F]/5 transition-all duration-200"
               >
                 <span>A little about me</span>

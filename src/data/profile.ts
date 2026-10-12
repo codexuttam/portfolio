@@ -103,7 +103,7 @@ export const profileData: ProfileData = {
     // NOTE FOR USER: Configurable placeholders below. Replace with your actual credentials.
     email: "uttamrajsingh423@gmail.com",
     github: "https://github.com/codexuttam",
-    linkedin: "https://linkedin.com/in/uttamraj-singh-placeholder",
+    linkedin: "https://linkedin.com/in/contactuttamraj",
     resumeUrl: "/resume.pdf",
     note: "Values above are configured in src/data/profile.ts. Replace placeholder email, LinkedIn, and resume with your actual links.",
   },

@@ -4,11 +4,13 @@ import React, { useState, useEffect } from "react";
 import { Navigation } from "@/components/navigation";
 import { Hero } from "@/components/hero";
 import { EditorialTicker } from "@/components/editorial-ticker";
+import { PanoramicBanner } from "@/components/panoramic-banner";
 import { ProjectShowcase } from "@/components/project-showcase";
 import { About } from "@/components/about";
 import { CurrentFocus } from "@/components/current-focus";
 import { Contact } from "@/components/contact";
 import { CommandPalette } from "@/components/command-palette";
+import { BottomDock } from "@/components/bottom-dock";
 
 export default function HomePage() {
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
@@ -39,6 +41,9 @@ export default function HomePage() {
         {/* Editorial Marquee Ticker */}
         <EditorialTicker />
 
+        {/* Panoramic Landscape Architectural Study Banner (inspired by rahulgg.in) */}
+        <PanoramicBanner />
+
         {/* Project Showcase: Vertically Stacked List + Cinematic Scene */}
         <ProjectShowcase />
 
@@ -51,6 +56,9 @@ export default function HomePage() {
         {/* Contact Section: Large Closing Typography & Channels */}
         <Contact />
       </main>
+
+      {/* Fixed Floating Bottom Navigation Dock (inspired by rahulgg.in) */}
+      <BottomDock onOpenCommandPalette={() => setCommandPaletteOpen(true)} />
 
       {/* Global Command Palette */}
       <CommandPalette

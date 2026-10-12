@@ -3,6 +3,8 @@
 import React from "react";
 import { profileData } from "@/data/profile";
 import { Compass } from "lucide-react";
+import { soundManager } from "@/utils/audio";
+import { TextScramble } from "@/components/text-scramble";
 
 export function About() {
   return (
@@ -37,13 +39,20 @@ export function About() {
               </p>
             </div>
 
-            {/* Principles */}
-            <div className="space-y-6 pt-6 border-t border-[#20221F]/10">
+            {/* Principles with signature rotating glyphs & hover-blur focus */}
+            <div className="space-y-6 pt-6 border-t border-[#20221F]/10 hover-blur-group">
               {profileData.about.principles.map((principle, idx) => (
-                <div key={principle.title} className="group">
-                  <div className="flex items-center gap-2 font-mono text-xs text-[#778A43] mb-1">
+                <div
+                  key={principle.title}
+                  onMouseEnter={() => soundManager.playTick()}
+                  className="group hover-blur-item cursor-default p-3 -mx-3 rounded-lg transition-all"
+                >
+                  <div className="flex items-center gap-2 font-mono text-xs text-[#778A43] mb-1.5">
+                    <span className="inline-block transition-transform duration-300 ease-out origin-center group-hover:rotate-180 group-hover:scale-125 text-[#778A43]">
+                      ✦
+                    </span>
                     <span>0{idx + 1}.</span>
-                    <h3 className="font-sans font-medium text-[#20221F] text-base">
+                    <h3 className="font-sans font-medium text-[#20221F] text-base group-hover:translate-x-1 transition-transform">
                       {principle.title}
                     </h3>
                   </div>
@@ -59,29 +68,44 @@ export function About() {
           <div className="lg:col-span-7 flex flex-col space-y-12">
             {/* Narrative Paragraphs */}
             <div className="space-y-6 text-lg sm:text-xl font-light text-[#20221F]/90 leading-relaxed">
-              {profileData.about.narrative.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
+              <p>
+                I&apos;m a computer science student focused on{" "}
+                <span className="italic font-serif-italic text-[#778A43]">AI/ML</span> and{" "}
+                <span className="font-medium text-[#20221F]">full-stack engineering</span>. I like
+                working across the whole stack — interfaces, APIs, databases, deployment, and the
+                small decisions that make a product feel{" "}
+                <span className="italic font-serif-italic text-[#20221F]">right</span>.
+              </p>
+              <p>
+                The interesting part isn&apos;t adding AI to everything. It&apos;s finding where it{" "}
+                <span className="wavy-link cursor-pointer">genuinely helps</span>, then doing the
+                engineering to make it work.
+              </p>
+              <p>
+                I believe software is most powerful when theoretical intelligence is paired with
+                rigorous backend systems and tactile, human-centered interfaces.
+              </p>
             </div>
 
-            {/* Understated Tech Labels (No progress bars) */}
+            {/* Understated Tech Labels (No progress bars) with hover-blur */}
             <div className="pt-8 border-t border-[#20221F]/10">
               <div className="flex items-center justify-between mb-4">
                 <span className="font-mono text-xs uppercase tracking-wider text-[#73756E]">
                   TECHNICAL FOUNDATIONS &amp; STACK
                 </span>
                 <span className="font-mono text-[11px] text-[#73756E]">
-                  NO ARBITRARY PERCENTAGES
+                  HOVER TO SCRAMBLE
                 </span>
               </div>
 
-              <div className="flex flex-wrap gap-2.5">
+              <div className="flex flex-wrap gap-2.5 hover-blur-group">
                 {profileData.about.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 rounded border border-[#20221F]/15 bg-[#20221F]/[0.03] text-[#20221F] text-sm font-mono hover:border-[#778A43] hover:bg-[#778A43]/10 transition-colors"
+                    onMouseEnter={() => soundManager.playTick()}
+                    className="hover-blur-item px-4 py-2 rounded-lg border border-[#20221F]/15 bg-[#20221F]/[0.03] text-[#20221F] text-sm font-mono hover:border-[#778A43] hover:bg-[#778A43]/10 hover:text-[#55642F] transition-all cursor-default"
                   >
-                    {tech}
+                    <TextScramble text={tech} speed={20} />
                   </span>
                 ))}
               </div>
