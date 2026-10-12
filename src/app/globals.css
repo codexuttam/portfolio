@@ -42,6 +42,8 @@ html {
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  cursor: url(/assets/cursor/c1.svg), auto;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -53,12 +55,20 @@ body {
   selection-color: var(--charcoal);
 }
 
+a, button:not(:disabled), [role="button"]:not(:disabled), .cursor-pointer {
+  cursor: url(/assets/cursor/c2.svg), pointer;
+}
+
 ::selection {
   background-color: #C4E36C;
   color: #20221F;
 }
 
-/* Custom editorial styling */
+/* Custom editorial typography */
+.font-baskerville {
+  font-family: var(--font-serif);
+}
+
 .font-serif-italic {
   font-family: var(--font-serif);
   font-style: italic;
@@ -85,15 +95,15 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #E9E7E1;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(32, 34, 31, 0.2);
-  border-radius: 3px;
+  border-radius: 0;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #778A43;
@@ -119,29 +129,68 @@ body {
   animation-play-state: paused;
 }
 
-/* Signature Hover-Blur focus field (inspired by editorial craft) */
+/* Cycle colors animation for active bottom dock glyph and highlights */
+@keyframes text-cycle {
+  0%, 100% { color: #8B5CF6; }
+  12.5% { color: #F97316; }
+  25% { color: #84CC16; }
+  37.5% { color: #06B6D4; }
+  50% { color: #7C3AED; }
+  62.5% { color: #0D9488; }
+  75% { color: #EC4899; }
+  87.5% { color: #D946EF; }
+}
+
+.animate-text-cycle {
+  animation: text-cycle 2.5s linear infinite;
+}
+
+/* Rahulgg.in Signature Hover-Blur System */
+:is(.hover-blur p, .hover-blur h1, .hover-blur h2, .hover-blur h3, .hoverable-wrapper, .hover-blur-target) {
+  transition: filter 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.profile-page:has(.hoverable-wrapper:hover) :is(
+  .hover-blur p:not(:has(.hoverable-wrapper:hover)):not(.hoverable-wrapper p),
+  .hover-blur h1,
+  .hover-blur h2,
+  .hover-blur h3,
+  .hover-blur .hoverable-wrapper:not(:hover),
+  .hover-blur .hover-blur-target:not(:hover)
+) {
+  filter: blur(2.7px);
+  opacity: 0.4;
+}
+
+/* Fallback for components with self-contained hover-blur-group */
 .hover-blur-group:hover .hover-blur-item:not(:hover) {
-  opacity: 0.38;
-  filter: blur(0.6px);
-  transition: opacity 0.35s ease, filter 0.35s ease;
+  opacity: 0.35;
+  filter: blur(2.5px);
+  transition: opacity 0.3s ease-out, filter 0.3s ease-out;
 }
 
 .hover-blur-item {
-  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.25s ease;
+  transition: opacity 0.3s ease-out, filter 0.3s ease-out, transform 0.25s ease-out;
 }
 
 /* Wavy underline decoration */
 .wavy-link {
   text-decoration: underline;
   text-decoration-style: wavy;
-  text-underline-offset: 4px;
-  text-decoration-color: rgba(119, 138, 67, 0.45);
-  transition: text-decoration-color 0.25s ease, color 0.25s ease;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(32, 34, 31, 0.4);
+  transition: text-decoration-color 0.3s ease-out, color 0.3s ease-out;
 }
 
 .wavy-link:hover {
-  text-decoration-color: #778A43;
+  text-decoration-color: #20221F;
   color: #20221F;
+}
+
+/* Terminal block character cursor for scramble */
+@keyframes block-char {
+  0% { left: 0%; }
+  100% { left: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -150,6 +199,16 @@ body {
   }
   .animate-ticker {
     animation: none;
+  }
+  .profile-page:has(.hoverable-wrapper:hover) :is(
+    .hover-blur p,
+    .hover-blur h1,
+    .hover-blur h2,
+    .hover-blur h3,
+    .hover-blur .hoverable-wrapper
+  ) {
+    opacity: 1;
+    filter: none;
   }
   .hover-blur-group:hover .hover-blur-item:not(:hover) {
     opacity: 1;
