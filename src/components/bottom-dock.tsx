@@ -14,7 +14,7 @@ export function BottomDock({ onOpenCommandPalette }: BottomDockProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "work", "about", "contact"];
+      const sections = ["hero", "work", "experience", "about", "contact"];
       const scrollY = window.scrollY + 200;
 
       for (const section of sections) {
@@ -42,6 +42,7 @@ export function BottomDock({ onOpenCommandPalette }: BottomDockProps) {
   const navLinks = [
     { id: "hero", label: "Profile", href: "#hero" },
     { id: "work", label: "Work", href: "#work" },
+    { id: "experience", label: "Roles", href: "#experience" },
     { id: "about", label: "About", href: "#about" },
     { id: "contact", label: "Contact", href: "#contact" },
   ];

@@ -6,6 +6,7 @@ import { Hero } from "@/components/hero";
 import { EditorialTicker } from "@/components/editorial-ticker";
 import { PanoramicBanner } from "@/components/panoramic-banner";
 import { ProjectShowcase } from "@/components/project-showcase";
+import { Experience } from "@/components/experience";
 import { About } from "@/components/about";
 import { CurrentFocus } from "@/components/current-focus";
 import { Contact } from "@/components/contact";
@@ -46,6 +47,9 @@ export default function HomePage() {
 
         {/* Project Showcase: Vertically Stacked List + Cinematic Scene */}
         <ProjectShowcase />
+
+        {/* Experience & Accolades Section (Synchronized with official resume) */}
+        <Experience />
 
         {/* About Section: Narrative & Understated Stack */}
         <About />

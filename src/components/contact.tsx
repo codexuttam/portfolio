@@ -82,6 +82,19 @@ export function Contact() {
                   )}
                 </button>
               </div>
+
+              {profileData.contact.phone && (
+                <div className="pt-2 border-t border-[#20221F]/10 flex items-center justify-between text-xs font-mono text-[#73756E]">
+                  <span>DIRECT LINE</span>
+                  <a
+                    href={`tel:${profileData.contact.phone}`}
+                    className="text-[#20221F] hover:text-[#778A43] transition-colors"
+                  >
+                    {profileData.contact.phone}
+                  </a>
+                </div>
+              )}
+
               <p className="font-mono text-[10px] text-[#73756E]/80">
                 {profileData.contact.note}
               </p>

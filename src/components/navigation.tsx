@@ -69,6 +69,17 @@ export function Navigation({ onOpenCommandPalette }: NavigationProps) {
               <span>Work</span>
             </Link>
             <Link
+              href="#experience"
+              onClick={() => soundManager.playClick()}
+              onMouseEnter={() => soundManager.playTick()}
+              className="group inline-flex items-center gap-1.5 text-sm tracking-wide text-[#20221F]/80 hover:text-[#20221F] font-medium transition-colors"
+            >
+              <span className="text-[10px] text-[#778A43] opacity-0 group-hover:opacity-100 group-hover:rotate-180 transition-all duration-300">
+                ✦
+              </span>
+              <span>Experience</span>
+            </Link>
+            <Link
               href="#about"
               onClick={() => soundManager.playClick()}
               onMouseEnter={() => soundManager.playTick()}
@@ -172,6 +183,13 @@ export function Navigation({ onOpenCommandPalette }: NavigationProps) {
               className="text-2xl font-serif text-[#20221F] hover:text-[#778A43] transition-colors"
             >
               Work
+            </Link>
+            <Link
+              href="#experience"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-2xl font-serif text-[#20221F] hover:text-[#778A43] transition-colors"
+            >
+              Experience
             </Link>
             <Link
               href="#about"
