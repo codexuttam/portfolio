@@ -1,0 +1,82 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Cinematic warm paper & deep charcoal gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#262824" />
+      <stop offset="45%" stop-color="#1B1C1A" />
+      <stop offset="100%" stop-color="#141513" />
+    </linearGradient>
+    <radialGradient id="warmLight" cx="45%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#C4E36C" stop-opacity="0.14" />
+      <stop offset="50%" stop-color="#778A43" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#141513" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="oliveAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#778A43" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#C4E36C" stop-opacity="0.3" />
+    </linearGradient>
+    <pattern id="fineGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E9E7E1" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect width="800" height="1000" fill="url(#bgGrad)" />
+  <rect width="800" height="1000" fill="url(#warmLight)" />
+  <rect width="800" height="1000" fill="url(#fineGrid)" />
+
+  <!-- Subtle Architectural Silhouette / Editorial Composition -->
+  <g opacity="0.85">
+    <!-- Studio backplate lighting -->
+    <ellipse cx="400" cy="460" rx="260" ry="340" fill="#2E302B" opacity="0.6" />
+    <ellipse cx="400" cy="420" rx="180" ry="240" fill="#3B3E36" opacity="0.35" />
+
+    <!-- Abstract Minimalist Portrait Silhouette -->
+    <!-- Head -->
+    <path d="M340 310 C340 220 460 220 460 310 C460 380 435 430 400 440 C365 430 340 380 340 310 Z" fill="#242622" stroke="#778A43" stroke-width="1.5" stroke-opacity="0.4" />
+    
+    <!-- Shoulders & Torso -->
+    <path d="M220 620 C220 500 320 470 400 470 C480 470 580 500 580 620 L580 820 L220 820 Z" fill="#1C1D1A" stroke="#E9E7E1" stroke-width="1" stroke-opacity="0.08" />
+
+    <!-- Editorial geometric line accents -->
+    <line x1="120" y1="460" x2="680" y2="460" stroke="#778A43" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="4 6" />
+    <line x1="400" y1="140" x2="400" y2="820" stroke="#E9E7E1" stroke-width="1" stroke-opacity="0.1" stroke-dasharray="2 6" />
+    <circle cx="400" cy="460" r="280" stroke="#C4E36C" stroke-width="1" stroke-opacity="0.15" />
+  </g>
+
+  <!-- Editorial Monogram & Identification -->
+  <g transform="translate(400, 420)">
+    <circle cx="0" cy="0" r="64" fill="#20221F" stroke="#778A43" stroke-width="1.5" stroke-opacity="0.6"/>
+    <text x="0" y="8" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="700" font-size="28" letter-spacing="4" text-anchor="middle">US</text>
+    <text x="0" y="24" fill="#C4E36C" font-family="'JetBrains Mono', monospace" font-size="8" letter-spacing="2" text-anchor="middle">UTTAMRAJ</text>
+  </g>
+
+  <!-- Framing Guidelines -->
+  <rect x="24" y="24" width="752" height="952" fill="none" stroke="#E9E7E1" stroke-opacity="0.12" stroke-width="1" />
+  <rect x="36" y="36" width="728" height="928" fill="none" stroke="#778A43" stroke-opacity="0.15" stroke-width="1" />
+
+  <!-- Corner Crop Marks -->
+  <path d="M24 64 L24 24 L64 24" stroke="#C4E36C" stroke-width="1.5" stroke-opacity="0.6"/>
+  <path d="M776 64 L776 24 L736 24" stroke="#C4E36C" stroke-width="1.5" stroke-opacity="0.6"/>
+  <path d="M24 936 L24 976 L64 976" stroke="#C4E36C" stroke-width="1.5" stroke-opacity="0.6"/>
+  <path d="M776 936 L776 976 L736 976" stroke="#C4E36C" stroke-width="1.5" stroke-opacity="0.6"/>
+
+  <!-- Top Metadata Header -->
+  <text x="56" y="68" fill="#E9E7E1" opacity="0.6" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="2">ARCHIVE REF: US-2026-PORTRAIT</text>
+  <text x="744" y="68" fill="#C4E36C" opacity="0.8" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="2" text-anchor="end">STUDIO / 01</text>
+
+  <!-- Notice Marker (Honoring instructions: clearly replaceable temporary image placeholder) -->
+  <g transform="translate(400, 760)">
+    <rect x="-240" y="-18" width="480" height="36" rx="4" fill="#20221F" fill-opacity="0.85" stroke="#778A43" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="-215" cy="0" r="4" fill="#C4E36C" />
+    <text x="-195" y="4" fill="#E9E7E1" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1.5">REPLACEABLE PORTRAIT ASSET • UTTAMRAJ SINGH</text>
+  </g>
+
+  <!-- Bottom Photographic Caption -->
+  <g transform="translate(56, 925)">
+    <text x="0" y="0" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="600" font-size="14" letter-spacing="1.5">UTTAMRAJ SINGH</text>
+    <text x="0" y="18" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">COMPUTER SCIENCE • AI &amp; SYSTEMS ENGINEERING</text>
+    <text x="688" y="0" fill="#C4E36C" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1" text-anchor="end">2026 EDITION</text>
+    <text x="688" y="18" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1" text-anchor="end">CALIBRATED NEUTRAL</text>
+  </g>
+</svg>

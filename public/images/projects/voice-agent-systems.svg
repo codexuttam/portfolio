@@ -1,0 +1,129 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="voiceBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#21241C" />
+      <stop offset="50%" stop-color="#191B16" />
+      <stop offset="100%" stop-color="#121410" />
+    </linearGradient>
+    <pattern id="voiceGrid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#7E886B" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="voiceGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#7E886B" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#C4E36C" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#191B16" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#voiceBg)" />
+  <rect width="1200" height="800" fill="url(#voiceGrid)" />
+  <rect width="1200" height="800" fill="url(#voiceGlow)" />
+
+  <rect x="32" y="32" width="1136" height="736" stroke="#7E886B" stroke-opacity="0.3" stroke-width="1"/>
+  <rect x="40" y="40" width="1120" height="720" stroke="#E9E7E1" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- Top Header Metadata Bar -->
+  <g transform="translate(64, 76)">
+    <circle cx="6" cy="6" r="4" fill="#C4E36C" />
+    <text x="24" y="10" fill="#E9E7E1" font-family="'JetBrains Mono', monospace" font-size="12" letter-spacing="2">PROJECT 05 // LOW-LATENCY FULL-DUPLEX VOICE PIPELINE</text>
+    <text x="1070" y="10" fill="#7E886B" font-family="'JetBrains Mono', monospace" font-size="12" letter-spacing="1" text-anchor="end">WEBSOCKETS • DEEPGRAM • PYTHON ASYNCIO</text>
+  </g>
+  <line x1="64" y1="104" x2="1136" y2="104" stroke="#7E886B" stroke-opacity="0.2" stroke-width="1" />
+
+  <!-- Left: Audio Waveform & Barge-In Detection Visual -->
+  <g transform="translate(80, 160)">
+    <rect x="0" y="0" width="540" height="380" rx="6" fill="#161813" stroke="#7E886B" stroke-width="1" stroke-opacity="0.4"/>
+    
+    <text x="24" y="34" fill="#7E886B" font-family="'JetBrains Mono', monospace" font-size="11">INBOUND SPEECH WAVEFORM &amp; INTERRUPTION DETECTION</text>
+
+    <!-- Waveform Bars -->
+    <g transform="translate(40, 150)">
+      <!-- Symmetrical audio waveform representation -->
+      <line x1="10" y1="-20" x2="10" y2="20" stroke="#7E886B" stroke-width="3" stroke-linecap="round"/>
+      <line x1="25" y1="-40" x2="25" y2="40" stroke="#7E886B" stroke-width="3" stroke-linecap="round"/>
+      <line x1="40" y1="-70" x2="40" y2="70" stroke="#C4E36C" stroke-width="3" stroke-linecap="round"/>
+      <line x1="55" y1="-90" x2="55" y2="90" stroke="#C4E36C" stroke-width="3" stroke-linecap="round"/>
+      <line x1="70" y1="-50" x2="70" y2="50" stroke="#C4E36C" stroke-width="3" stroke-linecap="round"/>
+      <line x1="85" y1="-30" x2="85" y2="30" stroke="#7E886B" stroke-width="3" stroke-linecap="round"/>
+      <line x1="100" y1="-85" x2="100" y2="85" stroke="#C4E36C" stroke-width="3" stroke-linecap="round"/>
+      <line x1="115" y1="-110" x2="115" y2="110" stroke="#C4E36C" stroke-width="3" stroke-linecap="round"/>
+      <line x1="130" y1="-60" x2="130" y2="60" stroke="#C4E36C" stroke-width="3" stroke-linecap="round"/>
+      <line x1="145" y1="-25" x2="145" y2="25" stroke="#7E886B" stroke-width="3" stroke-linecap="round"/>
+      <line x1="160" y1="-15" x2="160" y2="15" stroke="#7E886B" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Interruption Zone -->
+      <line x1="185" y1="-95" x2="185" y2="95" stroke="#E9E7E1" stroke-width="4" stroke-linecap="round"/>
+      <line x1="200" y1="-120" x2="200" y2="120" stroke="#E9E7E1" stroke-width="4" stroke-linecap="round"/>
+      <line x1="215" y1="-80" x2="215" y2="80" stroke="#E9E7E1" stroke-width="4" stroke-linecap="round"/>
+      <line x1="230" y1="-45" x2="230" y2="45" stroke="#7E886B" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Normal continuation -->
+      <line x1="250" y1="-20" x2="250" y2="20" stroke="#7E886B" stroke-width="3" stroke-linecap="round"/>
+      <line x1="265" y1="-60" x2="265" y2="60" stroke="#C4E36C" stroke-width="3" stroke-linecap="round"/>
+      <line x1="280" y1="-85" x2="280" y2="85" stroke="#C4E36C" stroke-width="3" stroke-linecap="round"/>
+      <line x1="295" y1="-40" x2="295" y2="40" stroke="#7E886B" stroke-width="3" stroke-linecap="round"/>
+      <line x1="310" y1="-75" x2="310" y2="75" stroke="#C4E36C" stroke-width="3" stroke-linecap="round"/>
+      <line x1="325" y1="-90" x2="325" y2="90" stroke="#C4E36C" stroke-width="3" stroke-linecap="round"/>
+      <line x1="340" y1="-30" x2="340" y2="30" stroke="#7E886B" stroke-width="3" stroke-linecap="round"/>
+      <line x1="355" y1="-15" x2="355" y2="15" stroke="#7E886B" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Marker Box -->
+    <g transform="translate(180, 290)">
+      <rect x="-10" y="-12" width="220" height="28" rx="4" fill="#20251B" stroke="#C4E36C" stroke-width="1"/>
+      <circle cx="6" cy="2" r="3" fill="#C4E36C"/>
+      <text x="18" y="6" fill="#C4E36C" font-family="'JetBrains Mono', monospace" font-size="10">BARGE-IN TRIGGER: &lt;45MS</text>
+    </g>
+
+    <text x="24" y="350" fill="#7E886B" font-family="'JetBrains Mono', monospace" font-size="10">SAMPLE RATE: 16000HZ OPUS // FULL-DUPLEX BUFFER ACTIVE</text>
+  </g>
+
+  <!-- Right: Real-time Telemetry & CRM Function Calling -->
+  <g transform="translate(660, 160)">
+    <rect x="0" y="0" width="460" height="380" rx="6" fill="#161813" stroke="#7E886B" stroke-width="1" stroke-opacity="0.4"/>
+    
+    <rect x="0" y="0" width="460" height="40" rx="6 6 0 0" fill="#21261B"/>
+    <text x="24" y="25" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="600" font-size="13">Streaming Pipeline Telemetry</text>
+
+    <!-- Telemetry stream -->
+    <g transform="translate(24, 64)" font-family="'JetBrains Mono', monospace" font-size="11">
+      <text x="0" y="0" fill="#7E886B">t+000ms: Caller speech packet received</text>
+      <text x="0" y="24" fill="#7E886B">t+140ms: WebSocket transcription emitted [Deepgram]</text>
+      <text x="0" y="48" fill="#C4E36C">t+210ms: Intent classified -&gt; "reschedule_meeting"</text>
+      <text x="0" y="72" fill="#E9E7E1">t+285ms: Tool Call: calendar_api.check_availability()</text>
+      <text x="0" y="96" fill="#E9E7E1">t+350ms: Tool result returned: 3 slots available</text>
+      <text x="0" y="120" fill="#C4E36C">t+420ms: First LLM token streamed to audio synth</text>
+      <text x="0" y="144" fill="#C4E36C">t+535ms: First audio chunk playing on caller phone</text>
+      <text x="0" y="180" fill="#7E886B">----------------------------------------</text>
+      <text x="0" y="204" fill="#E9E7E1">TOTAL ROUND-TRIP LATENCY: 535ms</text>
+      <text x="0" y="228" fill="#C4E36C">STATUS: STREAMING AUDIO CHUNKS</text>
+    </g>
+  </g>
+
+  <!-- Bottom Metric Highlights -->
+  <g transform="translate(80, 580)">
+    <rect x="0" y="0" width="1040" height="130" rx="4" fill="#1E2218" stroke="#7E886B" stroke-width="1" stroke-opacity="0.3"/>
+    
+    <g transform="translate(36, 32)">
+      <text x="0" y="0" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1">ROUND-TRIP LATENCY</text>
+      <text x="0" y="32" fill="#C4E36C" font-family="'Manrope', sans-serif" font-weight="700" font-size="28">&lt; 600ms</text>
+      <text x="0" y="54" fill="#E9E7E1" font-family="'JetBrains Mono', monospace" font-size="11">True conversational pacing</text>
+    </g>
+
+    <line x1="320" y1="20" x2="320" y2="110" stroke="#7E886B" stroke-opacity="0.2" stroke-width="1"/>
+
+    <g transform="translate(360, 32)">
+      <text x="0" y="0" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1">INTERRUPTION HANDLING</text>
+      <text x="0" y="32" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="700" font-size="28">Zero Lag Barge-In</text>
+      <text x="0" y="54" fill="#7E886B" font-family="'JetBrains Mono', monospace" font-size="11">Cancels playback on speech detection</text>
+    </g>
+
+    <line x1="680" y1="20" x2="680" y2="110" stroke="#7E886B" stroke-opacity="0.2" stroke-width="1"/>
+
+    <g transform="translate(720, 32)">
+      <text x="0" y="0" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1">CRM INTEGRATION</text>
+      <text x="0" y="32" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="700" font-size="28">Live Tool Calling</text>
+      <text x="0" y="54" fill="#C4E36C" font-family="'JetBrains Mono', monospace" font-size="11">Automated dispatch &amp; ticket updates</text>
+    </g>
+  </g>
+</svg>

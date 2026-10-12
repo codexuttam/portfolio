@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Uttamraj Singh — Personal Portfolio
 
-## Getting Started
+An editorial, cinematic, and interactive portfolio designed and engineered for **Uttamraj Singh**, specializing in AI/ML, full-stack systems, and AI-powered products.
 
-First, run the development server:
+Inspired by the visual restraint and project-hover interactions of high-end editorial portfolios, built with a warm paper aesthetic, oversized typography, and responsive interaction engineering.
+
+---
+
+## 🎨 Art Direction & Visual Identity
+
+- **Background (Warm Paper)**: `#E9E7E1`
+- **Text (Deep Charcoal)**: `#20221F`
+- **Primary Accent (Muted Olive)**: `#778A43`
+- **Highlight (Soft Lime/Green)**: `#C4E36C`
+- **Supporting Text (Muted Gray)**: `#73756E`
+- **Borders**: Translucent charcoal (`rgba(32, 34, 31, 0.12)`)
+- **Typography**: Manrope (Modern Sans-Serif), Newsreader/Cormorant Garamond (Italic Serif accent), JetBrains Mono (Technical indices & metadata).
+
+---
+
+## 🏗️ Architecture & Features
+
+- **Next.js 16 (App Router)** + **React 19** + **TypeScript**
+- **Tailwind CSS v4** with design token variables
+- **Framer Motion (`motion/react`)** for cinematic crossfades, pointer tilt physics, and easing
+- **Two-Column Project Showcase**:
+  - Vertically stacked project rows with interactive project-tint highlights
+  - Sticky large cinematic scene with smooth crossfades and zero layout shift
+  - Keyboard navigation (`↑` / `↓` arrow keys) & mobile touch support
+- **Dedicated Case Study Pages (`/work/[slug]`)**:
+  - Full-length case studies for Bitlance AI, Samadhan Setu, QuickLearn AI, Upchar360, and Voice Agent Systems
+- **Command Palette (`⌘K` / `Ctrl+K`)**:
+  - Search and filter across sections, case studies, and external profiles with keyboard controls
+- **Pointer-Responsive Portrait**:
+  - Perspective 3D tilt with spring damping and circular editorial rotating stamp
+- **Continuous Editorial Ticker**:
+  - Infinite CSS marquee with pause-on-hover
+
+---
+
+## 🚀 Running Locally
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Run linting
+npm run lint
+
+# Build production bundle
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application runs on [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Customization & Personal Assets
 
-## Learn More
+### 1. Adding Your Real Portrait
+Place your portrait photograph at:
+```
+public/images/portrait/portrait.jpg
+```
+The hero section automatically detects this file and switches from the editorial placeholder SVG to your actual photo while applying subtle cinematic tone grading.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Updating Personal Credentials & Links
+Edit [`src/data/profile.ts`](src/data/profile.ts) to update your actual email, GitHub URL, LinkedIn profile, and resume link.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. Adding or Updating Projects
+Project data is typed and configured in [`src/data/projects.ts`](src/data/projects.ts).

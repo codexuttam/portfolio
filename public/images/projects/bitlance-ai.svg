@@ -1,0 +1,121 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bitlanceBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E211B" />
+      <stop offset="50%" stop-color="#181A16" />
+      <stop offset="100%" stop-color="#121310" />
+    </linearGradient>
+    <pattern id="bitlanceGrid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#778A43" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="bitlanceGlow" cx="65%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#778A43" stop-opacity="0.25" />
+      <stop offset="60%" stop-color="#C4E36C" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#181A16" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="800" fill="url(#bitlanceBg)" />
+  <rect width="1200" height="800" fill="url(#bitlanceGrid)" />
+  <rect width="1200" height="800" fill="url(#bitlanceGlow)" />
+
+  <!-- Outer Editorial Borders -->
+  <rect x="32" y="32" width="1136" height="736" stroke="#778A43" stroke-opacity="0.3" stroke-width="1"/>
+  <rect x="40" y="40" width="1120" height="720" stroke="#E9E7E1" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- Top Header Metadata Bar -->
+  <g transform="translate(64, 76)">
+    <circle cx="6" cy="6" r="4" fill="#C4E36C" />
+    <text x="24" y="10" fill="#E9E7E1" font-family="'JetBrains Mono', monospace" font-size="12" letter-spacing="2">PROJECT 01 // MULTI-AGENT SWARM ORCHESTRATION</text>
+    <text x="1070" y="10" fill="#778A43" font-family="'JetBrains Mono', monospace" font-size="12" letter-spacing="1" text-anchor="end">FASTAPI • LANGCHAIN • REDIS</text>
+  </g>
+  <line x1="64" y1="104" x2="1136" y2="104" stroke="#778A43" stroke-opacity="0.2" stroke-width="1" />
+
+  <!-- Left: System State / Agent Pipeline Diagram -->
+  <g transform="translate(80, 160)">
+    <!-- Node 1: Ingestion -->
+    <rect x="0" y="0" width="220" height="110" rx="4" fill="#242721" stroke="#778A43" stroke-width="1.5" stroke-opacity="0.6"/>
+    <text x="20" y="32" fill="#C4E36C" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1.5">NODE A // INGESTION</text>
+    <text x="20" y="58" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="600" font-size="14">Creative Brief Parser</text>
+    <text x="20" y="80" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="11">Extract semantic constraints</text>
+
+    <!-- Connector Arrow -->
+    <path d="M 220 55 L 280 55" stroke="#C4E36C" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <polygon points="280,52 288,55 280,58" fill="#C4E36C" />
+
+    <!-- Node 2: Synthesis Swarm -->
+    <rect x="290" y="0" width="240" height="110" rx="4" fill="#242721" stroke="#C4E36C" stroke-width="1.5" stroke-opacity="0.8"/>
+    <text x="20" y="32" fill="#C4E36C" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1.5">NODE B // DRAFT ENGINE</text>
+    <text x="20" y="58" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="600" font-size="14">Multi-Agent Debate</text>
+    <text x="20" y="80" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="11">Tone &amp; citation verification</text>
+
+    <!-- Connector Arrow down -->
+    <path d="M 410 110 L 410 170" stroke="#778A43" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <polygon points="407,170 410,178 413,170" fill="#778A43" />
+
+    <!-- Node 3: Structured Schema Validation -->
+    <rect x="290" y="180" width="240" height="110" rx="4" fill="#242721" stroke="#778A43" stroke-width="1.5" stroke-opacity="0.6"/>
+    <text x="20" y="32" fill="#778A43" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1.5">NODE C // SCHEMA GUARD</text>
+    <text x="20" y="58" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="600" font-size="14">Pydantic Validation</text>
+    <text x="20" y="80" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="11">Deterministic JSON output</text>
+
+    <!-- Connector Arrow right -->
+    <path d="M 530 235 L 590 235" stroke="#C4E36C" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <polygon points="590,232 598,235 590,238" fill="#C4E36C" />
+  </g>
+
+  <!-- Right: Editorial Canvas Preview -->
+  <g transform="translate(680, 160)">
+    <rect x="0" y="0" width="440" height="380" rx="6" fill="#151713" stroke="#778A43" stroke-width="1" stroke-opacity="0.4"/>
+    
+    <!-- Window Bar -->
+    <rect x="0" y="0" width="440" height="36" rx="6 6 0 0" fill="#20231D"/>
+    <circle cx="20" cy="18" r="4" fill="#73756E" />
+    <circle cx="34" cy="18" r="4" fill="#73756E" />
+    <circle cx="48" cy="18" r="4" fill="#73756E" />
+    <text x="70" y="22" fill="#E9E7E1" opacity="0.6" font-family="'JetBrains Mono', monospace" font-size="11">bitlance-agent-runtime.json</text>
+
+    <!-- Code & Schema Output -->
+    <g transform="translate(24, 60)" font-family="'JetBrains Mono', monospace" font-size="12">
+      <text x="0" y="0" fill="#778A43">{"status": "verified", "execution_time_ms": 342},</text>
+      <text x="0" y="24" fill="#E9E7E1">"agent_consensus": {</text>
+      <text x="20" y="48" fill="#C4E36C">"confidence_score": 0.984,</text>
+      <text x="20" y="72" fill="#E9E7E1">"tone_vector": "editorial_technical",</text>
+      <text x="20" y="96" fill="#73756E">"citations_checked": 14,</text>
+      <text x="20" y="120" fill="#73756E">"hallucination_index": 0.002</text>
+      <text x="0" y="144" fill="#E9E7E1">},</text>
+      <text x="0" y="168" fill="#E9E7E1">"payload": {</text>
+      <text x="20" y="192" fill="#C4E36C">"summary": "Multi-agent synthesis complete.",</text>
+      <text x="20" y="216" fill="#778A43">"stream_ready": true</text>
+      <text x="0" y="240" fill="#E9E7E1">}</text>
+    </g>
+  </g>
+
+  <!-- Bottom Visual Anchor & Metric Highlights -->
+  <g transform="translate(80, 580)">
+    <rect x="0" y="0" width="1040" height="130" rx="4" fill="#20221B" stroke="#778A43" stroke-width="1" stroke-opacity="0.3"/>
+    
+    <g transform="translate(36, 32)">
+      <text x="0" y="0" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1">SYSTEM LATENCY</text>
+      <text x="0" y="32" fill="#C4E36C" font-family="'Manrope', sans-serif" font-weight="700" font-size="28">Sub-second</text>
+      <text x="0" y="54" fill="#E9E7E1" font-family="'JetBrains Mono', monospace" font-size="11">Streaming chunk generation</text>
+    </g>
+
+    <line x1="320" y1="20" x2="320" y2="110" stroke="#778A43" stroke-opacity="0.2" stroke-width="1"/>
+
+    <g transform="translate(360, 32)">
+      <text x="0" y="0" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1">AGENT TOPOLOGY</text>
+      <text x="0" y="32" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="700" font-size="28">4 Sub-Agents</text>
+      <text x="0" y="54" fill="#778A43" font-family="'JetBrains Mono', monospace" font-size="11">Decoupled Pydantic contracts</text>
+    </g>
+
+    <line x1="680" y1="20" x2="680" y2="110" stroke="#778A43" stroke-opacity="0.2" stroke-width="1"/>
+
+    <g transform="translate(720, 32)">
+      <text x="0" y="0" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1">OUTPUT INTEGRITY</text>
+      <text x="0" y="32" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="700" font-size="28">100% Typed</text>
+      <text x="0" y="54" fill="#C4E36C" font-family="'JetBrains Mono', monospace" font-size="11">Zero downstream parser errors</text>
+    </g>
+  </g>
+</svg>

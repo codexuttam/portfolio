@@ -1,26 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,500;1,600&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #E9E7E1;
+  --foreground: #20221F;
+  --paper: #E9E7E1;
+  --paper-subtle: #ECEAE4;
+  --paper-elevated: #F2F0EB;
+  --charcoal: #20221F;
+  --charcoal-muted: #73756E;
+  --charcoal-border: rgba(32, 34, 31, 0.12);
+  --charcoal-border-strong: rgba(32, 34, 31, 0.22);
+  --olive: #778A43;
+  --olive-dark: #55642F;
+  --lime: #C4E36C;
+  --lime-soft: #D5EE88;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-paper: var(--paper);
+  --color-paper-subtle: var(--paper-subtle);
+  --color-paper-elevated: var(--paper-elevated);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-muted: var(--charcoal-muted);
+  --color-charcoal-border: var(--charcoal-border);
+  --color-charcoal-border-strong: var(--charcoal-border-strong);
+  --color-olive: var(--olive);
+  --color-olive-dark: var(--olive-dark);
+  --color-lime: var(--lime);
+  --color-lime-soft: var(--lime-soft);
+
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: 'Newsreader', 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: var(--paper);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--paper);
+  color: var(--charcoal);
+  min-height: 100vh;
+  overflow-x: hidden;
+  selection-background-color: var(--lime);
+  selection-color: var(--charcoal);
+}
+
+::selection {
+  background-color: #C4E36C;
+  color: #20221F;
+}
+
+/* Custom editorial styling */
+.font-serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.editorial-border {
+  border-color: var(--charcoal-border);
+}
+
+.editorial-border-b {
+  border-bottom: 1px solid var(--charcoal-border);
+}
+
+.editorial-border-t {
+  border-top: 1px solid var(--charcoal-border);
+}
+
+/* Subtle grain overlay for cinematic tactile paper feel */
+.paper-grain {
+  background-image: radial-gradient(rgba(32, 34, 31, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #E9E7E1;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(32, 34, 31, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #778A43;
+}
+
+/* Subtle marquee animation for ticker */
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 32s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-ticker {
+    animation: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
