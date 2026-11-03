@@ -48,8 +48,28 @@ export function EditorialProjectsSection() {
 
       <div className="font-medium pl-4 text-sm space-y-4 leading-6.5 text-[#20221F]/80">
         <p>
-          A few things I&apos;ve designed and built on the side, the kind of projects an
-          obsessed engineer ends up making anyway.
+          A few things I&apos;ve designed and built{" "}
+          <span className="relative inline-block font-baskerville italic text-[#4338CA] bg-[#4F46E5]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(99,102,241,0.18)]">
+            on the side
+          </span>
+          , the kind of projects an{" "}
+          <span className="relative inline-block font-medium text-[#20221F]">
+            obsessed engineer
+            <svg
+              className="absolute -bottom-1 left-0 w-full h-[5px] text-[#778A43]"
+              viewBox="0 0 100 8"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,5 Q25,0 50,5 T100,5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>{" "}
+          ends up making anyway.
         </p>
 
         <div className="pt-1">

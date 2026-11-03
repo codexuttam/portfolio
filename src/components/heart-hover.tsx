@@ -5,6 +5,7 @@ import { soundManager } from "@/utils/audio";
 
 interface HeartHoverProps {
   text?: string;
+  children?: React.ReactNode;
   className?: string;
 }
 
@@ -17,7 +18,8 @@ interface FloatingHeart {
 }
 
 export function HeartHover({
-  text = "Liked what you found?",
+  text,
+  children,
   className = "",
 }: HeartHoverProps) {
   const [hearts, setHearts] = useState<FloatingHeart[]>([]);
@@ -43,14 +45,14 @@ export function HeartHover({
       className={`relative inline-block cursor-pointer group select-none ${className}`}
     >
       <span className="group-hover:text-[#20221F] transition-colors duration-200">
-        {text}
+        {children || text}
       </span>
 
       {/* Floating Animated Hearts */}
       {hearts.map((h) => (
         <span
           key={h.id}
-          className="absolute left-1/2 pointer-events-none text-red-500 animate-float-heart"
+          className="absolute left-1/2 pointer-events-none text-red-500 animate-float-heart z-30"
           style={{
             transform: `translate(${h.x}px, ${h.y}px) rotate(${h.rot}deg) scale(${h.scale})`,
             fontSize: "14px",

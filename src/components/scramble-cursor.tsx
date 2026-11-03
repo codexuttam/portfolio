@@ -23,7 +23,7 @@ export function ScrambleCursor({ text, className = "" }: ScrambleCursorProps) {
 
     let step = 0;
     const totalSteps = text.length;
-    const speed = 40; // ms per tick
+    const speed = 65; // ms per tick - deliberate, clear cyber-decoding speed
 
     if (animFrameRef.current) clearInterval(animFrameRef.current);
 
@@ -47,7 +47,8 @@ export function ScrambleCursor({ text, className = "" }: ScrambleCursorProps) {
           .join("")
       );
 
-      step += 0.8;
+      // Slower incremental step: ~4 ticks per character for visible, satisfying scramble
+      step += 0.28;
 
       if (step >= totalSteps + 1) {
         if (animFrameRef.current) clearInterval(animFrameRef.current);
@@ -67,10 +68,11 @@ export function ScrambleCursor({ text, className = "" }: ScrambleCursorProps) {
   return (
     <span
       onMouseEnter={startScramble}
-      className={`inline-flex items-center font-mono font-bold tracking-wider cursor-pointer select-none text-[#20221F] bg-[#20221F]/5 hover:bg-[#20221F]/10 px-1.5 py-0.5 rounded transition-colors ${className}`}
+      className={`inline-flex items-center font-mono font-bold tracking-wider cursor-pointer select-none text-[#20221F] bg-[#20221F]/5 hover:bg-[#20221F]/10 px-2 py-0.5 rounded transition-colors whitespace-pre ${className}`}
     >
       {displayText.split("").map((char, idx) => {
         const isCursor = cursorPos === idx;
+        const renderChar = char === " " ? "\u00A0" : char;
         return (
           <span
             key={idx}
@@ -80,7 +82,7 @@ export function ScrambleCursor({ text, className = "" }: ScrambleCursorProps) {
                 : ""
             }`}
           >
-            {char}
+            {renderChar}
           </span>
         );
       })}

@@ -66,12 +66,15 @@ export default function HomePage() {
                         Software &amp; AI Engineer
                       </span>{" "}
                       based in{" "}
-                      <span className="inline-flex items-center gap-1 font-semibold text-[#20221F]">
+                      <span className="inline-flex items-center gap-1.5 font-semibold text-[#20221F]">
                         <span>India</span>
-                        <span className="inline-flex flex-col h-3 w-1.5 rounded-[1px] overflow-hidden shadow-xs ring-1 ring-black/10">
-                          <span className="h-1 bg-[#FF9933] w-full" />
-                          <span className="h-1 bg-[#FFFFFF] w-full" />
-                          <span className="h-1 bg-[#138808] w-full" />
+                        <span className="inline-flex items-center justify-center w-5 h-3.5 rounded-[2px] overflow-hidden shadow-xs border border-[#20221F]/15">
+                          <svg className="w-full h-full" viewBox="0 0 24 16">
+                            <rect width="24" height="5.33" fill="#FF9933" />
+                            <rect y="5.33" width="24" height="5.33" fill="#FFFFFF" />
+                            <rect y="10.66" width="24" height="5.33" fill="#138808" />
+                            <circle cx="12" cy="8" r="1.8" fill="#000080" />
+                          </svg>
                         </span>
                       </span>
                       , building intelligent products from zero to one.
@@ -242,85 +245,95 @@ export default function HomePage() {
                   <div className="pl-4 font-medium text-sm">
                     {/* LinkedIn */}
                     <div>
-                      <a
-                        href="https://www.linkedin.com/in/uttamraj-singh-054593259/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => soundManager.playClick()}
-                        onMouseEnter={() => soundManager.playTick()}
-                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
-                      >
-                        <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
-                          ✽
-                        </span>
-                        <span className="inline-block pl-2">LinkedIn</span>
-                      </a>
+                      <HeartHover className="w-full block">
+                        <a
+                          href="https://www.linkedin.com/in/uttamraj-singh-054593259/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => soundManager.playClick()}
+                          onMouseEnter={() => soundManager.playTick()}
+                          className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
+                        >
+                          <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
+                            ✽
+                          </span>
+                          <span className="inline-block pl-2">LinkedIn</span>
+                        </a>
+                      </HeartHover>
                     </div>
 
                     {/* GitHub */}
                     <div>
-                      <a
-                        href="https://github.com/codexuttam"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => soundManager.playClick()}
-                        onMouseEnter={() => soundManager.playTick()}
-                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
-                      >
-                        <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
-                          ✽
-                        </span>
-                        <span className="inline-block pl-2">GitHub</span>
-                      </a>
+                      <HeartHover className="w-full block">
+                        <a
+                          href="https://github.com/codexuttam"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => soundManager.playClick()}
+                          onMouseEnter={() => soundManager.playTick()}
+                          className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
+                        >
+                          <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
+                            ✽
+                          </span>
+                          <span className="inline-block pl-2">GitHub</span>
+                        </a>
+                      </HeartHover>
                     </div>
 
                     {/* Email */}
                     <div>
-                      <a
-                        href="mailto:uttamraj8299@gmail.com"
-                        onClick={() => soundManager.playClick()}
-                        onMouseEnter={() => soundManager.playTick()}
-                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
-                      >
-                        <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
-                          ✽
-                        </span>
-                        <span className="inline-block pl-2">Email</span>
-                      </a>
+                      <HeartHover className="w-full block">
+                        <a
+                          href="mailto:uttamraj8299@gmail.com"
+                          onClick={() => soundManager.playClick()}
+                          onMouseEnter={() => soundManager.playTick()}
+                          className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
+                        >
+                          <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
+                            ✽
+                          </span>
+                          <span className="inline-block pl-2">Email</span>
+                        </a>
+                      </HeartHover>
                     </div>
 
                     {/* X (Twitter) */}
                     <div>
-                      <a
-                        href="https://x.com/codexuttam"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => soundManager.playClick()}
-                        onMouseEnter={() => soundManager.playTick()}
-                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
-                      >
-                        <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
-                          ✽
-                        </span>
-                        <span className="inline-block pl-2">X (twitter)</span>
-                      </a>
+                      <HeartHover className="w-full block">
+                        <a
+                          href="https://x.com/codexuttam"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => soundManager.playClick()}
+                          onMouseEnter={() => soundManager.playTick()}
+                          className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
+                        >
+                          <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
+                            ✽
+                          </span>
+                          <span className="inline-block pl-2">X (twitter)</span>
+                        </a>
+                      </HeartHover>
                     </div>
 
                     {/* Resume */}
                     <div>
-                      <a
-                        href="/resume.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => soundManager.playClick()}
-                        onMouseEnter={() => soundManager.playTick()}
-                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
-                      >
-                        <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
-                          ✽
-                        </span>
-                        <span className="inline-block pl-2">Resume (PDF)</span>
-                      </a>
+                      <HeartHover className="w-full block">
+                        <a
+                          href="/resume.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => soundManager.playClick()}
+                          onMouseEnter={() => soundManager.playTick()}
+                          className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
+                        >
+                          <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
+                            ✽
+                          </span>
+                          <span className="inline-block pl-2">Resume (PDF)</span>
+                        </a>
+                      </HeartHover>
                     </div>
 
                     {/* Liked what you found interactive footer */}

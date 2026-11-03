@@ -59,12 +59,15 @@ export default function AboutPage() {
                     Software &amp; AI Engineer
                   </span>{" "}
                   based in{" "}
-                  <span className="inline-flex items-center gap-1 font-semibold text-[#20221F]">
+                  <span className="inline-flex items-center gap-1.5 font-semibold text-[#20221F]">
                     <span>India</span>
-                    <span className="inline-flex flex-col h-3 w-1.5 rounded-[1px] overflow-hidden shadow-xs ring-1 ring-black/10">
-                      <span className="h-1 bg-[#FF9933] w-full" />
-                      <span className="h-1 bg-[#FFFFFF] w-full" />
-                      <span className="h-1 bg-[#138808] w-full" />
+                    <span className="inline-flex items-center justify-center w-5 h-3.5 rounded-[2px] overflow-hidden shadow-xs border border-[#20221F]/15">
+                      <svg className="w-full h-full" viewBox="0 0 24 16">
+                        <rect width="24" height="5.33" fill="#FF9933" />
+                        <rect y="5.33" width="24" height="5.33" fill="#FFFFFF" />
+                        <rect y="10.66" width="24" height="5.33" fill="#138808" />
+                        <circle cx="12" cy="8" r="1.8" fill="#000080" />
+                      </svg>
                     </span>
                   </span>
                   , building intelligent products from zero to one.
@@ -149,38 +152,44 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className="pt-4 text-xs text-[#73756E] flex flex-wrap items-center gap-1.5">
+                <div className="pt-4 text-xs text-[#73756E] flex flex-wrap items-center gap-2">
                   <HeartHover text="Liked what you found?" />
                   <span>I&apos;m on</span>
-                  <a
-                    href="https://x.com/codexuttam"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => soundManager.playClick()}
-                    className="underline text-[#20221F] hover:text-[#778A43] transition-colors"
-                  >
-                    X (twitter)
-                  </a>
+                  <HeartHover>
+                    <a
+                      href="https://x.com/codexuttam"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => soundManager.playClick()}
+                      className="underline text-[#20221F] hover:text-[#778A43] transition-colors"
+                    >
+                      X (twitter)
+                    </a>
+                  </HeartHover>
                   ,
-                  <a
-                    href="https://github.com/codexuttam"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => soundManager.playClick()}
-                    className="underline text-[#20221F] hover:text-[#778A43] transition-colors"
-                  >
-                    GitHub
-                  </a>
+                  <HeartHover>
+                    <a
+                      href="https://github.com/codexuttam"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => soundManager.playClick()}
+                      className="underline text-[#20221F] hover:text-[#778A43] transition-colors"
+                    >
+                      GitHub
+                    </a>
+                  </HeartHover>
                   , and
-                  <a
-                    href="https://www.linkedin.com/in/uttamraj-singh-054593259/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => soundManager.playClick()}
-                    className="underline text-[#20221F] hover:text-[#778A43] transition-colors"
-                  >
-                    LinkedIn
-                  </a>
+                  <HeartHover>
+                    <a
+                      href="https://www.linkedin.com/in/uttamraj-singh-054593259/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => soundManager.playClick()}
+                      className="underline text-[#20221F] hover:text-[#778A43] transition-colors"
+                    >
+                      LinkedIn
+                    </a>
+                  </HeartHover>
                   .
                 </div>
               </div>
