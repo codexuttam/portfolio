@@ -52,39 +52,57 @@ export default function AboutPage() {
               {/* Narrative Content */}
               <div className="space-y-4 font-medium leading-6.5 text-sm text-[#20221F]/80">
                 <p>
-                  Hey, I&apos;m a software and AI engineer based in{" "}
-                  <span className="font-semibold text-[#20221F]">India</span>.
-                </p>
-
-                <p>
-                  Alongside engineering, I bring a{" "}
-                  <span className="font-baskerville font-medium italic text-[#778A43]">
-                    product architect
-                  </span>{" "}
-                  mindset — driven by solving real friction and the craft of painting
-                  every interaction with tactile precision.
-                </p>
-
-                <p>
-                  I&apos;m drawn to distributed backends,{" "}
+                  I&apos;m a{" "}
                   <span className="font-semibold text-[#20221F]">
-                    autonomous AI agents
-                  </span>
-                  , and{" "}
-                  <span className="font-semibold text-[#778A43]">
-                    real-time voice systems
-                  </span>
-                  , caring deeply about how complex systems operate beneath the surface.
+                    Software &amp; AI Engineer
+                  </span>{" "}
+                  based in India, building intelligent products from zero to one.
                 </p>
 
                 <p>
-                  I&apos;m focused on early-stage teams. As a{" "}
-                  <span className="font-mono font-medium text-[#20221F] inline-block bg-[#20221F]/5 px-1 py-0.5 rounded">
-                    <TextScramble text="founding engineer" />
+                  I combine engineering depth with a{" "}
+                  <span className="font-baskerville font-medium italic text-[#778A43]">
+                    product architect&apos;s
                   </span>{" "}
-                  and CTO at Upchaar 360, I&apos;ve put zero-to-one product shipping at
-                  the center of everything I do — from shaping the architecture to
-                  refining the smallest latency benchmark.
+                  mindset, working across distributed backends, autonomous AI agents, and real-time voice systems. I care about the details beneath the interface — architecture, performance, latency, and every interaction in between.
+                </p>
+
+                <p>
+                  Currently building at{" "}
+                  <a
+                    href="https://www.upchar360.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => soundManager.playClick()}
+                    className="text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-[#778A43] hover:text-[#778A43] transition-colors duration-200 underline-offset-2"
+                  >
+                    Upchaar 360
+                  </a>
+                  , with experience shipping products and AI-driven systems at{" "}
+                  <a
+                    href="https://www.bitlancetechhub.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => soundManager.playClick()}
+                    className="text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-[#778A43] hover:text-[#778A43] transition-colors duration-200 underline-offset-2"
+                  >
+                    Bitlance
+                  </a>{" "}
+                  and building solutions like{" "}
+                  <a
+                    href="https://samadhan-setu-g8en.onrender.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => soundManager.playClick()}
+                    className="text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-[#778A43] hover:text-[#778A43] transition-colors duration-200 underline-offset-2"
+                  >
+                    Samadhan Setu
+                  </a>
+                  .
+                </p>
+
+                <p>
+                  I thrive in early-stage environments where ideas turn into products and engineering meets real-world impact.
                 </p>
 
                 <div className="pt-6 border-t border-[#20221F]/10 space-y-2">

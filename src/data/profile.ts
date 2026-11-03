@@ -165,9 +165,10 @@ export const profileData: ProfileData = {
   about: {
     headline: "Curious by nature. Builder by choice.",
     narrative: [
-      "I'm a computer science student at Noida International University specializing in AI/ML and full-stack engineering. I like working across the whole stack — interfaces, APIs, databases, deployment, and the small decisions that make a product feel right.",
-      "The interesting part isn't adding AI to everything. It's finding where it genuinely helps, then doing the engineering to make it work.",
-      "I believe software is most powerful when theoretical intelligence is paired with rigorous backend systems and tactile, human-centered interfaces.",
+      "I'm a Software & AI Engineer based in India, building intelligent products from zero to one.",
+      "I combine engineering depth with a product architect's mindset, working across distributed backends, autonomous AI agents, and real-time voice systems. I care about the details beneath the interface — architecture, performance, latency, and every interaction in between.",
+      "Currently building at Upchaar 360, with experience shipping products and AI-driven systems at Bitlance and building solutions like Samadhan Setu.",
+      "I thrive in early-stage environments where ideas turn into products and engineering meets real-world impact.",
     ],
     technologies: [
       "Next.js",

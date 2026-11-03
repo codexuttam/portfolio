@@ -57,36 +57,56 @@ export default function HomePage() {
                   <h1 className="text-base font-normal font-baskerville text-[#73756E] pb-2">
                     About
                   </h1>
-                  <div className="font-medium pl-4 text-sm leading-6.5">
-                    <p className="inline-hoverable-wrapper">
-                      Hi, I&apos;m Uttamraj Singh — an{" "}
-                      <span className="italic font-baskerville text-[#20221F]">
-                        AI
-                      </span>{" "}
-                      &amp;{" "}
+                  <div className="font-medium pl-4 text-sm leading-6.5 space-y-3">
+                    <p>
+                      I&apos;m a{" "}
                       <span className="font-semibold text-[#20221F]">
-                        Software
+                        Software &amp; AI Engineer
                       </span>{" "}
-                      Engineer, currently serving as Founding CTO at{" "}
+                      based in India, building intelligent products from zero to one.
+                    </p>
+                    <p>
+                      I combine engineering depth with a{" "}
+                      <span className="italic font-baskerville text-[#20221F]">
+                        product architect&apos;s
+                      </span>{" "}
+                      mindset, working across distributed backends, autonomous AI agents, and real-time voice systems. I care about the details beneath the interface — architecture, performance, latency, and every interaction in between.
+                    </p>
+                    <p>
+                      Currently building at{" "}
                       <a
                         href="https://www.upchar360.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => soundManager.playClick()}
-                        className="group/curr-company hoverable-wrapper text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-wavy hover:decoration-[#20221F] hover:text-[#20221F] focus:decoration-wavy focus:decoration-[#20221F] focus:text-[#20221F] transition-colors duration-300 ease-out underline-offset-2"
+                        className="text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-[#778A43] hover:text-[#778A43] transition-colors duration-200 underline-offset-2"
                       >
                         Upchaar 360
-                      </a>{" "}
-                      and building autonomous AI systems at{" "}
+                      </a>
+                      , with experience shipping products and AI-driven systems at{" "}
                       <a
                         href="https://www.bitlancetechhub.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => soundManager.playClick()}
-                        className="group/curr-company hoverable-wrapper text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-wavy hover:decoration-[#20221F] hover:text-[#20221F] focus:decoration-wavy focus:decoration-[#20221F] focus:text-[#20221F] transition-colors duration-300 ease-out underline-offset-2"
+                        className="text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-[#778A43] hover:text-[#778A43] transition-colors duration-200 underline-offset-2"
                       >
-                        Bitlance Tech Hub
-                      </a>, with a focus on scalable platforms, intelligent automation, and end-to-end product engineering.
+                        Bitlance
+                      </a>{" "}
+                      and building solutions like{" "}
+                      <a
+                        href="https://samadhan-setu-g8en.onrender.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => soundManager.playClick()}
+                        className="text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-[#778A43] hover:text-[#778A43] transition-colors duration-200 underline-offset-2"
+                      >
+                        Samadhan Setu
+                      </a>
+                      .
+                    </p>
+                    <p>
+                      I thrive in early-stage environments where ideas turn into products and engineering meets real-world impact.
                     </p>
                   </div>
                 </div>
