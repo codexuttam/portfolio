@@ -8,7 +8,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Uttamraj Singh — Software & AI Engineer | Portfolio",
+  title: "Uttamraj Singh | Software & AI Engineer Portfolio",
   description:
     "Personal portfolio of Uttamraj Singh. Computer Science engineering student specializing in AI/ML, full-stack systems, and AI-powered products. Making ideas feel real.",
   keywords: [
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://uttamrajsingh.dev",
-    title: "Uttamraj Singh — Software & AI Engineer",
+    title: "Uttamraj Singh | Software & AI Engineer",
     description:
       "Making ideas feel real. Software and AI-powered products engineered from first principles to production details.",
     siteName: "Uttamraj Singh Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Uttamraj Singh — Software & AI Engineer",
+    title: "Uttamraj Singh | Software & AI Engineer",
     description:
       "Making ideas feel real. Software and AI-powered products engineered from first principles to production details.",
   },

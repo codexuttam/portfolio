@@ -72,7 +72,7 @@ export function About() {
                 I&apos;m a computer science student focused on{" "}
                 <span className="italic font-serif-italic text-[#778A43]">AI/ML</span> and{" "}
                 <span className="font-medium text-[#20221F]">full-stack engineering</span>. I like
-                working across the whole stack — interfaces, APIs, databases, deployment, and the
+                working across the whole stack: interfaces, APIs, databases, deployment, and the
                 small decisions that make a product feel{" "}
                 <span className="italic font-serif-italic text-[#20221F]">right</span>.
               </p>

@@ -66,11 +66,11 @@ export default function HomePage() {
                       based in India, building intelligent products from zero to one.
                     </p>
                     <p>
-                      I combine engineering depth with a{" "}
+                      I bring a{" "}
                       <span className="italic font-baskerville text-[#20221F]">
                         product architect&apos;s
                       </span>{" "}
-                      mindset, working across distributed backends, autonomous AI agents, and real-time voice systems. I care about the details beneath the interface — architecture, performance, latency, and every interaction in between.
+                      mindset to engineering, working across AI systems, autonomous agents, distributed backends, and real-time voice technology. I&apos;m passionate about turning complex ideas into scalable products, with an eye for architecture, performance, and the finer details of user experience.
                     </p>
                     <p>
                       Currently building at{" "}
@@ -83,9 +83,9 @@ export default function HomePage() {
                       >
                         Upchaar 360
                       </a>
-                      , with experience shipping products and AI-driven systems at{" "}
+                      , with experience at{" "}
                       <a
-                        href="https://www.bitlancetechhub.com/"
+                        href="https://bitlancetechhub.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => soundManager.playClick()}
@@ -93,9 +93,9 @@ export default function HomePage() {
                       >
                         Bitlance
                       </a>{" "}
-                      and building solutions like{" "}
+                      and projects like{" "}
                       <a
-                        href="https://samadhan-setu-g8en.onrender.com/"
+                        href="https://samadhan-setu-sandy.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => soundManager.playClick()}
@@ -106,7 +106,7 @@ export default function HomePage() {
                       .
                     </p>
                     <p>
-                      I thrive in early-stage environments where ideas turn into products and engineering meets real-world impact.
+                      I thrive in early-stage environments where engineering, experimentation, and product thinking come together to create meaningful impact.
                     </p>
                   </div>
                 </div>

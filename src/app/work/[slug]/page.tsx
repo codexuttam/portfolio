@@ -31,15 +31,15 @@ export async function generateMetadata({
 
   if (!project) {
     return {
-      title: "Project Not Found — Uttamraj Singh",
+      title: "Project Not Found | Uttamraj Singh",
     };
   }
 
   return {
-    title: `${project.title} — Case Study | Uttamraj Singh`,
+    title: `${project.title} | Case Study | Uttamraj Singh`,
     description: project.shortDescription,
     openGraph: {
-      title: `${project.title} — Uttamraj Singh`,
+      title: `${project.title} | Uttamraj Singh`,
       description: project.shortDescription,
     },
   };

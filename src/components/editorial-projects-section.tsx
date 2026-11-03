@@ -79,7 +79,7 @@ export function EditorialProjectsSection() {
 
                   {/* Category Pill for quick context */}
                   <span className="hidden sm:inline-block text-[11px] font-mono text-[#73756E]/80">
-                    — {project.category.toLowerCase()}
+                    / {project.category.toLowerCase()}
                   </span>
 
                   {/* Year Right Aligned */}

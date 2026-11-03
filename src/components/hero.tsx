@@ -73,7 +73,7 @@ export function Hero() {
 
             {/* Introduction Copy */}
             <p className="text-lg sm:text-xl text-[#73756E] leading-relaxed max-w-2xl font-light mb-10">
-              Hi, I&apos;m Uttamraj Singh &mdash; an AI &amp; Software Engineer, currently serving as Founding CTO at{" "}
+              Hi, I&apos;m Uttamraj Singh, an AI &amp; Software Engineer, currently serving as Founding CTO at{" "}
               <a
                 href="https://www.upchar360.com/"
                 target="_blank"
@@ -186,7 +186,7 @@ export function Hero() {
                 {/* Minimal Caption at bottom of photograph */}
                 <div className="absolute bottom-0 inset-x-0 z-20 p-4 bg-gradient-to-t from-[#141612] via-[#141612]/90 to-transparent flex items-center justify-between border-t border-[#E3EBD8]/10 font-mono text-[11px] text-[#E3EBD8]/80">
                   <span className="tracking-widest">
-                    UTTAMRAJ SINGH — 2026 ARCHIVE
+                    UTTAMRAJ SINGH // 2026 ARCHIVE
                   </span>
                   <span className="text-[#BFDF64] font-semibold tracking-wider">
                     [REF: US-01]

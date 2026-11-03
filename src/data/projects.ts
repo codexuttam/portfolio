@@ -55,7 +55,7 @@ export const projectsData: ProjectItem[] = [
       "NLP",
     ],
     caseStudyUrl: "/work/samadhan-setu",
-    liveUrl: "https://samadhan-setu-g8en.onrender.com/",
+    liveUrl: "https://samadhan-setu-sandy.vercel.app/",
     status: "Case Study Available",
     year: "2026",
     role: "System Designer & Lead Developer",

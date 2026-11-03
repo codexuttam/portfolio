@@ -70,7 +70,7 @@ export const profileData: ProfileData = {
   headlinePrefix: "Making ideas feel",
   headlineEmphasis: "real.",
   bioIntro:
-    "Hi, I'm Uttamraj Singh — an AI & Software Engineer, currently serving as Founding CTO at Upchaar 360 and building autonomous AI systems at Bitlance Tech Hub, with a focus on scalable platforms, intelligent automation, and end-to-end product engineering.",
+    "Hi, I'm Uttamraj Singh, an AI & Software Engineer, currently serving as Founding CTO at Upchaar 360 and building autonomous AI systems at Bitlance Tech Hub, with a focus on scalable platforms, intelligent automation, and end-to-end product engineering.",
   location: "India / Available Globally",
   discipline: "Computer Science Engineering (AI/ML)",
   currentFocus: "Agentic Workflows, Voice AI & Production Systems",
@@ -131,7 +131,7 @@ export const profileData: ProfileData = {
   ],
   achievements: [
     {
-      title: "2nd Prize — Campus Project Exhibition",
+      title: "2nd Prize - Campus Project Exhibition",
       period: "Feb. 2026",
       description:
         "Awarded 2nd prize for developing Samadhan Setu, an AI-powered civic grievance redressal platform.",
@@ -139,24 +139,24 @@ export const profileData: ProfileData = {
     },
     {
       title: "Google Campus Ambassador",
-      period: "Oct. 2025 – Feb. 2026",
+      period: "Oct. 2025 - Feb. 2026",
       description:
         "Engaged and mentored campus learners on real-world AI applications, technical communication, and community outreach.",
     },
     {
-      title: "Campus Ambassador — HackWithIndia",
-      period: "Oct. 2025 – Jan. 2026",
+      title: "Campus Ambassador - HackWithIndia",
+      period: "Oct. 2025 - Jan. 2026",
       description:
         "Organized hackathons and technical webinars fostering student innovation and collaborative problem-solving.",
     },
     {
-      title: "Top 50 / 500 Finalist — Hackemon Hackathon",
+      title: "Top 50 / 500 Finalist - Hackemon Hackathon",
       period: "2025",
       description:
         "Ranked in the top 10% of participants for rapid prototyping and algorithmic problem solving.",
     },
     {
-      title: "Open Source Contributor — Social Summer of Code",
+      title: "Open Source Contributor - Social Summer of Code",
       period: "2025",
       description:
         "Collaborated on real-world open-source repositories improving feature development and code quality.",
@@ -166,9 +166,9 @@ export const profileData: ProfileData = {
     headline: "Curious by nature. Builder by choice.",
     narrative: [
       "I'm a Software & AI Engineer based in India, building intelligent products from zero to one.",
-      "I combine engineering depth with a product architect's mindset, working across distributed backends, autonomous AI agents, and real-time voice systems. I care about the details beneath the interface — architecture, performance, latency, and every interaction in between.",
-      "Currently building at Upchaar 360, with experience shipping products and AI-driven systems at Bitlance and building solutions like Samadhan Setu.",
-      "I thrive in early-stage environments where ideas turn into products and engineering meets real-world impact.",
+      "I bring a product architect's mindset to engineering, working across AI systems, autonomous agents, distributed backends, and real-time voice technology. I'm passionate about turning complex ideas into scalable products, with an eye for architecture, performance, and the finer details of user experience.",
+      "Currently building at Upchaar 360, with experience at Bitlance and projects like Samadhan Setu.",
+      "I thrive in early-stage environments where engineering, experimentation, and product thinking come together to create meaningful impact.",
     ],
     technologies: [
       "Next.js",
@@ -210,7 +210,7 @@ export const profileData: ProfileData = {
   contact: {
     headlinePrefix: "Have a good",
     headlineEmphasis: "one.",
-    copy: "Whether you have an ambitious product idea, a challenging engineering problem in AI/ML systems, or an internship opportunity — my inbox is always open.",
+    copy: "Whether you have an ambitious product idea, a challenging engineering problem in AI/ML systems, or an internship opportunity, my inbox is always open.",
     phone: "+91 8318768905",
     email: "uttamrajsingh423@gmail.com",
     github: "https://github.com/codexuttam",

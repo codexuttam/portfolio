@@ -44,7 +44,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
   const navigationItems = [
     {
       category: "Navigation",
-      title: "Work — Selected Projects",
+      title: "Work // Selected Projects",
       subtitle: "Explore production systems & prototypes",
       action: () => {
         router.push("#work");
@@ -54,7 +54,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
     },
     {
       category: "Navigation",
-      title: "About — Background & Philosophy",
+      title: "About // Background & Philosophy",
       subtitle: "Engineering mindset & technology foundations",
       action: () => {
         router.push("#about");
@@ -64,7 +64,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
     },
     {
       category: "Navigation",
-      title: "Contact — Let's Connect",
+      title: "Contact // Let's Connect",
       subtitle: "Collaboration, opportunities, and discussions",
       action: () => {
         router.push("#contact");
