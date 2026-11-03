@@ -6,6 +6,8 @@ import { BottomDock } from "@/components/bottom-dock";
 import { CommandPalette } from "@/components/command-palette";
 import { TextScramble } from "@/components/text-scramble";
 import { soundManager } from "@/utils/audio";
+import { ScrambleCursor } from "@/components/scramble-cursor";
+import { HeartHover } from "@/components/heart-hover";
 
 export default function AboutPage() {
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
@@ -56,19 +58,49 @@ export default function AboutPage() {
                   <span className="font-semibold text-[#20221F]">
                     Software &amp; AI Engineer
                   </span>{" "}
-                  based in India, building intelligent products from zero to one.
+                  based in{" "}
+                  <span className="inline-flex items-center gap-1 font-semibold text-[#20221F]">
+                    <span>India</span>
+                    <span className="inline-flex flex-col h-3 w-1.5 rounded-[1px] overflow-hidden shadow-xs ring-1 ring-black/10">
+                      <span className="h-1 bg-[#FF9933] w-full" />
+                      <span className="h-1 bg-[#FFFFFF] w-full" />
+                      <span className="h-1 bg-[#138808] w-full" />
+                    </span>
+                  </span>
+                  , building intelligent products from zero to one.
                 </p>
 
                 <p>
                   I bring a{" "}
-                  <span className="font-baskerville font-medium italic text-[#778A43]">
+                  <span className="relative inline-block font-baskerville italic text-[#4338CA] bg-[#4F46E5]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(99,102,241,0.18)]">
                     product architect&apos;s
                   </span>{" "}
-                  mindset to engineering, working across AI systems, autonomous agents, distributed backends, and real-time voice technology. I&apos;m passionate about turning complex ideas into scalable products, with an eye for architecture, performance, and the finer details of user experience.
+                  mindset to engineering, working across AI systems, autonomous agents,{" "}
+                  <span className="relative inline-block font-medium text-[#20221F]">
+                    distributed backends
+                    <svg
+                      className="absolute -bottom-1 left-0 w-full h-[5px] text-[#778A43]"
+                      viewBox="0 0 100 8"
+                      preserveAspectRatio="none"
+                    >
+                      <path
+                        d="M0,5 Q25,0 50,5 T100,5"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </span>
+                  , and{" "}
+                  <span className="font-medium text-[#20221F]">
+                    real-time voice technology
+                  </span>
+                  . I&apos;m passionate about turning complex ideas into scalable products, with an eye for architecture, performance, and the finer details of user experience.
                 </p>
 
                 <p>
-                  Currently building at{" "}
+                  Currently building as a <ScrambleCursor text="FOUNDING CTO" /> at{" "}
                   <a
                     href="https://www.upchar360.com/"
                     target="_blank"
@@ -111,14 +143,15 @@ export default function AboutPage() {
                   </p>
                   <p className="text-xs text-[#73756E] leading-relaxed">
                     B.Tech in Computer Science & Engineering (AI/ML) at Noida
-                    International University (2024–2028, CGPA 8.5/10). Specializing
+                    International University (2024-2028, CGPA 8.5/10). Specializing
                     in Python, PyTorch, LangChain, TypeScript, Next.js, FastAPI,
                     Docker, PostgreSQL, and WebRTC.
                   </p>
                 </div>
 
-                <p className="pt-4 text-xs text-[#73756E]">
-                  Liked what you found? I&apos;m on{" "}
+                <div className="pt-4 text-xs text-[#73756E] flex flex-wrap items-center gap-1.5">
+                  <HeartHover text="Liked what you found?" />
+                  <span>I&apos;m on</span>
                   <a
                     href="https://x.com/codexuttam"
                     target="_blank"
@@ -128,7 +161,7 @@ export default function AboutPage() {
                   >
                     X (twitter)
                   </a>
-                  ,{" "}
+                  ,
                   <a
                     href="https://github.com/codexuttam"
                     target="_blank"
@@ -138,7 +171,7 @@ export default function AboutPage() {
                   >
                     GitHub
                   </a>
-                  , and{" "}
+                  , and
                   <a
                     href="https://www.linkedin.com/in/uttamraj-singh-054593259/"
                     target="_blank"
@@ -149,7 +182,7 @@ export default function AboutPage() {
                     LinkedIn
                   </a>
                   .
-                </p>
+                </div>
               </div>
             </div>
           </div>

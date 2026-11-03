@@ -6,6 +6,8 @@ import { EditorialProjectsSection } from "@/components/editorial-projects-sectio
 import { BottomDock } from "@/components/bottom-dock";
 import { CommandPalette } from "@/components/command-palette";
 import { soundManager } from "@/utils/audio";
+import { ScrambleCursor } from "@/components/scramble-cursor";
+import { HeartHover } from "@/components/heart-hover";
 
 export default function HomePage() {
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
@@ -63,17 +65,47 @@ export default function HomePage() {
                       <span className="font-semibold text-[#20221F]">
                         Software &amp; AI Engineer
                       </span>{" "}
-                      based in India, building intelligent products from zero to one.
+                      based in{" "}
+                      <span className="inline-flex items-center gap-1 font-semibold text-[#20221F]">
+                        <span>India</span>
+                        <span className="inline-flex flex-col h-3 w-1.5 rounded-[1px] overflow-hidden shadow-xs ring-1 ring-black/10">
+                          <span className="h-1 bg-[#FF9933] w-full" />
+                          <span className="h-1 bg-[#FFFFFF] w-full" />
+                          <span className="h-1 bg-[#138808] w-full" />
+                        </span>
+                      </span>
+                      , building intelligent products from zero to one.
                     </p>
                     <p>
                       I bring a{" "}
-                      <span className="italic font-baskerville text-[#20221F]">
+                      <span className="relative inline-block font-baskerville italic text-[#4338CA] bg-[#4F46E5]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(99,102,241,0.18)]">
                         product architect&apos;s
                       </span>{" "}
-                      mindset to engineering, working across AI systems, autonomous agents, distributed backends, and real-time voice technology. I&apos;m passionate about turning complex ideas into scalable products, with an eye for architecture, performance, and the finer details of user experience.
+                      mindset to engineering, working across AI systems, autonomous agents,{" "}
+                      <span className="relative inline-block font-medium text-[#20221F]">
+                        distributed backends
+                        <svg
+                          className="absolute -bottom-1 left-0 w-full h-[5px] text-[#778A43]"
+                          viewBox="0 0 100 8"
+                          preserveAspectRatio="none"
+                        >
+                          <path
+                            d="M0,5 Q25,0 50,5 T100,5"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      </span>
+                      , and{" "}
+                      <span className="font-medium text-[#20221F]">
+                        real-time voice technology
+                      </span>
+                      . I&apos;m passionate about turning complex ideas into scalable products, with an eye for architecture, performance, and the finer details of user experience.
                     </p>
                     <p>
-                      Currently building at{" "}
+                      Currently building as a <ScrambleCursor text="FOUNDING CTO" /> at{" "}
                       <a
                         href="https://www.upchar360.com/"
                         target="_blank"
@@ -289,6 +321,14 @@ export default function HomePage() {
                         </span>
                         <span className="inline-block pl-2">Resume (PDF)</span>
                       </a>
+                    </div>
+
+                    {/* Liked what you found interactive footer */}
+                    <div className="pt-4 border-t border-[#20221F]/10">
+                      <p className="text-xs text-[#73756E] flex items-center gap-1.5 font-medium">
+                        <HeartHover text="Liked what you found?" />
+                        <span>Let&apos;s build something meaningful together.</span>
+                      </p>
                     </div>
                   </div>
                 </section>
