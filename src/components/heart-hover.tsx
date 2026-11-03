@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import { soundManager } from "@/utils/audio";
 
 interface HeartHoverProps {
-  text?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
   className?: string;
 }
 
@@ -15,48 +14,44 @@ interface FloatingHeart {
   y: number;
   rot: number;
   scale: number;
+  delayMs: number;
 }
 
-export function HeartHover({
-  text,
-  children,
-  className = "",
-}: HeartHoverProps) {
+export function HeartHover({ children, className = "" }: HeartHoverProps) {
   const [hearts, setHearts] = useState<FloatingHeart[]>([]);
 
   const triggerHearts = () => {
     soundManager.playClick();
+    const now = Date.now();
     const newHearts: FloatingHeart[] = [
-      { id: Date.now() + 1, x: -16, y: -26, rot: -18, scale: 0.9 },
-      { id: Date.now() + 2, x: 4, y: -38, rot: 8, scale: 1.15 },
-      { id: Date.now() + 3, x: 24, y: -28, rot: 22, scale: 0.85 },
-      { id: Date.now() + 4, x: -32, y: -34, rot: -28, scale: 0.75 },
+      { id: now + 1, x: -14, y: -26, rot: -14, scale: 0.9, delayMs: 0 },
+      { id: now + 2, x: 2, y: -38, rot: 8, scale: 1.1, delayMs: 80 },
+      { id: now + 3, x: 18, y: -28, rot: 18, scale: 0.85, delayMs: 160 },
     ];
     setHearts(newHearts);
 
     setTimeout(() => {
       setHearts([]);
-    }, 1200);
+    }, 1400);
   };
 
   return (
     <span
       onMouseEnter={triggerHearts}
-      className={`relative inline-block cursor-pointer group select-none ${className}`}
+      className={`relative inline-block cursor-pointer select-none ${className}`}
     >
-      <span className="group-hover:text-[#20221F] transition-colors duration-200">
-        {children || text}
-      </span>
+      {children}
 
-      {/* Floating Animated Hearts */}
+      {/* Smooth Animated Floating Hearts */}
       {hearts.map((h) => (
         <span
           key={h.id}
-          className="absolute left-1/2 pointer-events-none text-red-500 animate-float-heart z-30"
+          className="absolute left-1/2 -top-2 pointer-events-none text-red-500 animate-float-heart z-40"
           style={{
+            animationDelay: `${h.delayMs}ms`,
             transform: `translate(${h.x}px, ${h.y}px) rotate(${h.rot}deg) scale(${h.scale})`,
-            fontSize: "14px",
-            filter: "drop-shadow(0 2px 4px rgba(239, 68, 68, 0.4))",
+            fontSize: "13px",
+            filter: "drop-shadow(0 2px 6px rgba(239, 68, 68, 0.45))",
           }}
         >
           ❤️

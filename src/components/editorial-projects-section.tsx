@@ -92,10 +92,10 @@ export function EditorialProjectsSection() {
                     ❊
                   </span>
 
-                  {/* Project Title */}
-                  <p className="text-sm font-medium transition-colors duration-200">
+                  {/* Project Title with product-architect glow highlight on hover */}
+                  <span className="text-sm font-medium transition-all duration-200 px-1.5 py-0.5 rounded group-hover/w-item:text-[#4338CA] group-hover/w-item:bg-[#4F46E5]/10 group-hover/w-item:shadow-[0_0_12px_rgba(99,102,241,0.18)]">
                     {project.title}
-                  </p>
+                  </span>
 
                   {/* Category Pill for quick context */}
                   <span className="hidden sm:inline-block text-[11px] font-mono text-[#73756E]/80">

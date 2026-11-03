@@ -109,7 +109,7 @@ export default function AboutPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => soundManager.playClick()}
-                    className="text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-[#778A43] hover:text-[#778A43] transition-colors duration-200 underline-offset-2"
+                    className="relative inline-block font-baskerville italic text-[#4338CA] bg-[#4F46E5]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(99,102,241,0.18)] hover:bg-[#4F46E5]/20 transition-all duration-200"
                   >
                     Upchaar 360
                   </a>
@@ -119,7 +119,7 @@ export default function AboutPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => soundManager.playClick()}
-                    className="text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-[#778A43] hover:text-[#778A43] transition-colors duration-200 underline-offset-2"
+                    className="relative inline-block font-baskerville italic text-[#4338CA] bg-[#4F46E5]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(99,102,241,0.18)] hover:bg-[#4F46E5]/20 transition-all duration-200"
                   >
                     Bitlance
                   </a>{" "}
@@ -129,7 +129,7 @@ export default function AboutPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => soundManager.playClick()}
-                    className="text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-[#778A43] hover:text-[#778A43] transition-colors duration-200 underline-offset-2"
+                    className="relative inline-block font-baskerville italic text-[#4338CA] bg-[#4F46E5]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(99,102,241,0.18)] hover:bg-[#4F46E5]/20 transition-all duration-200"
                   >
                     Samadhan Setu
                   </a>
@@ -152,8 +152,8 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className="pt-4 text-xs text-[#73756E] flex flex-wrap items-center gap-2">
-                  <HeartHover text="Liked what you found?" />
+                <div className="pt-4 text-xs text-[#73756E] flex flex-wrap items-center gap-1.5">
+                  <span>Liked what you found?</span>
                   <span>I&apos;m on</span>
                   <HeartHover>
                     <a
