@@ -36,11 +36,11 @@ export default function AboutPage() {
                 <div>
                   <div className="relative w-full aspect-[632/356] overflow-hidden border border-[#20221F]/10 bg-[#20221F]/5 shadow-sm">
                     <Image
-                      src="/images/portrait/editorial-portrait.svg"
-                      alt="Uttamraj Singh portrait study banner"
+                      src="/images/portrait/portrait.jpg"
+                      alt="Uttamraj Singh portrait"
                       fill
                       priority
-                      className="w-full h-full object-cover inline-block"
+                      className="w-full h-full object-cover object-center inline-block"
                     />
                   </div>
                   <p className="text-xs text-[#73756E]/75 text-end pt-2">

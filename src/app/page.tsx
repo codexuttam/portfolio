@@ -37,8 +37,8 @@ export default function HomePage() {
                 <div>
                   <div className="relative w-full aspect-[632/356] overflow-hidden border border-[#20221F]/10 bg-[#20221F]/5 shadow-sm">
                     <Image
-                      src="/images/banner/editorial-banner.svg"
-                      alt="Uttamraj Singh architectural and engineering landscape study banner"
+                      src="/images/banner/editorial-banner.jpg"
+                      alt="Uttamraj Singh serene landscape banner"
                       fill
                       priority
                       className="w-full h-full object-cover inline-block"

@@ -14,8 +14,8 @@ export function PanoramicBanner() {
 
         {/* Panoramic image */}
         <Image
-          src="/images/banner/editorial-banner.svg"
-          alt="Architectural landscape study banner of Uttamraj Singh"
+          src="/images/banner/editorial-banner.jpg"
+          alt="Serene tree and rolling hills landscape banner"
           fill
           priority
           sizes="(max-width: 1280px) 100vw, 1280px"
