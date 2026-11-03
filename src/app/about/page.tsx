@@ -103,7 +103,7 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  Currently building as a <ScrambleCursor text="FOUNDING CTO" /> at{" "}
+                  Currently working as a <ScrambleCursor text="Founding Engineer" /> at{" "}
                   <a
                     href="https://www.upchar360.com/"
                     target="_blank"

@@ -70,7 +70,7 @@ export const profileData: ProfileData = {
   headlinePrefix: "Making ideas feel",
   headlineEmphasis: "real.",
   bioIntro:
-    "Hi, I'm Uttamraj Singh, an AI & Software Engineer, currently serving as Founding CTO at Upchaar 360 and building autonomous AI systems at Bitlance Tech Hub, with a focus on scalable platforms, intelligent automation, and end-to-end product engineering.",
+    "Hi, I'm Uttamraj Singh, a software and AI engineer who loves building products from the ground up. Currently working as a Founding Engineer at Upchaar 360, with experience building AI-powered products and systems at Bitlance, from architecture to deployment.",
   location: "India / Available Globally",
   discipline: "Computer Science Engineering (AI/ML)",
   currentFocus: "Agentic Workflows, Voice AI & Production Systems",

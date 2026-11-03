@@ -61,54 +61,17 @@ export default function HomePage() {
                   </h1>
                   <div className="font-medium pl-4 text-sm leading-6.5 space-y-3">
                     <p>
-                      I&apos;m a{" "}
+                      Hi,
+                    </p>
+                    <p>
+                      I&apos;m{" "}
                       <span className="font-semibold text-[#20221F]">
-                        Software &amp; AI Engineer
-                      </span>{" "}
-                      based in{" "}
-                      <span className="inline-flex items-center gap-1.5 font-semibold text-[#20221F]">
-                        <span>India</span>
-                        <span className="inline-flex items-center justify-center w-5 h-3.5 rounded-[2px] overflow-hidden shadow-xs border border-[#20221F]/15">
-                          <svg className="w-full h-full" viewBox="0 0 24 16">
-                            <rect width="24" height="5.33" fill="#FF9933" />
-                            <rect y="5.33" width="24" height="5.33" fill="#FFFFFF" />
-                            <rect y="10.66" width="24" height="5.33" fill="#138808" />
-                            <circle cx="12" cy="8" r="1.8" fill="#000080" />
-                          </svg>
-                        </span>
+                        Uttamraj Singh
                       </span>
-                      , building intelligent products from zero to one.
+                      , a software and AI engineer who loves building products from the ground up.
                     </p>
                     <p>
-                      I bring a{" "}
-                      <span className="relative inline-block font-baskerville italic text-[#4338CA] bg-[#4F46E5]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(99,102,241,0.18)]">
-                        product architect&apos;s
-                      </span>{" "}
-                      mindset to engineering, working across AI systems, autonomous agents,{" "}
-                      <span className="relative inline-block font-medium text-[#20221F]">
-                        distributed backends
-                        <svg
-                          className="absolute -bottom-1 left-0 w-full h-[5px] text-[#778A43]"
-                          viewBox="0 0 100 8"
-                          preserveAspectRatio="none"
-                        >
-                          <path
-                            d="M0,5 Q25,0 50,5 T100,5"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                          />
-                        </svg>
-                      </span>
-                      , and{" "}
-                      <span className="font-medium text-[#20221F]">
-                        real-time voice technology
-                      </span>
-                      . I&apos;m passionate about turning complex ideas into scalable products, with an eye for architecture, performance, and the finer details of user experience.
-                    </p>
-                    <p>
-                      Currently building as a <ScrambleCursor text="FOUNDING CTO" /> at{" "}
+                      Currently working as a <ScrambleCursor text="Founding Engineer" /> at{" "}
                       <a
                         href="https://www.upchar360.com/"
                         target="_blank"
@@ -118,7 +81,7 @@ export default function HomePage() {
                       >
                         Upchaar 360
                       </a>
-                      , with experience at{" "}
+                      , with experience building AI-powered products and systems at{" "}
                       <a
                         href="https://bitlancetechhub.com/"
                         target="_blank"
@@ -127,21 +90,8 @@ export default function HomePage() {
                         className="text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-[#778A43] hover:text-[#778A43] transition-colors duration-200 underline-offset-2"
                       >
                         Bitlance
-                      </a>{" "}
-                      and projects like{" "}
-                      <a
-                        href="https://samadhan-setu-sandy.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => soundManager.playClick()}
-                        className="text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-[#778A43] hover:text-[#778A43] transition-colors duration-200 underline-offset-2"
-                      >
-                        Samadhan Setu
                       </a>
-                      .
-                    </p>
-                    <p>
-                      I thrive in early-stage environments where engineering, experimentation, and product thinking come together to create meaningful impact.
+                      , from architecture to deployment.
                     </p>
                   </div>
                 </div>
