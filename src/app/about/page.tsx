@@ -10,6 +10,48 @@ import { ScrambleCursor } from "@/components/scramble-cursor";
 import { HeartHover } from "@/components/heart-hover";
 import { RopeUnderline } from "@/components/rope-underline";
 
+const skillCategories = [
+  {
+    category: "Languages",
+    skills: ["Python", "TypeScript", "JavaScript", "C"],
+  },
+  {
+    category: "AI & Machine Learning",
+    skills: ["PyTorch", "LangChain", "LLMs", "RAG", "AI Agents"],
+  },
+  {
+    category: "Frontend",
+    skills: ["React", "Next.js", "Tailwind CSS"],
+  },
+  {
+    category: "Backend & APIs",
+    skills: ["Node.js", "Express.js", "FastAPI"],
+  },
+  {
+    category: "Databases",
+    skills: ["PostgreSQL", "MongoDB", "Prisma"],
+  },
+  {
+    category: "Infrastructure",
+    skills: ["Docker", "Git", "GitHub", "Vercel"],
+  },
+  {
+    category: "Real-time Systems",
+    skills: ["WebRTC", "SIP", "Voice AI"],
+  },
+];
+
+const prominentSkills = new Set([
+  "Python",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "FastAPI",
+  "PostgreSQL",
+  "PyTorch",
+  "AI Agents",
+]);
+
 export default function AboutPage() {
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
 
@@ -130,16 +172,57 @@ export default function AboutPage() {
                   I thrive in early-stage environments where engineering, experimentation, and product thinking come together to create meaningful impact.
                 </p>
 
-                <div className="pt-6 border-t border-[#20221F]/10 space-y-2">
+                <div className="pt-6 border-t border-[#20221F]/10 space-y-4">
                   <p className="text-xs font-mono uppercase tracking-wider text-[#73756E]">
                     Current Academic & Technical Foundation
                   </p>
-                  <p className="text-xs text-[#73756E] leading-relaxed">
-                    B.Tech in Computer Science & Engineering (AI/ML) at Noida
-                    International University (2024-2028, CGPA 8.5/10). Specializing
-                    in Python, PyTorch, LangChain, TypeScript, Next.js, FastAPI,
-                    Docker, PostgreSQL, and WebRTC.
-                  </p>
+
+                  {/* Education */}
+                  <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 text-xs pb-1">
+                    <div>
+                      <span className="font-medium text-[#20221F]">
+                        B.Tech in Computer Science & Engineering (AI/ML)
+                      </span>
+                      <span className="text-[#73756E]">
+                        {" "}· Noida International University
+                      </span>
+                    </div>
+                    <div className="font-mono text-[11px] text-[#73756E] shrink-0">
+                      2024–2028 · CGPA: 8.5/10
+                    </div>
+                  </div>
+
+                  {/* Technical Skills Collection */}
+                  <div className="space-y-2.5 pt-1">
+                    {skillCategories.map((group) => (
+                      <div
+                        key={group.category}
+                        className="grid grid-cols-1 sm:grid-cols-[140px_1fr] items-baseline gap-1 sm:gap-2.5 text-xs"
+                      >
+                        <span className="text-[11px] font-mono text-[#73756E] tracking-tight">
+                          {group.category}
+                        </span>
+                        <div className="flex flex-wrap items-center gap-1.5">
+                          {group.skills.map((skill) => {
+                            const isProminent = prominentSkills.has(skill);
+                            return (
+                              <span
+                                key={skill}
+                                onMouseEnter={() => soundManager.playTick()}
+                                className={`inline-flex items-center text-[11.5px] px-2 py-0.5 rounded transition-all duration-200 cursor-default select-none ${
+                                  isProminent
+                                    ? "font-medium text-[#20221F] bg-[#20221F]/[0.06] border border-[#20221F]/20 hover:bg-[#20221F]/[0.11] hover:border-[#20221F]/30 shadow-xs"
+                                    : "font-normal text-[#20221F]/75 bg-[#20221F]/[0.025] border border-[#20221F]/[0.06] hover:bg-[#20221F]/[0.07] hover:text-[#20221F]"
+                                }`}
+                              >
+                                {skill}
+                              </span>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="pt-4 text-xs text-[#73756E] flex flex-wrap items-center gap-1.5">
