@@ -70,7 +70,7 @@ export const profileData: ProfileData = {
   headlinePrefix: "Making ideas feel",
   headlineEmphasis: "real.",
   bioIntro:
-    "Hi, I'm Uttamraj Singh, a software and AI engineer who loves building products from the ground up. Currently working as a Founding Engineer at Upchaar 360, with experience building AI-powered products and systems at Bitlance, from architecture to deployment.",
+    "Hi, I'm Uttamraj Singh, a software and AI engineer who loves building products from the ground up. Currently working as a Founding Engineer at Upchaar 360, with experience building AI-powered products and systems at Bitlance Tech Hub, from architecture to deployment.",
   location: "India / Available Globally",
   discipline: "Computer Science Engineering (AI/ML)",
   currentFocus: "Agentic Workflows, Voice AI & Production Systems",
@@ -167,7 +167,7 @@ export const profileData: ProfileData = {
     narrative: [
       "I'm a Software & AI Engineer based in India, building intelligent products from zero to one.",
       "I bring a product architect's mindset to engineering, working across AI systems, autonomous agents, distributed backends, and real-time voice technology. I'm passionate about turning complex ideas into scalable products, with an eye for architecture, performance, and the finer details of user experience.",
-      "Currently building at Upchaar 360, with experience at Bitlance and projects like Samadhan Setu.",
+      "Currently building at Upchaar 360, with experience at Bitlance Tech Hub and projects like Samadhan Setu.",
       "I thrive in early-stage environments where engineering, experimentation, and product thinking come together to create meaningful impact.",
     ],
     technologies: [

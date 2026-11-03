@@ -8,6 +8,7 @@ import { CommandPalette } from "@/components/command-palette";
 import { soundManager } from "@/utils/audio";
 import { ScrambleCursor } from "@/components/scramble-cursor";
 import { HeartHover } from "@/components/heart-hover";
+import { RopeUnderline } from "@/components/rope-underline";
 
 export default function HomePage() {
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
@@ -68,7 +69,11 @@ export default function HomePage() {
                       <span className="font-semibold text-[#20221F]">
                         Uttamraj Singh
                       </span>
-                      , a software and AI engineer who loves building products from the ground up.
+                      , a software and AI engineer who loves{" "}
+                      <RopeUnderline>
+                        building products from the ground up
+                      </RopeUnderline>
+                      .
                     </p>
                     <p>
                       Currently working as a <ScrambleCursor text="Founding Engineer" /> at{" "}
@@ -77,7 +82,7 @@ export default function HomePage() {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => soundManager.playClick()}
-                        className="relative inline-block font-baskerville italic text-[#4338CA] bg-[#4F46E5]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(99,102,241,0.18)] hover:bg-[#4F46E5]/20 transition-all duration-200"
+                        className="relative inline-block font-baskerville italic text-[#C2410C] bg-[#EA580C]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(234,88,12,0.18)] hover:bg-[#EA580C]/20 transition-all duration-200"
                       >
                         Upchaar 360
                       </a>
@@ -87,11 +92,15 @@ export default function HomePage() {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => soundManager.playClick()}
-                        className="relative inline-block font-baskerville italic text-[#4338CA] bg-[#4F46E5]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(99,102,241,0.18)] hover:bg-[#4F46E5]/20 transition-all duration-200"
+                        className="relative inline-block font-baskerville italic text-[#047857] bg-[#059669]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(5,150,105,0.18)] hover:bg-[#059669]/20 transition-all duration-200"
                       >
-                        Bitlance
+                        Bitlance Tech Hub
                       </a>
-                      , from architecture to deployment.
+                      , from{" "}
+                      <RopeUnderline color="#6B7F52">
+                        architecture to deployment
+                      </RopeUnderline>
+                      .
                     </p>
                   </div>
                 </div>

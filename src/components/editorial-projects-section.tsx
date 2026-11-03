@@ -6,6 +6,19 @@ import Image from "next/image";
 import { projectsData, ProjectItem } from "@/data/projects";
 import { soundManager } from "@/utils/audio";
 import { ArrowUpRight } from "lucide-react";
+import { RopeUnderline } from "@/components/rope-underline";
+
+const projectGlowStyles: Record<string, string> = {
+  "samadhan-setu":
+    "group-hover/w-item:text-[#6D28D9] group-hover/w-item:bg-[#7C3AED]/10 group-hover/w-item:shadow-[0_0_12px_rgba(124,58,237,0.2)]",
+  "acad-x":
+    "group-hover/w-item:text-[#047857] group-hover/w-item:bg-[#059669]/10 group-hover/w-item:shadow-[0_0_12px_rgba(5,150,105,0.2)]",
+  iona: "group-hover/w-item:text-[#C2410C] group-hover/w-item:bg-[#EA580C]/10 group-hover/w-item:shadow-[0_0_12px_rgba(234,88,12,0.2)]",
+  "aspirant-saathi":
+    "group-hover/w-item:text-[#0F766E] group-hover/w-item:bg-[#0D9488]/10 group-hover/w-item:shadow-[0_0_12px_rgba(13,148,136,0.2)]",
+  "quicklearn-ai":
+    "group-hover/w-item:text-[#4338CA] group-hover/w-item:bg-[#4F46E5]/10 group-hover/w-item:shadow-[0_0_12px_rgba(99,102,241,0.2)]",
+};
 
 export function EditorialProjectsSection() {
   const [hoveredProject, setHoveredProject] = useState<ProjectItem | null>(null);
@@ -53,22 +66,7 @@ export function EditorialProjectsSection() {
             on the side
           </span>
           , the kind of projects an{" "}
-          <span className="relative inline-block font-medium text-[#20221F]">
-            obsessed engineer
-            <svg
-              className="absolute -bottom-1 left-0 w-full h-[5px] text-[#778A43]"
-              viewBox="0 0 100 8"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M0,5 Q25,0 50,5 T100,5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-          </span>{" "}
+          <RopeUnderline color="#778A43">obsessed engineer</RopeUnderline>{" "}
           ends up making anyway.
         </p>
 
@@ -92,8 +90,13 @@ export function EditorialProjectsSection() {
                     ❊
                   </span>
 
-                  {/* Project Title with product-architect glow highlight on hover */}
-                  <span className="text-sm font-medium transition-all duration-200 px-1.5 py-0.5 rounded group-hover/w-item:text-[#4338CA] group-hover/w-item:bg-[#4F46E5]/10 group-hover/w-item:shadow-[0_0_12px_rgba(99,102,241,0.18)]">
+                  {/* Project Title with customized glow highlight on hover */}
+                  <span
+                    className={`text-sm font-medium transition-all duration-200 px-1.5 py-0.5 rounded ${
+                      projectGlowStyles[project.id] ||
+                      "group-hover/w-item:text-[#4338CA] group-hover/w-item:bg-[#4F46E5]/10 group-hover/w-item:shadow-[0_0_12px_rgba(99,102,241,0.18)]"
+                    }`}
+                  >
                     {project.title}
                   </span>
 

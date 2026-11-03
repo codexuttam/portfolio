@@ -8,6 +8,7 @@ import { TextScramble } from "@/components/text-scramble";
 import { soundManager } from "@/utils/audio";
 import { ScrambleCursor } from "@/components/scramble-cursor";
 import { HeartHover } from "@/components/heart-hover";
+import { RopeUnderline } from "@/components/rope-underline";
 
 export default function AboutPage() {
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
@@ -79,22 +80,11 @@ export default function AboutPage() {
                     product architect&apos;s
                   </span>{" "}
                   mindset to engineering, working across AI systems, autonomous agents,{" "}
-                  <span className="relative inline-block font-medium text-[#20221F]">
-                    distributed backends
-                    <svg
-                      className="absolute -bottom-1 left-0 w-full h-[5px] text-[#778A43]"
-                      viewBox="0 0 100 8"
-                      preserveAspectRatio="none"
-                    >
-                      <path
-                        d="M0,5 Q25,0 50,5 T100,5"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </span>
+                  <RopeUnderline color="#88987E">
+                    <span className="font-medium text-[#20221F]">
+                      distributed backends
+                    </span>
+                  </RopeUnderline>
                   , and{" "}
                   <span className="font-medium text-[#20221F]">
                     real-time voice technology
@@ -109,7 +99,7 @@ export default function AboutPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => soundManager.playClick()}
-                    className="relative inline-block font-baskerville italic text-[#4338CA] bg-[#4F46E5]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(99,102,241,0.18)] hover:bg-[#4F46E5]/20 transition-all duration-200"
+                    className="relative inline-block font-baskerville italic text-[#C2410C] bg-[#EA580C]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(234,88,12,0.18)] hover:bg-[#EA580C]/20 transition-all duration-200"
                   >
                     Upchaar 360
                   </a>
@@ -119,9 +109,9 @@ export default function AboutPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => soundManager.playClick()}
-                    className="relative inline-block font-baskerville italic text-[#4338CA] bg-[#4F46E5]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(99,102,241,0.18)] hover:bg-[#4F46E5]/20 transition-all duration-200"
+                    className="relative inline-block font-baskerville italic text-[#047857] bg-[#059669]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(5,150,105,0.18)] hover:bg-[#059669]/20 transition-all duration-200"
                   >
-                    Bitlance
+                    Bitlance Tech Hub
                   </a>{" "}
                   and projects like{" "}
                   <a
@@ -129,7 +119,7 @@ export default function AboutPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => soundManager.playClick()}
-                    className="relative inline-block font-baskerville italic text-[#4338CA] bg-[#4F46E5]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(99,102,241,0.18)] hover:bg-[#4F46E5]/20 transition-all duration-200"
+                    className="relative inline-block font-baskerville italic text-[#6D28D9] bg-[#7C3AED]/10 px-1.5 py-0.5 rounded shadow-[0_0_12px_rgba(124,58,237,0.18)] hover:bg-[#7C3AED]/20 transition-all duration-200"
                   >
                     Samadhan Setu
                   </a>
