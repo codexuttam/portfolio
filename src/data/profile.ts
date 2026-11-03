@@ -70,7 +70,7 @@ export const profileData: ProfileData = {
   headlinePrefix: "Making ideas feel",
   headlineEmphasis: "real.",
   bioIntro:
-    "I'm Uttamraj Singh. I build software and AI-powered products — from the first rough idea to the details that make them useful.",
+    "Hi, I'm Uttamraj Singh — an AI & Software Engineer, currently serving as Founding CTO at Upchaar 360 and building autonomous AI systems at Bitlance Tech Hub, with a focus on scalable platforms, intelligent automation, and end-to-end product engineering.",
   location: "India / Available Globally",
   discipline: "Computer Science Engineering (AI/ML)",
   currentFocus: "Agentic Workflows, Voice AI & Production Systems",
@@ -89,6 +89,7 @@ export const profileData: ProfileData = {
       role: "CTO & Co-Founder",
       organization: "Upchaar 360",
       period: "Aug. 2026 – Ongoing",
+      link: "https://www.upchar360.com/",
       isCurrent: true,
       highlights: [
         "Architected and developed the end-to-end technical infrastructure for a patient-doctor platform, bridging patient requirements with healthcare providers through a centralized CRM.",
@@ -100,6 +101,7 @@ export const profileData: ProfileData = {
       role: "AI Developer Intern",
       organization: "Bitlance Tech Hub",
       period: "June 2026 – Ongoing",
+      link: "https://www.bitlancetechhub.com/",
       isCurrent: true,
       highlights: [
         "Engineered autonomous AI agents and end-to-end AI pipelines to automate business workflows and improve operational efficiency.",
@@ -114,6 +116,16 @@ export const profileData: ProfileData = {
       highlights: [
         "Developed and deployed full-stack web applications using React, Node.js, Express, and MongoDB for African markets.",
         "Collaborated with an international engineering team to deliver scalable web platforms and responsive RESTful APIs.",
+      ],
+    },
+    {
+      role: "Freelance Web Developer",
+      organization: "Independent Practice",
+      period: "2024 – Lifetime",
+      isCurrent: true,
+      highlights: [
+        "Designing and shipping custom full-stack web applications, landing pages, and interactive client digital products.",
+        "Engineering high-performance Next.js architectures with tactile micro-interactions and tailored design systems.",
       ],
     },
   ],

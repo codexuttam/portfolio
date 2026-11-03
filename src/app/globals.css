@@ -2,19 +2,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #E9E7E1;
-  --foreground: #20221F;
-  --paper: #E9E7E1;
-  --paper-subtle: #ECEAE4;
-  --paper-elevated: #F2F0EB;
-  --charcoal: #20221F;
-  --charcoal-muted: #73756E;
-  --charcoal-border: rgba(32, 34, 31, 0.12);
-  --charcoal-border-strong: rgba(32, 34, 31, 0.22);
-  --olive: #778A43;
-  --olive-dark: #55642F;
-  --lime: #C4E36C;
-  --lime-soft: #D5EE88;
+  --background: #E3EBD8;
+  --foreground: #1E231B;
+  --paper: #E3EBD8;
+  --paper-subtle: #EAF0E1;
+  --paper-elevated: #EFF4E7;
+  --charcoal: #1E231B;
+  --charcoal-muted: #6B7465;
+  --charcoal-border: rgba(30, 35, 27, 0.12);
+  --charcoal-border-strong: rgba(30, 35, 27, 0.22);
+  --olive: #6F853B;
+  --olive-dark: #4D5E26;
+  --lime: #BFDF64;
+  --lime-soft: #D1E87E;
 }
 
 @theme {
@@ -60,8 +60,8 @@ a, button:not(:disabled), [role="button"]:not(:disabled), .cursor-pointer {
 }
 
 ::selection {
-  background-color: #C4E36C;
-  color: #20221F;
+  background-color: #BFDF64;
+  color: #1E231B;
 }
 
 /* Custom editorial typography */

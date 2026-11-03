@@ -1,130 +1,154 @@
 <svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="quicklearnBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#192020" />
-      <stop offset="50%" stop-color="#141919" />
-      <stop offset="100%" stop-color="#0E1212" />
+    <linearGradient id="qlWindowBg" x1="0%" y1="0%" x2="0%" y2="1">
+      <stop offset="0%" stop-color="#0F1410" />
+      <stop offset="100%" stop-color="#080C09" />
     </linearGradient>
-    <pattern id="quicklearnGrid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#5A7A77" stroke-opacity="0.12" stroke-width="1"/>
-    </pattern>
-    <radialGradient id="quicklearnGlow" cx="50%" cy="35%" r="60%">
-      <stop offset="0%" stop-color="#5A7A77" stop-opacity="0.25" />
-      <stop offset="50%" stop-color="#C4E36C" stop-opacity="0.08" />
-      <stop offset="100%" stop-color="#141919" stop-opacity="0" />
-    </radialGradient>
+    <linearGradient id="qlCardGrad" x1="0%" y1="0%" x2="1" y2="1">
+      <stop offset="0%" stop-color="#162219" />
+      <stop offset="100%" stop-color="#101812" />
+    </linearGradient>
+    <filter id="qlShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
   </defs>
 
-  <rect width="1200" height="800" fill="url(#quicklearnBg)" />
-  <rect width="1200" height="800" fill="url(#quicklearnGrid)" />
-  <rect width="1200" height="800" fill="url(#quicklearnGlow)" />
+  <!-- Canvas Background -->
+  <rect width="1200" height="800" fill="#0C0E0D" />
 
-  <rect x="32" y="32" width="1136" height="736" stroke="#5A7A77" stroke-opacity="0.3" stroke-width="1"/>
-  <rect x="40" y="40" width="1120" height="720" stroke="#E9E7E1" stroke-opacity="0.08" stroke-width="1"/>
-
-  <!-- Top Header Metadata Bar -->
-  <g transform="translate(64, 76)">
-    <circle cx="6" cy="6" r="4" fill="#C4E36C" />
-    <text x="24" y="10" fill="#E9E7E1" font-family="'JetBrains Mono', monospace" font-size="12" letter-spacing="2">PROJECT 03 // ADAPTIVE CONCEPT DAG &amp; DRILL ENGINE</text>
-    <text x="1070" y="10" fill="#5A7A77" font-family="'JetBrains Mono', monospace" font-size="12" letter-spacing="1" text-anchor="end">VECTOR RETRIEVAL • SM-2 ALGORITHM • NEXT.JS</text>
-  </g>
-  <line x1="64" y1="104" x2="1136" y2="104" stroke="#5A7A77" stroke-opacity="0.2" stroke-width="1" />
-
-  <!-- Left: Interactive Concept DAG Tree Visualization -->
-  <g transform="translate(80, 160)">
-    <rect x="0" y="0" width="560" height="380" rx="6" fill="#131717" stroke="#5A7A77" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- Browser Window Wrapper -->
+  <g filter="url(#qlShadow)">
+    <rect x="60" y="40" width="1080" height="720" rx="14" fill="url(#qlWindowBg)" stroke="#243427" stroke-width="1.5" />
     
-    <text x="24" y="34" fill="#5A7A77" font-family="'JetBrains Mono', monospace" font-size="11">DYNAMIC KNOWLEDGE DIRECTED ACYCLIC GRAPH</text>
+    <!-- Browser Top Bar -->
+    <rect x="60" y="40" width="1080" height="46" rx="14" fill="#151E17" />
+    <path d="M 60 72 L 60 86 L 1140 86 L 1140 72 Z" fill="#151E17" />
+    <line x1="60" y1="86" x2="1140" y2="86" stroke="#243427" stroke-width="1" />
 
-    <!-- Graph Connections -->
-    <path d="M 120 180 L 260 110" stroke="#5A7A77" stroke-width="2" stroke-dasharray="4 4"/>
-    <path d="M 120 180 L 260 250" stroke="#5A7A77" stroke-width="2"/>
-    <path d="M 260 110 L 420 80" stroke="#C4E36C" stroke-width="2"/>
-    <path d="M 260 110 L 420 160" stroke="#5A7A77" stroke-width="2"/>
-    <path d="M 260 250 L 420 250" stroke="#5A7A77" stroke-width="2" stroke-dasharray="4 4"/>
+    <!-- Window Control Dots -->
+    <circle cx="86" cy="63" r="5.5" fill="#FF5F56" />
+    <circle cx="104" cy="63" r="5.5" fill="#FFBD2E" />
+    <circle cx="122" cy="63" r="5.5" fill="#27C93F" />
 
-    <!-- Nodes -->
-    <!-- Root Node -->
-    <circle cx="120" cy="180" r="26" fill="#1E2625" stroke="#C4E36C" stroke-width="2"/>
-    <text x="120" y="184" fill="#E9E7E1" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">Calculus</text>
-
-    <!-- Child Node 1 -->
-    <circle cx="260" cy="110" r="24" fill="#1E2625" stroke="#5A7A77" stroke-width="2"/>
-    <text x="260" y="114" fill="#E9E7E1" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle">Gradients</text>
-
-    <!-- Child Node 2 -->
-    <circle cx="260" cy="250" r="24" fill="#1E2625" stroke="#5A7A77" stroke-width="2"/>
-    <text x="260" y="254" fill="#E9E7E1" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle">Matrices</text>
-
-    <!-- Leaf Node 1 (Mastered) -->
-    <circle cx="420" cy="80" r="24" fill="#1E2625" stroke="#C4E36C" stroke-width="2"/>
-    <text x="420" y="84" fill="#C4E36C" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle">Backprop</text>
-
-    <!-- Leaf Node 2 -->
-    <circle cx="420" cy="160" r="24" fill="#1E2625" stroke="#5A7A77" stroke-width="2"/>
-    <text x="420" y="164" fill="#E9E7E1" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle">Attention</text>
-
-    <!-- Leaf Node 3 -->
-    <circle cx="420" cy="250" r="24" fill="#1E2625" stroke="#73756E" stroke-width="2"/>
-    <text x="420" y="254" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle">Eigenvectors</text>
-
-    <text x="24" y="350" fill="#C4E36C" font-family="'JetBrains Mono', monospace" font-size="10">ACTIVE RECALL RETENTION: 94.2% (SM-2 INTERVAL 6 DAYS)</text>
+    <!-- URL Bar -->
+    <rect x="240" y="52" width="600" height="24" rx="6" fill="#0B0F0C" stroke="#243427" stroke-width="1" />
+    <circle cx="256" cy="64" r="3" fill="#6F853B" />
+    <text x="268" y="68" fill="#A4B399" font-family="'JetBrains Mono', monospace" font-size="11">https://quicklearn-ai-three.vercel.app</text>
   </g>
 
-  <!-- Right: Adaptive Drill Flashcard Preview -->
-  <g transform="translate(680, 160)">
-    <rect x="0" y="0" width="440" height="380" rx="6" fill="#131717" stroke="#5A7A77" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- Platform Web Navigation Bar -->
+  <g transform="translate(60, 86)">
+    <rect x="0" y="0" width="1080" height="64" fill="#101712" stroke="#1F2E22" stroke-width="1" />
     
-    <rect x="0" y="0" width="440" height="40" rx="6 6 0 0" fill="#1C2322"/>
-    <text x="24" y="25" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="600" font-size="13">Active Recall Drill: Backpropagation</text>
+    <!-- Logo -->
+    <rect x="40" y="18" width="28" height="28" rx="6" fill="#6F853B" />
+    <path d="M 54 22 L 48 32 L 53 32 L 51 40 L 60 29 L 55 29 Z" fill="#0F1410" />
+    <text x="78" y="37" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-weight="700" font-size="16">QuickLearn <tspan fill="#BFDF64">AI</tspan></text>
+    
+    <!-- Navigation Links -->
+    <text x="490" y="37" fill="#BFDF64" font-family="'Manrope', sans-serif" font-weight="600" font-size="13">Interactive Tutor</text>
+    <text x="640" y="37" fill="#889880" font-family="'Manrope', sans-serif" font-weight="500" font-size="13">Adaptive Drills</text>
+    <text x="770" y="37" fill="#889880" font-family="'Manrope', sans-serif" font-weight="500" font-size="13">Concept Graphs</text>
+    <text x="900" y="37" fill="#889880" font-family="'Manrope', sans-serif" font-weight="500" font-size="13">Retention Track</text>
 
-    <g transform="translate(24, 64)">
-      <rect x="0" y="0" width="392" height="120" rx="4" fill="#18201F" stroke="#5A7A77" stroke-width="1" stroke-opacity="0.3"/>
-      <text x="20" y="32" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="10">SYNTHESIZED QUESTION FROM LECTURE 04</text>
-      <text x="20" y="58" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="600" font-size="13">Why is the Jacobian matrix partitioned during</text>
-      <text x="20" y="78" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="600" font-size="13">multi-layer vector calculus propagation?</text>
-    </g>
-
-    <!-- Response Options -->
-    <g transform="translate(24, 204)">
-      <rect x="0" y="0" width="392" height="42" rx="4" fill="#1E2726" stroke="#C4E36C" stroke-width="1" stroke-opacity="0.6"/>
-      <circle cx="20" cy="21" r="5" fill="#C4E36C"/>
-      <text x="36" y="25" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-size="12">To decouple weight gradients across independent layers</text>
-    </g>
-
-    <g transform="translate(24, 256)">
-      <rect x="0" y="0" width="392" height="42" rx="4" fill="#18201F" stroke="#5A7A77" stroke-width="1" stroke-opacity="0.2"/>
-      <circle cx="20" cy="21" r="5" stroke="#73756E" stroke-width="1"/>
-      <text x="36" y="25" fill="#73756E" font-family="'Manrope', sans-serif" font-size="12">To reduce memory consumption during inference only</text>
-    </g>
-
-    <text x="24" y="340" fill="#5A7A77" font-family="'JetBrains Mono', monospace" font-size="10">AUDIO TIMESTAMPS SYNCED AT 34:12 // 42:10</text>
+    <!-- Sign In Button -->
+    <rect x="990" y="16" width="50" height="32" rx="6" fill="#1F2E23" stroke="#324937" stroke-width="1" />
+    <text x="1015" y="36" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-weight="600" font-size="11" text-anchor="middle">Study</text>
   </g>
 
-  <!-- Bottom Metric Highlights -->
-  <g transform="translate(80, 580)">
-    <rect x="0" y="0" width="1040" height="130" rx="4" fill="#182121" stroke="#5A7A77" stroke-width="1" stroke-opacity="0.3"/>
-    
-    <g transform="translate(36, 32)">
-      <text x="0" y="0" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1">LEARNING EFFICIENCY</text>
-      <text x="0" y="32" fill="#C4E36C" font-family="'Manrope', sans-serif" font-weight="700" font-size="28">Adaptive DAG</text>
-      <text x="0" y="54" fill="#E9E7E1" font-family="'JetBrains Mono', monospace" font-size="11">Identifies prerequisite blind spots</text>
-    </g>
+  <!-- Hero Content Section -->
+  <g transform="translate(100, 180)">
+    <!-- Badge -->
+    <rect x="0" y="0" width="290" height="26" rx="13" fill="#1B261D" stroke="#354A37" stroke-width="1" />
+    <circle cx="14" cy="13" r="3.5" fill="#BFDF64" />
+    <text x="26" y="17" fill="#BFDF64" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" letter-spacing="1">INTERACTIVE LLM LEARNING ASSISTANT</text>
 
-    <line x1="320" y1="20" x2="320" y2="110" stroke="#5A7A77" stroke-opacity="0.2" stroke-width="1"/>
+    <!-- Headline -->
+    <text x="0" y="65" fill="#E3EBD8" font-family="'Newsreader', Georgia, serif" font-size="38" font-weight="500">
+      Not Just a Wrapper. An Interactive <tspan font-style="italic" fill="#BFDF64">Tutor</tspan>.
+    </text>
+    <text x="0" y="98" fill="#8C9C84" font-family="'Manrope', sans-serif" font-size="14" font-weight="400">
+      Make learning faster, personalized, and structured using LLM-powered concept maps, Socratic diagnostics, and adaptive retention loops.
+    </text>
 
-    <g transform="translate(360, 32)">
-      <text x="0" y="0" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1">SPACED REPETITION</text>
-      <text x="0" y="32" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="700" font-size="28">SM-2 Mod</text>
-      <text x="0" y="54" fill="#5A7A77" font-family="'JetBrains Mono', monospace" font-size="11">Personalized recall intervals</text>
-    </g>
+    <!-- Interactive Tutor Platform Workspace -->
+    <g transform="translate(0, 130)">
+      <rect x="0" y="0" width="1000" height="370" rx="12" fill="url(#qlCardGrad)" stroke="#293D2D" stroke-width="1.5" />
 
-    <line x1="680" y1="20" x2="680" y2="110" stroke="#5A7A77" stroke-opacity="0.2" stroke-width="1"/>
+      <!-- Left Sidebar: Concept Tree -->
+      <g transform="translate(24, 24)">
+        <rect x="0" y="0" width="230" height="322" rx="8" fill="#0C120E" stroke="#1D2A20" stroke-width="1" />
+        <text x="16" y="28" fill="#889880" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">CURRICULUM BREAKDOWN</text>
 
-    <g transform="translate(720, 32)">
-      <text x="0" y="0" fill="#73756E" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1">CONTENT MULTI-MODALITY</text>
-      <text x="0" y="32" fill="#E9E7E1" font-family="'Manrope', sans-serif" font-weight="700" font-size="28">Audio &amp; Text</text>
-      <text x="0" y="54" fill="#C4E36C" font-family="'JetBrains Mono', monospace" font-size="11">Synced lecture transcript chunks</text>
+        <rect x="12" y="44" width="206" height="36" rx="6" fill="#1E2B21" stroke="#384E3D" stroke-width="1" />
+        <text x="22" y="66" fill="#BFDF64" font-family="'Manrope', sans-serif" font-size="12" font-weight="600">1. Attention Mechanism</text>
+
+        <text x="22" y="110" fill="#8C9C84" font-family="'Manrope', sans-serif" font-size="12">2. Multi-Head Projections</text>
+        <text x="22" y="148" fill="#8C9C84" font-family="'Manrope', sans-serif" font-size="12">3. Positional Encodings</text>
+        <text x="22" y="186" fill="#8C9C84" font-family="'Manrope', sans-serif" font-size="12">4. Layer Normalization</text>
+        <text x="22" y="224" fill="#8C9C84" font-family="'Manrope', sans-serif" font-size="12">5. Residual Connections</text>
+
+        <rect x="12" y="260" width="206" height="38" rx="6" fill="#141E16" stroke="#253828" stroke-width="1" />
+        <text x="22" y="284" fill="#BFDF64" font-family="'JetBrains Mono', monospace" font-size="10">MASTERY LEVEL: 86%</text>
+      </g>
+
+      <!-- Center Chat & Socratic Workspace -->
+      <g transform="translate(276, 24)">
+        <rect x="0" y="0" width="460" height="322" rx="8" fill="#0C120E" stroke="#1D2A20" stroke-width="1" />
+        <text x="20" y="28" fill="#BFDF64" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">SOCRATIC INTERACTION CANVAS</text>
+
+        <!-- Tutor Prompt -->
+        <rect x="16" y="44" width="428" height="66" rx="8" fill="#141F17" stroke="#283C2C" stroke-width="1" />
+        <text x="32" y="68" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-size="12" font-weight="600">
+          TUTOR: Why split attention across 8 heads instead of 1 large vector?
+        </text>
+        <text x="32" y="90" fill="#889880" font-family="'Manrope', sans-serif" font-size="11">
+          Think about how different syntactic and semantic relations are captured.
+        </text>
+
+        <!-- Student Attempt -->
+        <rect x="16" y="122" width="428" height="60" rx="8" fill="#101712" stroke="#202F23" stroke-width="1" />
+        <text x="32" y="146" fill="#A4B399" font-family="'Manrope', sans-serif" font-size="12">
+          &quot;It lets the model attend to information from different representation
+        </text>
+        <text x="32" y="166" fill="#A4B399" font-family="'Manrope', sans-serif" font-size="12">
+          subspaces simultaneously at different positions.&quot;
+        </text>
+
+        <!-- AI Real-Time Feedback -->
+        <rect x="16" y="194" width="428" height="66" rx="8" fill="#19281D" stroke="#3A583E" stroke-width="1.5" />
+        <text x="32" y="218" fill="#BFDF64" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">
+          ✓ ACCURATE INSIGHT (+15 XP)
+        </text>
+        <text x="32" y="238" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-size="11">
+          Spot on. Head 1 tracks syntax while Head 4 correlates long-range coreference.
+        </text>
+
+        <!-- Next Challenge button -->
+        <rect x="16" y="272" width="428" height="34" rx="6" fill="#6F853B" />
+        <text x="230" y="294" fill="#0C120E" font-family="'Manrope', sans-serif" font-weight="700" font-size="11" text-anchor="middle">Continue to Next Practice Challenge →</text>
+      </g>
+
+      <!-- Right Panel: Spaced Repetition -->
+      <g transform="translate(758, 24)">
+        <rect x="0" y="0" width="218" height="322" rx="8" fill="#0C120E" stroke="#1D2A20" stroke-width="1" />
+        <text x="16" y="28" fill="#889880" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">RETENTION SCHEDULE</text>
+
+        <rect x="12" y="44" width="194" height="110" rx="6" fill="#141E16" stroke="#253828" stroke-width="1" />
+        <text x="20" y="70" fill="#889880" font-family="'JetBrains Mono', monospace" font-size="10">SPACED DRILL</text>
+        <text x="20" y="96" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-size="18" font-weight="700">SM-2 Algorithm</text>
+        <text x="20" y="122" fill="#BFDF64" font-family="'JetBrains Mono', monospace" font-size="10">NEXT REVIEW: 2 DAYS</text>
+        <text x="20" y="140" fill="#889880" font-family="'Manrope', sans-serif" font-size="10">Confidence: 94.2%</text>
+
+        <!-- Active Flashcards -->
+        <rect x="12" y="166" width="194" height="74" rx="6" fill="#141E16" stroke="#253828" stroke-width="1" />
+        <text x="20" y="190" fill="#889880" font-family="'JetBrains Mono', monospace" font-size="10">KNOWLEDGE CARDS</text>
+        <text x="20" y="214" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-size="13" font-weight="600">38 Decks Mastered</text>
+
+        <!-- Start Practice button -->
+        <rect x="12" y="254" width="194" height="38" rx="6" fill="#1F2E23" stroke="#3A583E" stroke-width="1" />
+        <text x="109" y="278" fill="#BFDF64" font-family="'Manrope', sans-serif" font-weight="600" font-size="11" text-anchor="middle">Flash Revision</text>
+      </g>
     </g>
   </g>
 </svg>

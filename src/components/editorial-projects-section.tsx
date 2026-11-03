@@ -55,14 +55,16 @@ export function EditorialProjectsSection() {
         <div className="pt-1">
           {projectsData.map((project) => (
             <div key={project.id} className="relative">
-              <Link
-                href={project.caseStudyUrl}
+              <a
+                href={project.liveUrl || project.caseStudyUrl}
+                target={project.liveUrl ? "_blank" : undefined}
+                rel={project.liveUrl ? "noopener noreferrer" : undefined}
                 onClick={() => soundManager.playClick()}
                 onMouseEnter={() => handleRowMouseEnter(project)}
                 onMouseLeave={handleRowMouseLeave}
                 onFocus={() => handleRowMouseEnter(project)}
                 onBlur={handleRowMouseLeave}
-                className="group/w-item hoverable-wrapper py-2 text-inherit inline-block w-full no-underline hover:text-[#20221F] hover:pr-4 focus:text-[#20221F] focus:pr-4 transition-all duration-300"
+                className="group/w-item hoverable-wrapper py-1.5 text-inherit inline-block w-full no-underline hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300"
               >
                 <div className="flex items-center justify-start gap-2">
                   {/* Rotating project glyph inspired by rahulgg.in */}
@@ -76,16 +78,16 @@ export function EditorialProjectsSection() {
                   </p>
 
                   {/* Category Pill for quick context */}
-                  <span className="hidden sm:inline-block text-[11px] font-mono text-[#73756E]/80 pl-2">
+                  <span className="hidden sm:inline-block text-[11px] font-mono text-[#73756E]/80">
                     — {project.category.toLowerCase()}
                   </span>
 
                   {/* Year Right Aligned */}
-                  <span className="text-xs ml-auto font-medium text-[#73756E] group-hover/w-item:text-[#20221F] transition-colors duration-300">
+                  <span className="text-xs ml-auto font-mono text-[#73756E] group-hover/w-item:text-[#20221F] transition-colors duration-300 text-right shrink-0">
                     {project.year.split(" ")[0]}
                   </span>
                 </div>
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -102,19 +104,39 @@ export function EditorialProjectsSection() {
             transform: "translate3d(0, 0, 0)",
           }}
         >
-          <div className="w-80 bg-[#E9E7E1] border border-[#20221F]/20 rounded-lg p-3 shadow-2xl backdrop-blur-md overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-            {/* Project Image Preview */}
-            <div className="relative w-full h-40 rounded bg-[#20221F]/5 overflow-hidden border border-[#20221F]/10 mb-2.5">
-              <Image
-                src={hoveredProject.heroImage}
-                alt={hoveredProject.imageAlt}
-                fill
-                className="object-cover object-center"
-                sizes="320px"
-                priority
-              />
-              <div className="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-[#20221F]/80 text-[#E9E7E1] font-mono text-[9px] uppercase tracking-wider">
-                {hoveredProject.status}
+          <div className="w-96 bg-[#E3EBD8] border border-[#20221F]/20 rounded-xl p-3 shadow-2xl backdrop-blur-md overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+            {/* Project Browser Preview */}
+            <div className="relative w-full rounded-lg bg-[#181C18] overflow-hidden border border-[#20221F]/15 mb-2.5 shadow-md">
+              {/* Browser Window Chrome */}
+              <div className="flex items-center justify-between px-2.5 py-1.5 bg-[#141814] border-b border-white/10">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-[#FF5F56]/80" />
+                  <span className="w-2 h-2 rounded-full bg-[#FFBD2E]/80" />
+                  <span className="w-2 h-2 rounded-full bg-[#27C93F]/80" />
+                </div>
+                {hoveredProject.liveUrl ? (
+                  <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[9px] font-mono text-[#A4B399] max-w-[210px]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                    <span className="truncate">{hoveredProject.liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")}</span>
+                  </div>
+                ) : (
+                  <span className="text-[9px] font-mono text-[#8C9C84]/70">case study preview</span>
+                )}
+                <span className="text-[9px] font-mono text-emerald-400/90 uppercase tracking-wider font-semibold">
+                  {hoveredProject.liveUrl ? "LIVE" : "ARCHIVE"}
+                </span>
+              </div>
+
+              {/* Exact Platform Image */}
+              <div className="relative w-full h-44 bg-[#0F1410] overflow-hidden">
+                <Image
+                  src={hoveredProject.heroImage}
+                  alt={hoveredProject.imageAlt}
+                  fill
+                  className="object-cover object-top transition-transform duration-500 ease-out hover:scale-105"
+                  sizes="384px"
+                  priority
+                />
               </div>
             </div>
 
@@ -125,7 +147,7 @@ export function EditorialProjectsSection() {
                   {hoveredProject.title}
                 </span>
                 <span className="font-mono text-[10px] text-[#778A43] flex items-center gap-0.5">
-                  Case Study <ArrowUpRight className="w-2.5 h-2.5" />
+                  {hoveredProject.liveUrl ? "Visit Live" : "Case Study"} <ArrowUpRight className="w-2.5 h-2.5" />
                 </span>
               </div>
 

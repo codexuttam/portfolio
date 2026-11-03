@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#E9E7E1",
+  themeColor: "#E3EBD8",
   width: "device-width",
   initialScale: 1,
 };
@@ -52,7 +52,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full scroll-smooth antialiased">
-      <body className="min-h-full flex flex-col bg-[#E9E7E1] text-[#20221F] selection:bg-[#C4E36C] selection:text-[#20221F] paper-grain">
+      <body className="min-h-full flex flex-col bg-[#E3EBD8] text-[#1E231B] selection:bg-[#BFDF64] selection:text-[#1E231B] paper-grain">
         {children}
       </body>
     </html>

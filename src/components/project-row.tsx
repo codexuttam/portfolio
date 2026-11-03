@@ -118,7 +118,7 @@ export function ProjectRow({ project, isActive, onSelect }: ProjectRowProps) {
           }}
           className={`shrink-0 p-2.5 rounded-full border transition-all duration-200 ${
             isActive
-              ? "bg-[#20221F] text-[#E9E7E1] border-[#20221F]"
+              ? "bg-[#20221F] text-[#E3EBD8] border-[#20221F]"
               : "border-[#20221F]/15 text-[#73756E] group-hover:text-[#20221F] group-hover:border-[#20221F]/30"
           }`}
           aria-label={`Open full case study for ${project.title}`}

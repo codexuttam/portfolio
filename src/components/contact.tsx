@@ -19,7 +19,7 @@ export function Contact() {
   return (
     <footer
       id="contact"
-      className="py-24 md:py-36 pb-32 relative scroll-mt-12 bg-[#E9E7E1]"
+      className="py-24 md:py-36 pb-32 relative scroll-mt-12 bg-[#E3EBD8]"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Top Tag */}
@@ -34,7 +34,7 @@ export function Contact() {
         <div className="mb-12">
           <h2 className="text-4xl sm:text-6xl md:text-8xl font-sans font-light tracking-tight text-[#20221F] leading-[1.05]">
             {profileData.contact.headlinePrefix}{" "}
-            <span className="font-serif-italic font-normal text-[#778A43] underline decoration-[#C4E36C]/70 decoration-2 underline-offset-8">
+            <span className="font-serif-italic font-normal text-[#778A43] underline decoration-[#BFDF64]/70 decoration-2 underline-offset-8">
               {profileData.contact.headlineEmphasis}
             </span>
           </h2>

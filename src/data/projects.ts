@@ -34,71 +34,14 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
   {
-    id: "bitlance-ai",
-    slug: "bitlance-ai",
-    number: "01",
-    title: "Bitlance AI",
-    category: "AI content systems and automation",
-    shortDescription:
-      "Autonomous multi-agent orchestration engine delivering structured, brand-aligned creative workflows and verifiable publication pipelines.",
-    heroImage: "/images/projects/bitlance-ai.svg",
-    imageAlt: "Bitlance AI multi-agent orchestration architecture and editorial interface visual",
-    accentColor: "#778A43", // Muted olive
-    accentColorSoft: "rgba(119, 138, 67, 0.12)",
-    technologies: [
-      "Python",
-      "FastAPI",
-      "Next.js",
-      "LangChain",
-      "PostgreSQL",
-      "Redis",
-      "Tailwind CSS",
-    ],
-    caseStudyUrl: "/work/bitlance-ai",
-    status: "Case Study Available",
-    year: "2025 – 2026",
-    role: "Full-Stack Engineer & AI Architect",
-    caseStudy: {
-      overview:
-        "Bitlance AI is an agentic content infrastructure designed to bridge the gap between open-ended LLM capabilities and deterministic production standards. Instead of single-turn prompting, it utilizes a coordinated graph of specialized agents that draft, evaluate, verify citations, and format deliverables into structured schemas.",
-      problem:
-        "Generative tools frequently suffer from stylistic drift, hallucinated factual points, and unstructured output formats that break downstream publishing workflows. Engineering teams spend excessive time manually post-processing and validating outputs.",
-      solution:
-        "Implemented an asynchronous agent swarm where each node possesses strict validation contracts. An editorial critique agent benchmarks drafts against customized tone-of-voice embeddings before pushing validated JSON to the frontend drafting canvas.",
-      architectureNotes:
-        "FastAPI backend running stateful agent routines via Redis task queues. Frontend leverages Next.js App Router with real-time streaming tokens and collaborative editing interfaces.",
-      sections: [
-        {
-          title: "Multi-Agent Coordination Pipeline",
-          content:
-            "Decomposed content synthesis into four discrete sub-agents: Research & Ingestion, Draft Synthesis, Fact-Checking & Citation Alignment, and JSON Structuring. Each agent communicates via strongly-typed Pydantic schemas.",
-          bulletPoints: [
-            "Deterministic JSON schema validation preventing downstream parser failures",
-            "Embedding-based style alignment scoring against custom brand guidelines",
-            "Streaming response architecture allowing real-time token inspections",
-          ],
-        },
-        {
-          title: "Frontend Interaction Design",
-          content:
-            "Engineered a distraction-free editorial interface with modular step-by-step reviews. Writers inspect which sub-agent made specific edits, inspecting revision histories with fine-grained control.",
-        },
-      ],
-      keyTakeaways: [
-        "LLMs achieve higher reliability when restricted to bounded sub-tasks with programmatic schema validation.",
-        "Asynchronous task queues are essential for maintaining sub-second UI responsiveness during multi-stage agent workflows.",
-      ],
-    },
-  },
-  {
     id: "samadhan-setu",
     slug: "samadhan-setu",
-    number: "02",
+    number: "01",
     title: "Samadhan Setu",
-    category: "Civic technology and grievance workflows",
+    category: "Civic grievance redressal platform",
     shortDescription:
-      "Intelligent civic grievance routing and triage platform connecting citizens with municipal departments via automated urgency classification.",
-    heroImage: "/images/projects/samadhan-setu.svg",
+      "AI-powered Civic Grievance Redressal Platform bridging the gap between citizens and authorities through automated department identification and transparent tracking.",
+    heroImage: "/images/projects/samadhan-setu.jpg",
     imageAlt: "Samadhan Setu civic dashboard showing grievance tracking and departmental routing",
     accentColor: "#8C7355", // Warm earth
     accentColorSoft: "rgba(140, 115, 85, 0.12)",
@@ -109,196 +52,251 @@ export const projectsData: ProjectItem[] = [
       "FastAPI",
       "PostgreSQL",
       "PostGIS",
-      "Prisma",
+      "NLP",
     ],
     caseStudyUrl: "/work/samadhan-setu",
+    liveUrl: "https://samadhan-setu-g8en.onrender.com/",
     status: "Case Study Available",
-    year: "2025",
+    year: "2026",
     role: "System Designer & Lead Developer",
     caseStudy: {
       overview:
-        "Samadhan Setu ('Resolution Bridge') is a civic tech initiative designed to solve administrative triage bottlenecks in municipal public grievance redressal systems. It automates semantic categorization, geo-tags issues, and routes complaints directly to field engineers.",
+        "Samadhan Setu AI is an AI-powered Civic Grievance Redressal Platform, designed to bridge the gap between citizens and government authorities.",
       problem:
-        "Citizens face opaque grievance portals where submissions sit unread for weeks due to manual triage backlogs, incorrect departmental tagging, and an inability to detect duplicate complaints across adjacent streets.",
+        "Its central idea is simple: A citizen should not have to understand the government bureaucracy to get a public problem resolved.",
       solution:
-        "Engineered an NLP-driven triage engine that extracts semantic urgency, normalizes multilingual reports, matches spatial clusters with PostGIS, and delivers a transparent resolution audit trail to both citizen and officer.",
+        "Instead, they should be able to report a problem, let the platform identify the appropriate department, and track the resolution transparently.",
       architectureNotes:
         "PostgreSQL with PostGIS extensions handles geographic bounding queries. Transformer classification models extract department tags with confidence scoring.",
       sections: [
         {
           title: "Semantic Triage & Categorization",
           content:
-            "Trained a lightweight classification pipeline capable of parsing colloquial descriptions, categorizing issues (water infrastructure, road repairs, sanitation, electrical hazards) and flagging hazardous situations for expedited review.",
+            "Trained a lightweight classification pipeline capable of parsing colloquial descriptions, categorizing issues (water infrastructure, road repairs, sanitation, electrical hazards) and routing them to municipal departments.",
           bulletPoints: [
-            "Spatial clustering algorithm grouping duplicate localized reports into single administrative work-orders",
-            "Multilingual transcript parsing supporting both local dialect input and standard official terminology",
-            "Public status ledger ensuring timestamped accountability across departmental handoffs",
+            "Automatic identification of responsible municipal authorities from natural language reports",
+            "Geospatial clustering grouping duplicate localized reports into single work orders",
+            "Transparent public ledger ensuring real-time auditability across departmental handoffs",
           ],
         },
         {
-          title: "Administrative Dispatch Experience",
+          title: "Citizen-Centric Interaction",
           content:
-            "Built a high-density, keyboard-driven triage portal for municipal officers that sorts incoming queues by SLA deadlines and geographic proximity.",
+            "Designed a streamlined reporting interface that removes administrative jargon and provides immediate tracking identifiers.",
         },
       ],
       keyTakeaways: [
-        "In civic technology, clear status visibility and unambiguous accountability drive trust more than complex UI decoration.",
-        "Geospatial clustering drastically reduces redundant field inspections by municipal teams.",
+        "Citizens should report problems in plain language without needing to know bureaucratic divisions.",
+        "Geospatial and semantic clustering reduces redundant complaints and accelerates resolution.",
+      ],
+    },
+  },
+  {
+    id: "acad-x",
+    slug: "acad-x",
+    number: "02",
+    title: "AcadX",
+    category: "Academic knowledge ecosystem",
+    shortDescription:
+      "Academic knowledge ecosystem connecting students, faculty, and institutions beyond a conventional AI chatbot or productivity tool.",
+    heroImage: "/images/projects/acad-x.png",
+    imageAlt: "AcadX academic knowledge ecosystem and collaborative curriculum graph",
+    accentColor: "#6F853B", // Muted olive
+    accentColorSoft: "rgba(111, 133, 59, 0.12)",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "FastAPI",
+      "Python",
+      "Vector DB",
+      "PostgreSQL",
+      "Tailwind CSS",
+    ],
+    caseStudyUrl: "/work/acad-x",
+    liveUrl: "https://acad-x-kappa.vercel.app/",
+    status: "Case Study Available",
+    year: "2026",
+    role: "Architect & Lead Full-Stack Engineer",
+    caseStudy: {
+      overview:
+        "AcadX is an academic knowledge ecosystem that connects students, faculty and institutions, moving beyond conventional AI chatbots or student productivity applications.",
+      problem:
+        "Higher education workflows are disjointed: lecture materials, research repositories, and student-faculty discourse exist in separate silos, hindering deep conceptual learning.",
+      solution:
+        "Built a unified academic intelligence ecosystem that synthesizes course syllabi, indexes institutional materials, and powers structured academic collaboration.",
+      architectureNotes:
+        "Vector-indexed knowledge graph hosted alongside FastAPI reasoning microservices, with Next.js App Router providing low-latency document exploration.",
+      sections: [
+        {
+          title: "Connected Knowledge Ecosystem",
+          content:
+            "Transforms static textbooks, syllabi, and lecture slide decks into an interactive conceptual map shared across academic departments.",
+          bulletPoints: [
+            "Entity extraction creating persistent conceptual ties between course subjects",
+            "Verified faculty feedback channel keeping AI answers grounded in verified course materials",
+            "Cross-institution research search and collaborative inquiry rooms",
+          ],
+        },
+      ],
+      keyTakeaways: [
+        "Academic tools must elevate collaborative insight rather than just summarizing text.",
+        "Grounding responses in verified institutional sources prevents hallucinated academic citations.",
+      ],
+    },
+  },
+  {
+    id: "iona",
+    slug: "iona",
+    number: "03",
+    title: "IONA",
+    category: "Client side project",
+    shortDescription:
+      "Bespoke digital product and interactive client web experience engineered with high-craft frontend interactions and polished typography.",
+    heroImage: "/images/projects/iona.jpg",
+    imageAlt: "IONA client web experience visual design and interactive interface study",
+    accentColor: "#8C7355", // Warm taupe
+    accentColorSoft: "rgba(140, 115, 85, 0.12)",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vercel",
+    ],
+    caseStudyUrl: "/work/iona",
+    liveUrl: "https://ionaaaaaa.vercel.app/",
+    status: "Case Study Available",
+    year: "2026",
+    role: "Frontend Engineer & UI Craft Specialist",
+    caseStudy: {
+      overview:
+        "IONA is a bespoke side project engineered for a client, focusing on distinct aesthetic identity, responsive performance, and polished interaction design.",
+      problem:
+        "The client needed a digital presentation that felt elevated, memorable, and visually distinct from cookie-cutter corporate templates.",
+      solution:
+        "Created an editorial-driven layout utilizing custom typography, micro-interactions, and refined responsive layouts.",
+      architectureNotes:
+        "Next.js with Tailwind CSS and Framer Motion for smooth GPU-accelerated page transitions and crisp mobile responsiveness.",
+      sections: [
+        {
+          title: "Visual Hierarchy & Micro-Interactions",
+          content:
+            "Implemented tactile hover dynamics, bespoke scroll animations, and optimized typography hierarchies.",
+          bulletPoints: [
+            "Tailored typographic rhythm utilizing variable serif and sans-serif pairings",
+            "Sub-100ms interaction feedback across mobile touch and desktop cursor states",
+            "Lightweight bundle delivery for near-instant first contentful paint",
+          ],
+        },
+      ],
+      keyTakeaways: [
+        "Subtle motion and restrained typography deliver greater luxury appeal than heavy decorative graphics.",
+        "Client requirements are best met by tight feedback cycles on real responsive devices.",
+      ],
+    },
+  },
+  {
+    id: "aspirant-saathi",
+    slug: "aspirant-saathi",
+    number: "04",
+    title: "Aspirant Saathi",
+    category: "AI examination preparation and answer evaluation",
+    shortDescription:
+      "AI-powered examination preparation and answer evaluation platform delivering automated, examiner-style feedback on student written responses.",
+    heroImage: "/images/projects/aspirant-saathi.jpg",
+    imageAlt: "Aspirant Saathi answer evaluation rubric and examiner feedback dashboard",
+    accentColor: "#5A7A77", // Slate teal
+    accentColorSoft: "rgba(90, 122, 119, 0.12)",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Next.js",
+      "TypeScript",
+      "LLM Evaluation",
+      "PostgreSQL",
+    ],
+    caseStudyUrl: "/work/aspirant-saathi",
+    liveUrl: "https://aspirant-saathi.vercel.app/",
+    status: "Case Study Available",
+    year: "2025",
+    role: "Founder & AI Engineer",
+    caseStudy: {
+      overview:
+        "Aspirant Saathi is an AI-powered examination preparation and answer evaluation platform. Its main purpose is to help competitive-exam aspirants improve their answer-writing skills through automated, examiner-style feedback.",
+      problem:
+        "Unlike a conventional AI chatbot that simply gives answers, Aspirant Saathi evaluates what the student has actually written. Aspirants preparing for high-stakes subjective examinations lack affordable, instant evaluation of their long-form descriptive essays and problem solutions.",
+      solution:
+        "Built a diagnostic answer evaluation pipeline that grades submitted student answers against official examiner marking rubrics, highlighting missing arguments, factual inaccuracies, and structure deficiencies.",
+      architectureNotes:
+        "Asynchronous evaluation worker queue with multi-dimensional rubric scoring across factual accuracy, structure, conciseness, and depth.",
+      sections: [
+        {
+          title: "Examiner-Style Rubric Engine",
+          content:
+            "Constructed criteria-specific evaluation prompts that analyze answers through the lens of a strict human examiner rather than a conversational assistant.",
+          bulletPoints: [
+            "Granular marks breakdown by question criteria and official marking scheme",
+            "Inline structural suggestions pointing out missing introductory frameworks or weak conclusions",
+            "Personalized progress tracker recording answer improvement over successive drafts",
+          ],
+        },
+      ],
+      keyTakeaways: [
+        "Students learn more from critical diagnostic feedback on their own writing than from passive model answers.",
+        "Rigorous rubric anchoring prevents generative evaluation models from inflating scores.",
       ],
     },
   },
   {
     id: "quicklearn-ai",
     slug: "quicklearn-ai",
-    number: "03",
-    title: "QuickLearn AI",
-    category: "AI-assisted learning",
+    number: "05",
+    title: "Quick Learn AI",
+    category: "Interactive LLM learning assistant",
     shortDescription:
-      "Adaptive micro-learning platform that synthesizes technical lectures and documentation into interactive concept maps and spaced-repetition drills.",
-    heroImage: "/images/projects/quicklearn-ai.svg",
-    imageAlt: "QuickLearn AI concept graph synthesis and spaced repetition drill engine",
-    accentColor: "#5A7A77", // Muted slate teal
-    accentColorSoft: "rgba(90, 122, 119, 0.12)",
+      "Interactive LLM learning assistant designed to make technical learning faster, more personalized, and deeply engaging beyond simple chat wrappers.",
+    heroImage: "/images/projects/quicklearn-ai.jpg",
+    imageAlt: "Quick Learn AI concept graph synthesis and spaced repetition drill engine",
+    accentColor: "#778A43", // Olive
+    accentColorSoft: "rgba(119, 138, 67, 0.12)",
     technologies: [
       "React",
       "Next.js",
-      "Node.js",
       "Vector DB",
       "Tailwind CSS",
-      "Web Audio API",
+      "Node.js",
+      "FastAPI",
     ],
     caseStudyUrl: "/work/quicklearn-ai",
+    liveUrl: "https://quicklearn-ai-three.vercel.app/",
     status: "Case Study Available",
-    year: "2024 – 2025",
-    role: "Full-Stack Engineer",
+    year: "2025",
+    role: "Full-Stack AI Developer",
     caseStudy: {
       overview:
-        "QuickLearn AI transforms dense technical lectures, documentation sets, and textbooks into structured learning journeys. It dynamically builds conceptual knowledge graphs and generates interactive spaced-repetition exercises tailored to individual student weaknesses.",
+        "Quick Learn AI was built around a simple idea: make learning faster, more personalised and easier to understand using Large Language Models.",
       problem:
-        "Passive consumption of long-form video lectures and documentation leads to the illusion of competence, leaving students unprepared for real synthesis and practical problem-solving.",
+        "The interesting part is that you weren't just building a ChatGPT wrapper. You were exploring how AI could become an interactive learning assistant that actively tests understanding.",
       solution:
-        "Built a retrieval-augmented synthesis pipeline that decomposes transcripts into hierarchical knowledge nodes, formulating contextual test questions that adapt in real time to learner responses.",
+        "Constructed an adaptive educational system combining concept mapping, interactive self-testing, and dynamic difficulty scaling based on student mastery.",
       architectureNotes:
-        "Node.js orchestration layer with vector embeddings stored in a lightweight vector store. Frontend renders dynamic SVG conceptual directed acyclic graphs (DAGs).",
+        "Node.js and Python backend with vector embedding index for syllabus concepts and dynamic quiz generation.",
       sections: [
         {
-          title: "Knowledge Graph Generation",
+          title: "Interactive Learning Assistant",
           content:
-            "Extracts key concepts, prerequisites, and relationships from ingested material, presenting them as an interactive visual map of understanding.",
+            "Instead of passive answers, the assistant engages learners with Socratic prompts and spaced quizzes to cement conceptual retention.",
           bulletPoints: [
-            "Prerequisite dependency mapping highlighting conceptual bottlenecks",
-            "SM-2 modified spaced repetition scheduler optimizing retention intervals",
-            "Audio snippet alignment syncing practice drills with original lecture timestamps",
+            "Hierarchical breakdown of complex subjects into bite-sized actionable milestones",
+            "Adaptive drill generator synthesizing customized questions from technical documentation",
+            "Retention progress dashboard visualizing conceptual strengths and revision schedules",
           ],
         },
       ],
       keyTakeaways: [
-        "Visual knowledge representations help students orient themselves within complex domains much faster than linear flashcards.",
-        "Precision in chunking and embedding retrieval directly determines the factual accuracy of AI-generated drills.",
-      ],
-    },
-  },
-  {
-    id: "upchar360",
-    slug: "upchar360",
-    number: "04",
-    title: "Upchar360",
-    category: "Digital product and platform development",
-    shortDescription:
-      "Comprehensive healthcare operations portal streamlining outpatient scheduling, digital diagnostic records, and tele-consultation coordination.",
-    heroImage: "/images/projects/upchar360.svg",
-    imageAlt: "Upchar360 medical practice management and clinical schedule interface",
-    accentColor: "#6F7E50", // Olive sage
-    accentColorSoft: "rgba(111, 126, 80, 0.12)",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Node.js",
-      "PostgreSQL",
-      "Prisma",
-      "WebRTC",
-      "Docker",
-    ],
-    caseStudyUrl: "/work/upchar360",
-    status: "Case Study Available",
-    year: "2024",
-    role: "Full-Stack Product Engineer",
-    caseStudy: {
-      overview:
-        "Upchar360 is an integrated clinical management platform crafted for independent clinics and outpatient diagnostic centers. It consolidates appointment scheduling, encrypted prescription histories, and secure tele-consultations into a unified, responsive interface.",
-      problem:
-        "Many regional healthcare facilities juggle disparate tools for patient appointments, physical paper prescriptions, and external messaging channels, causing booking friction and lost patient history.",
-      solution:
-        "Engineered an all-in-one web application emphasizing clinical clarity, accessible font hierarchy, rapid search across patient records, and end-to-end encrypted medical attachments.",
-      architectureNotes:
-        "Relational schema modeled in Prisma ORM with strict access control. Real-time slot management using optimistic locking prevents double bookings.",
-      sections: [
-        {
-          title: "Streamlined Clinical Workflow",
-          content:
-            "Designed the doctor dashboard for minimal click-depth: medical records, past prescriptions, and consultation notes are accessible within two keyboard shortcuts.",
-          bulletPoints: [
-            "Optimistic UI updates for high-volume outpatient morning queues",
-            "Strict role-based access control protecting confidential patient health data",
-            "Integrated WebRTC peer-to-peer room for remote patient follow-ups",
-          ],
-        },
-      ],
-      keyTakeaways: [
-        "In healthcare software, user interfaces must reduce cognitive burden and eliminate ambiguity above all else.",
-        "Database transaction safety around scheduling prevents chaotic reception desk conflicts.",
-      ],
-    },
-  },
-  {
-    id: "voice-agent-systems",
-    slug: "voice-agent-systems",
-    number: "05",
-    title: "Voice Agent Systems",
-    category: "Voice AI, CRM integrations, and automation",
-    shortDescription:
-      "Ultra-low-latency conversational voice agent pipeline handling inbound support queries, calendar bookings, and CRM synchronization.",
-    heroImage: "/images/projects/voice-agent-systems.svg",
-    imageAlt: "Voice agent system waveform visualization and real-time streaming pipeline diagram",
-    accentColor: "#7E886B", // Muted moss
-    accentColorSoft: "rgba(126, 136, 107, 0.12)",
-    technologies: [
-      "Python",
-      "WebSockets",
-      "FastAPI",
-      "Deepgram",
-      "Redis",
-      "CRM APIs",
-      "Asyncio",
-    ],
-    caseStudyUrl: "/work/voice-agent-systems",
-    status: "Case Study Available",
-    year: "2025 – 2026",
-    role: "AI & Systems Engineer",
-    caseStudy: {
-      overview:
-        "A full-duplex conversational voice pipeline engineered for ultra-low latency voice workflows. The system transcribes inbound speech streams, performs contextual intent analysis, queries backend CRM tools via function calling, and synthesizes natural audio output.",
-      problem:
-        "Traditional voice bots feel robotic and cumbersome because their turn-around latency exceeds 2 seconds, and they fail to gracefully handle user interruptions (barge-in).",
-      solution:
-        "Architected an event-driven streaming pipeline utilizing persistent WebSockets, audio chunk buffering, zero-shot interruption detection, and sub-600ms latency execution.",
-      architectureNotes:
-        "Python asyncio event loop coordinating WebSocket connections with transcription providers, streaming LLM inference, and audio synthesizer chunks concurrently.",
-      sections: [
-        {
-          title: "Sub-Second Latency Architecture",
-          content:
-            "Pipelined the speech-to-text, reasoning, and text-to-speech stages so output audio begins streaming before the entire LLM response has completed generating.",
-          bulletPoints: [
-            "Barge-in detection immediately canceling current audio playback upon caller voice activity",
-            "Dynamic tool execution invoking CRM booking APIs with confirmation callbacks",
-            "Continuous session state preservation across call handoffs",
-          ],
-        },
-      ],
-      keyTakeaways: [
-        "Natural conversational flow in voice systems depends far more on latency reduction and barge-in handling than model parameter count.",
-        "Asynchronous stream pipelining cuts perceived latency by over 60% compared to sequential request models.",
+        "True educational AI requires interactive evaluation loops, not just text generation.",
+        "Interactive LLM assistants dramatically accelerate technical onboarding when paired with structured drills.",
       ],
     },
   },

@@ -13,21 +13,21 @@ interface ProjectSceneProps {
 
 export function ProjectScene({ project }: ProjectSceneProps) {
   return (
-    <div className="relative w-full rounded-2xl border border-[#20221F]/15 bg-[#171916] text-[#E9E7E1] shadow-2xl overflow-hidden flex flex-col">
+    <div className="relative w-full rounded-2xl border border-[#20221F]/15 bg-[#171916] text-[#E3EBD8] shadow-2xl overflow-hidden flex flex-col">
       {/* Top Scene Bar */}
-      <div className="px-6 py-4 border-b border-[#E9E7E1]/10 flex items-center justify-between font-mono text-xs text-[#73756E] bg-[#121411]">
+      <div className="px-6 py-4 border-b border-[#E3EBD8]/10 flex items-center justify-between font-mono text-xs text-[#73756E] bg-[#121411]">
         <div className="flex items-center gap-2.5">
           <span
             className="h-2 w-2 rounded-full transition-colors duration-300"
             style={{ backgroundColor: project.accentColor }}
           />
-          <span className="text-[#E9E7E1]/90 font-medium">
+          <span className="text-[#E3EBD8]/90 font-medium">
             INDEX {project.number} {"//"} ARCHIVE
           </span>
         </div>
 
         <div className="flex items-center gap-3">
-          <span className="text-[11px] px-2 py-0.5 rounded border border-[#E9E7E1]/10 bg-[#E9E7E1]/5 text-[#C4E36C]">
+          <span className="text-[11px] px-2 py-0.5 rounded border border-[#E3EBD8]/10 bg-[#E3EBD8]/5 text-[#BFDF64]">
             {project.status}
           </span>
           <span className="hidden sm:inline text-[#73756E]">{project.year}</span>
@@ -60,7 +60,7 @@ export function ProjectScene({ project }: ProjectSceneProps) {
       </div>
 
       {/* Dynamic Project Details Lower Section */}
-      <div className="p-6 sm:p-8 bg-[#171916] border-t border-[#E9E7E1]/10 flex-1 flex flex-col justify-between">
+      <div className="p-6 sm:p-8 bg-[#171916] border-t border-[#E3EBD8]/10 flex-1 flex flex-col justify-between">
         <AnimatePresence mode="wait">
           <motion.div
             key={project.id + "-info"}
@@ -77,7 +77,7 @@ export function ProjectScene({ project }: ProjectSceneProps) {
               >
                 {project.category}
               </p>
-              <h4 className="text-2xl sm:text-3xl font-sans font-light tracking-tight text-[#E9E7E1]">
+              <h4 className="text-2xl sm:text-3xl font-sans font-light tracking-tight text-[#E3EBD8]">
                 {project.title}
               </h4>
             </div>
@@ -91,7 +91,7 @@ export function ProjectScene({ project }: ProjectSceneProps) {
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-2.5 py-1 rounded text-xs font-mono bg-[#E9E7E1]/10 text-[#E9E7E1] border border-[#E9E7E1]/5"
+                  className="px-2.5 py-1 rounded text-xs font-mono bg-[#E3EBD8]/10 text-[#E3EBD8] border border-[#E3EBD8]/5"
                 >
                   {tech}
                 </span>
@@ -101,15 +101,15 @@ export function ProjectScene({ project }: ProjectSceneProps) {
         </AnimatePresence>
 
         {/* Action Link Footer */}
-        <div className="pt-6 mt-6 border-t border-[#E9E7E1]/10 flex items-center justify-between">
+        <div className="pt-6 mt-6 border-t border-[#E3EBD8]/10 flex items-center justify-between">
           <div className="flex items-center gap-2 text-xs font-mono text-[#73756E]">
-            <Layers className="w-3.5 h-3.5 text-[#C4E36C]" />
+            <Layers className="w-3.5 h-3.5 text-[#BFDF64]" />
             <span>Role: {project.role}</span>
           </div>
 
           <Link
             href={project.caseStudyUrl}
-            className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#E9E7E1] text-[#20221F] text-xs font-semibold hover:bg-[#C4E36C] transition-colors shadow"
+            className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#E3EBD8] text-[#20221F] text-xs font-semibold hover:bg-[#BFDF64] transition-colors shadow"
           >
             <span>Read Full Case Study</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

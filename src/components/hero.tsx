@@ -66,14 +66,33 @@ export function Hero() {
             {/* Oversized Headline */}
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-sans font-light tracking-tight text-[#20221F] leading-[1.08] mb-8">
               {profileData.headlinePrefix}{" "}
-              <span className="font-serif-italic font-normal text-[#778A43] underline decoration-[#C4E36C]/70 decoration-2 underline-offset-8">
+              <span className="font-serif-italic font-normal text-[#778A43] underline decoration-[#BFDF64]/70 decoration-2 underline-offset-8">
                 {profileData.headlineEmphasis}
               </span>
             </h1>
 
             {/* Introduction Copy */}
             <p className="text-lg sm:text-xl text-[#73756E] leading-relaxed max-w-2xl font-light mb-10">
-              {profileData.bioIntro}
+              Hi, I&apos;m Uttamraj Singh &mdash; an AI &amp; Software Engineer, currently serving as Founding CTO at{" "}
+              <a
+                href="https://www.upchar360.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => soundManager.playClick()}
+                className="text-[#20221F] underline decoration-[#778A43]/50 hover:text-[#778A43] hover:decoration-[#778A43] transition-colors"
+              >
+                Upchaar 360
+              </a>{" "}
+              and building autonomous AI systems at{" "}
+              <a
+                href="https://www.bitlancetechhub.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => soundManager.playClick()}
+                className="text-[#20221F] underline decoration-[#778A43]/50 hover:text-[#778A43] hover:decoration-[#778A43] transition-colors"
+              >
+                Bitlance Tech Hub
+              </a>, with a focus on scalable platforms, intelligent automation, and end-to-end product engineering.
             </p>
 
             {/* CTAs */}
@@ -82,10 +101,10 @@ export function Hero() {
                 href="#work"
                 onClick={() => soundManager.playClick()}
                 onMouseEnter={() => soundManager.playTick()}
-                className="group inline-flex items-center gap-3 px-6 py-3.5 bg-[#20221F] text-[#E9E7E1] font-medium text-sm rounded-full hover:bg-[#778A43] transition-all duration-200 shadow-sm"
+                className="group inline-flex items-center gap-3 px-6 py-3.5 bg-[#20221F] text-[#E3EBD8] font-medium text-sm rounded-full hover:bg-[#778A43] transition-all duration-200 shadow-sm"
               >
                 <span>Explore selected work</span>
-                <ArrowDownRight className="w-4 h-4 text-[#C4E36C] group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform" />
+                <ArrowDownRight className="w-4 h-4 text-[#BFDF64] group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform" />
               </a>
 
               <a
@@ -165,11 +184,11 @@ export function Hero() {
                 </div>
 
                 {/* Minimal Caption at bottom of photograph */}
-                <div className="absolute bottom-0 inset-x-0 z-20 p-4 bg-gradient-to-t from-[#141612] via-[#141612]/90 to-transparent flex items-center justify-between border-t border-[#E9E7E1]/10 font-mono text-[11px] text-[#E9E7E1]/80">
+                <div className="absolute bottom-0 inset-x-0 z-20 p-4 bg-gradient-to-t from-[#141612] via-[#141612]/90 to-transparent flex items-center justify-between border-t border-[#E3EBD8]/10 font-mono text-[11px] text-[#E3EBD8]/80">
                   <span className="tracking-widest">
                     UTTAMRAJ SINGH — 2026 ARCHIVE
                   </span>
-                  <span className="text-[#C4E36C] font-semibold tracking-wider">
+                  <span className="text-[#BFDF64] font-semibold tracking-wider">
                     [REF: US-01]
                   </span>
                 </div>
@@ -177,7 +196,7 @@ export function Hero() {
 
               {/* Circular Editorial Stamp overlapping frame */}
               <div
-                className="absolute -top-5 -right-5 z-30 pointer-events-none w-24 h-24 rounded-full bg-[#E9E7E1] border border-[#20221F]/20 shadow-lg flex items-center justify-center p-1.5"
+                className="absolute -top-5 -right-5 z-30 pointer-events-none w-24 h-24 rounded-full bg-[#E3EBD8] border border-[#20221F]/20 shadow-lg flex items-center justify-center p-1.5"
                 aria-hidden="true"
               >
                 <div className="relative w-full h-full rounded-full border border-dashed border-[#778A43]/50 flex items-center justify-center">

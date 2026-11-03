@@ -1,0 +1,145 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="axWindowBg" x1="0%" y1="0%" x2="0%" y2="1">
+      <stop offset="0%" stop-color="#0E1210" />
+      <stop offset="100%" stop-color="#080B09" />
+    </linearGradient>
+    <linearGradient id="axCardGrad" x1="0%" y1="0%" x2="1" y2="1">
+      <stop offset="0%" stop-color="#162018" />
+      <stop offset="100%" stop-color="#101712" />
+    </linearGradient>
+    <filter id="axShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="800" fill="#0C0E0D" />
+
+  <!-- Browser Window Wrapper -->
+  <g filter="url(#axShadow)">
+    <rect x="60" y="40" width="1080" height="720" rx="14" fill="url(#axWindowBg)" stroke="#222E24" stroke-width="1.5" />
+    
+    <!-- Browser Top Bar -->
+    <rect x="60" y="40" width="1080" height="46" rx="14" fill="#141C16" />
+    <path d="M 60 72 L 60 86 L 1140 86 L 1140 72 Z" fill="#141C16" />
+    <line x1="60" y1="86" x2="1140" y2="86" stroke="#222E24" stroke-width="1" />
+
+    <!-- Window Control Dots -->
+    <circle cx="86" cy="63" r="5.5" fill="#FF5F56" />
+    <circle cx="104" cy="63" r="5.5" fill="#FFBD2E" />
+    <circle cx="122" cy="63" r="5.5" fill="#27C93F" />
+
+    <!-- URL Bar -->
+    <rect x="240" y="52" width="600" height="24" rx="6" fill="#0B0E0C" stroke="#222E24" stroke-width="1" />
+    <circle cx="256" cy="64" r="3" fill="#6F853B" />
+    <text x="268" y="68" fill="#A4B399" font-family="'JetBrains Mono', monospace" font-size="11">https://acad-x-kappa.vercel.app</text>
+  </g>
+
+  <!-- Platform Web Navigation Bar -->
+  <g transform="translate(60, 86)">
+    <rect x="0" y="0" width="1080" height="64" fill="#101612" stroke="#1D2920" stroke-width="1" />
+    
+    <!-- Logo -->
+    <rect x="40" y="18" width="28" height="28" rx="6" fill="#6F853B" />
+    <text x="54" y="37" fill="#0E1210" font-family="'Manrope', sans-serif" font-weight="900" font-size="16" text-anchor="middle">A</text>
+    <text x="78" y="37" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-weight="700" font-size="16">Acad<tspan fill="#BFDF64">X</tspan></text>
+    
+    <!-- Navigation Links -->
+    <text x="480" y="37" fill="#BFDF64" font-family="'Manrope', sans-serif" font-weight="600" font-size="13">Knowledge Hub</text>
+    <text x="630" y="37" fill="#889880" font-family="'Manrope', sans-serif" font-weight="500" font-size="13">Concept Graphs</text>
+    <text x="770" y="37" fill="#889880" font-family="'Manrope', sans-serif" font-weight="500" font-size="13">Faculty Connect</text>
+    <text x="900" y="37" fill="#889880" font-family="'Manrope', sans-serif" font-weight="500" font-size="13">Institutions</text>
+
+    <!-- Sign In Button -->
+    <rect x="990" y="16" width="50" height="32" rx="6" fill="#1F2A21" stroke="#314234" stroke-width="1" />
+    <text x="1015" y="36" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-weight="600" font-size="11" text-anchor="middle">Launch</text>
+  </g>
+
+  <!-- Hero & Platform Ecosystem Canvas -->
+  <g transform="translate(100, 180)">
+    <!-- Badge -->
+    <rect x="0" y="0" width="290" height="26" rx="13" fill="#1B261D" stroke="#354A37" stroke-width="1" />
+    <circle cx="14" cy="13" r="3.5" fill="#BFDF64" />
+    <text x="26" y="17" fill="#BFDF64" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" letter-spacing="1">ACADEMIC KNOWLEDGE ECOSYSTEM</text>
+
+    <!-- Headline -->
+    <text x="0" y="65" fill="#E3EBD8" font-family="'Newsreader', Georgia, serif" font-size="38" font-weight="500">
+      Beyond Another Chatbot. A Connected <tspan font-style="italic" fill="#BFDF64">Ecosystem</tspan>.
+    </text>
+    <text x="0" y="98" fill="#8C9C84" font-family="'Manrope', sans-serif" font-size="14" font-weight="400">
+      Synthesizing student inquiry, faculty research, and institutional course knowledge into an interconnected conceptual intelligence layer.
+    </text>
+
+    <!-- Interactive Knowledge Platform UI -->
+    <g transform="translate(0, 130)">
+      <rect x="0" y="0" width="1000" height="370" rx="12" fill="url(#axCardGrad)" stroke="#283A2C" stroke-width="1.5" />
+
+      <!-- Left Sidebar: Course Topics -->
+      <g transform="translate(24, 24)">
+        <rect x="0" y="0" width="220" height="322" rx="8" fill="#0C110E" stroke="#1D2A20" stroke-width="1" />
+        <text x="16" y="28" fill="#889880" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">ACTIVE CURRICULA</text>
+        
+        <!-- Active Subject -->
+        <rect x="10" y="42" width="200" height="36" rx="6" fill="#1E2B21" stroke="#384E3D" stroke-width="1" />
+        <text x="22" y="65" fill="#BFDF64" font-family="'Manrope', sans-serif" font-size="12" font-weight="600">Neural Graph Systems</text>
+
+        <!-- Other subjects -->
+        <text x="22" y="112" fill="#8C9C84" font-family="'Manrope', sans-serif" font-size="12">Distributed Algorithms</text>
+        <text x="22" y="152" fill="#8C9C84" font-family="'Manrope', sans-serif" font-size="12">Compiler Architecture</text>
+        <text x="22" y="192" fill="#8C9C84" font-family="'Manrope', sans-serif" font-size="12">Quantum Information</text>
+        <text x="22" y="232" fill="#8C9C84" font-family="'Manrope', sans-serif" font-size="12">Autonomous Agents</text>
+      </g>
+
+      <!-- Center Knowledge Graph Visual -->
+      <g transform="translate(264, 24)">
+        <rect x="0" y="0" width="440" height="322" rx="8" fill="#0F1511" stroke="#1D2A20" stroke-width="1" />
+        <text x="20" y="28" fill="#BFDF64" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">INTERACTIVE KNOWLEDGE TOPOLOGY</text>
+
+        <!-- Connecting Lines -->
+        <line x1="140" y1="120" x2="220" y2="180" stroke="#39503D" stroke-width="1.5" />
+        <line x1="300" y1="120" x2="220" y2="180" stroke="#39503D" stroke-width="1.5" />
+        <line x1="220" y1="180" x2="160" y2="250" stroke="#BFDF64" stroke-width="2" />
+        <line x1="220" y1="180" x2="280" y2="250" stroke="#39503D" stroke-width="1.5" />
+
+        <!-- Nodes -->
+        <circle cx="140" cy="120" r="28" fill="#152018" stroke="#39503D" stroke-width="1.5" />
+        <text x="140" y="124" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-size="10" text-anchor="middle">Embeddings</text>
+
+        <circle cx="300" cy="120" r="28" fill="#152018" stroke="#39503D" stroke-width="1.5" />
+        <text x="300" y="124" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-size="10" text-anchor="middle">Attention</text>
+
+        <!-- Center Active Node -->
+        <circle cx="220" cy="180" r="38" fill="#203023" stroke="#BFDF64" stroke-width="2" />
+        <text x="220" y="180" fill="#BFDF64" font-family="'Manrope', sans-serif" font-weight="700" font-size="11" text-anchor="middle">Graph</text>
+        <text x="220" y="194" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-weight="500" font-size="10" text-anchor="middle">Attention</text>
+
+        <circle cx="160" cy="250" r="26" fill="#19241C" stroke="#BFDF64" stroke-width="1.5" />
+        <text x="160" y="254" fill="#BFDF64" font-family="'Manrope', sans-serif" font-size="9" text-anchor="middle">Prerequisites</text>
+
+        <circle cx="280" cy="250" r="26" fill="#152018" stroke="#39503D" stroke-width="1.5" />
+        <text x="280" y="254" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-size="9" text-anchor="middle">Synthesis</text>
+      </g>
+
+      <!-- Right Panel: Verified Synthesis Feed -->
+      <g transform="translate(724, 24)">
+        <rect x="0" y="0" width="252" height="322" rx="8" fill="#0C110E" stroke="#1D2A20" stroke-width="1" />
+        <text x="16" y="28" fill="#889880" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">FACULTY-VERIFIED CONTEXT</text>
+
+        <rect x="12" y="44" width="228" height="85" rx="6" fill="#141E16" stroke="#2B3C2E" stroke-width="1" />
+        <text x="22" y="66" fill="#BFDF64" font-family="'JetBrains Mono', monospace" font-size="9">PROF. CHEN • LECTURE 08</text>
+        <text x="22" y="86" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-size="11" font-weight="500">GNN spectral filtering</text>
+        <text x="22" y="104" fill="#889880" font-family="'Manrope', sans-serif" font-size="10">Mapped to Midterm Q3 Study</text>
+
+        <rect x="12" y="140" width="228" height="95" rx="6" fill="#141E16" stroke="#2B3C2E" stroke-width="1" />
+        <text x="22" y="162" fill="#BFDF64" font-family="'JetBrains Mono', monospace" font-size="9">INSTITUTIONAL SYLLABUS</text>
+        <text x="22" y="182" fill="#E3EBD8" font-family="'Manrope', sans-serif" font-size="11" font-weight="500">Cross-department sync</text>
+        <text x="22" y="200" fill="#889880" font-family="'Manrope', sans-serif" font-size="10">42 verified papers indexed</text>
+
+        <!-- Action Button -->
+        <rect x="12" y="254" width="228" height="36" rx="6" fill="#6F853B" />
+        <text x="126" y="277" fill="#0C110E" font-family="'Manrope', sans-serif" font-weight="700" font-size="11" text-anchor="middle">Explore Knowledge Graph →</text>
+      </g>
+    </g>
+  </g>
+</svg>

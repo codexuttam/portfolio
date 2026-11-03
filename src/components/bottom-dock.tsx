@@ -25,7 +25,7 @@ export function BottomDock({ onOpenCommandPalette }: BottomDockProps) {
   return (
     <nav
       aria-label="Editorial Bottom Navigation"
-      className="font-baskerville bg-[#E9E7E1]/85 fixed bottom-0 w-full h-14 z-50 text-sm px-6 border-t border-[#20221F]/15 backdrop-blur-[4px] transition-colors duration-300"
+      className="font-baskerville bg-[#E3EBD8]/85 fixed bottom-0 w-full h-14 z-50 text-sm px-6 border-t border-[#20221F]/15 backdrop-blur-[4px] transition-colors duration-300"
     >
       <div className="h-full">
         <div className="flex items-stretch justify-between max-w-158 px-0.5 mx-auto h-full">

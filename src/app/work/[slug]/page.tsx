@@ -60,9 +60,9 @@ export default async function CaseStudyPage({ params }: PageProps) {
     projectsData[(projectIndex + 1) % projectsData.length];
 
   return (
-    <main className="min-h-screen bg-[#E9E7E1] text-[#20221F] paper-grain selection:bg-[#C4E36C] selection:text-[#20221F]">
+    <main className="min-h-screen bg-[#E3EBD8] text-[#1E231B] paper-grain selection:bg-[#BFDF64] selection:text-[#1E231B]">
       {/* Top Navigation Bar */}
-      <header className="sticky top-0 z-40 w-full bg-[#E9E7E1]/90 backdrop-blur-md border-b border-[#20221F]/10 py-4">
+      <header className="sticky top-0 z-40 w-full bg-[#E3EBD8]/90 backdrop-blur-md border-b border-[#20221F]/10 py-4">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 flex items-center justify-between">
           <Link
             href="/#work"
@@ -111,7 +111,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </p>
 
         {/* Project Metadata Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 sm:p-8 rounded-xl border border-[#20221F]/15 bg-[#20221F]/[0.025] mb-14 font-mono text-xs">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 sm:p-8 rounded-xl border border-[#20221F]/15 bg-[#20221F]/[0.025] mb-8 font-mono text-xs">
           <div>
             <span className="block text-[10px] uppercase text-[#73756E] mb-1">
               TIMELINE
@@ -141,6 +141,21 @@ export default async function CaseStudyPage({ params }: PageProps) {
           </div>
         </div>
 
+        {/* Live Project Action */}
+        {project.liveUrl && (
+          <div className="mb-14">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#1E231B] text-[#E3EBD8] hover:bg-[#6F853B] transition-colors font-mono text-xs font-medium shadow-sm"
+            >
+              <span>Launch Live Application</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        )}
+
         {/* Large Hero Visual Diagram */}
         <div className="relative aspect-[16/10] w-full rounded-2xl border border-[#20221F]/20 bg-[#171916] shadow-2xl overflow-hidden mb-16">
           <Image
@@ -149,7 +164,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             fill
             priority
             sizes="(max-width: 1200px) 100vw, 1200px"
-            className="object-cover object-center"
+            className="object-cover object-top"
           />
         </div>
 
@@ -188,19 +203,19 @@ export default async function CaseStudyPage({ params }: PageProps) {
             </section>
 
             {/* Architecture Notes */}
-            <section className="p-6 sm:p-8 rounded-xl border border-[#20221F]/15 bg-[#171916] text-[#E9E7E1] space-y-4">
-              <div className="flex items-center gap-2 font-mono text-xs text-[#C4E36C]">
+            <section className="p-6 sm:p-8 rounded-xl border border-[#20221F]/15 bg-[#171916] text-[#E3EBD8] space-y-4">
+              <div className="flex items-center gap-2 font-mono text-xs text-[#BFDF64]">
                 <Terminal className="w-4 h-4" />
                 <span>ARCHITECTURE &amp; STACK NOTES</span>
               </div>
-              <p className="text-base text-[#E9E7E1]/90 font-mono leading-relaxed">
+              <p className="text-base text-[#E3EBD8]/90 font-mono leading-relaxed">
                 {project.caseStudy.architectureNotes}
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-2.5 py-1 rounded bg-[#E9E7E1]/10 text-xs font-mono text-[#E9E7E1]"
+                    className="px-2.5 py-1 rounded bg-[#E3EBD8]/10 text-xs font-mono text-[#E3EBD8]"
                   >
                     {tech}
                   </span>

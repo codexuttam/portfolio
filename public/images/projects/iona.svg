@@ -1,0 +1,90 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ionaWindowBg" x1="0%" y1="0%" x2="0%" y2="1">
+      <stop offset="0%" stop-color="#141312" />
+      <stop offset="100%" stop-color="#0A0909" />
+    </linearGradient>
+    <filter id="ionaShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="800" fill="#0C0E0D" />
+
+  <!-- Browser Window Wrapper -->
+  <g filter="url(#ionaShadow)">
+    <rect x="60" y="40" width="1080" height="720" rx="14" fill="url(#ionaWindowBg)" stroke="#2C2825" stroke-width="1.5" />
+    
+    <!-- Browser Top Bar -->
+    <rect x="60" y="40" width="1080" height="46" rx="14" fill="#1C1A18" />
+    <path d="M 60 72 L 60 86 L 1140 86 L 1140 72 Z" fill="#1C1A18" />
+    <line x1="60" y1="86" x2="1140" y2="86" stroke="#2C2825" stroke-width="1" />
+
+    <!-- Window Control Dots -->
+    <circle cx="86" cy="63" r="5.5" fill="#FF5F56" />
+    <circle cx="104" cy="63" r="5.5" fill="#FFBD2E" />
+    <circle cx="122" cy="63" r="5.5" fill="#27C93F" />
+
+    <!-- URL Bar -->
+    <rect x="240" y="52" width="600" height="24" rx="6" fill="#0E0D0C" stroke="#2C2825" stroke-width="1" />
+    <circle cx="256" cy="64" r="3" fill="#8C7355" />
+    <text x="268" y="68" fill="#B3A594" font-family="'JetBrains Mono', monospace" font-size="11">https://ionaaaaaa.vercel.app</text>
+  </g>
+
+  <!-- Platform Web Navigation Bar -->
+  <g transform="translate(60, 86)">
+    <rect x="0" y="0" width="1080" height="64" fill="#141311" stroke="#262320" stroke-width="1" />
+    
+    <!-- Wordmark -->
+    <text x="50" y="40" fill="#F0ECE4" font-family="'Newsreader', Georgia, serif" font-weight="500" font-size="24" letter-spacing="2">I O N A</text>
+    
+    <!-- Navigation Links -->
+    <text x="560" y="38" fill="#F0ECE4" font-family="'Manrope', sans-serif" font-weight="600" font-size="12" letter-spacing="1">INDEX</text>
+    <text x="680" y="38" fill="#968C82" font-family="'Manrope', sans-serif" font-weight="500" font-size="12" letter-spacing="1">ARCHIVE</text>
+    <text x="800" y="38" fill="#968C82" font-family="'Manrope', sans-serif" font-weight="500" font-size="12" letter-spacing="1">ATELIER</text>
+    <text x="920" y="38" fill="#968C82" font-family="'Manrope', sans-serif" font-weight="500" font-size="12" letter-spacing="1">INQUIRY</text>
+  </g>
+
+  <!-- Hero Content Section -->
+  <g transform="translate(110, 190)">
+    <!-- Metadata pill -->
+    <text x="0" y="20" fill="#8C7355" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="2">CURATED CLIENT EXPERIENCE // 2026 EDITION</text>
+    
+    <!-- Dramatic Editorial Headline -->
+    <text x="0" y="70" fill="#F0ECE4" font-family="'Newsreader', Georgia, serif" font-size="44" font-weight="400">
+      Tactile Craft. Considered <tspan font-style="italic" fill="#C4AE93">Digital Spaces</tspan>.
+    </text>
+
+    <!-- Client Showcase Gallery Grid -->
+    <g transform="translate(0, 110)">
+      <!-- Main Visual Showcase Card -->
+      <rect x="0" y="0" width="620" height="390" rx="8" fill="#1C1A17" stroke="#332F2A" stroke-width="1" />
+      <rect x="24" y="24" width="572" height="260" rx="4" fill="#24211D" />
+      
+      <!-- Inside image preview -->
+      <circle cx="310" cy="154" r="70" fill="#2E2A25" stroke="#8C7355" stroke-opacity="0.4" stroke-width="1.5" />
+      <text x="310" y="160" fill="#F0ECE4" font-family="'Newsreader', Georgia, serif" font-size="28" font-style="italic" text-anchor="middle">IONA</text>
+      
+      <text x="24" y="324" fill="#F0ECE4" font-family="'Manrope', sans-serif" font-weight="600" font-size="14">Spatial Design &amp; Architectural Web Experience</text>
+      <text x="24" y="350" fill="#968C82" font-family="'Manrope', sans-serif" font-size="12">Tailored for private client brand launch • 60fps GPU micro-interactions</text>
+
+      <!-- Right Column: Case Details & Stats -->
+      <g transform="translate(650, 0)">
+        <rect x="0" y="0" width="330" height="185" rx="8" fill="#1A1816" stroke="#332F2A" stroke-width="1" />
+        <text x="24" y="36" fill="#8C7355" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">CLIENT SPECIFICATION</text>
+        <text x="24" y="65" fill="#F0ECE4" font-family="'Newsreader', Georgia, serif" font-size="20" font-style="italic">Bespoke Brand Presence</text>
+        <text x="24" y="96" fill="#968C82" font-family="'Manrope', sans-serif" font-size="12" leading-relaxed">
+          Fluid physics, sub-100ms transitions, and bespoke editorial layout engineered for private portfolio deployment.
+        </text>
+        <text x="24" y="155" fill="#BFDF64" font-family="'JetBrains Mono', monospace" font-size="10">STATUS: PRODUCTION LIVE</text>
+
+        <rect x="0" y="205" width="330" height="185" rx="8" fill="#1A1816" stroke="#332F2A" stroke-width="1" />
+        <text x="24" y="240" fill="#8C7355" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">PERFORMANCE AUDIT</text>
+        <text x="24" y="275" fill="#F0ECE4" font-family="'Manrope', sans-serif" font-size="26" font-weight="700">100 / 100</text>
+        <text x="24" y="302" fill="#968C82" font-family="'Manrope', sans-serif" font-size="12">Lighthouse Core Web Vitals score</text>
+        <text x="24" y="336" fill="#A4B399" font-family="'JetBrains Mono', monospace" font-size="11">Next.js • Tailwind • Framer Motion</text>
+      </g>
+    </g>
+  </g>
+</svg>

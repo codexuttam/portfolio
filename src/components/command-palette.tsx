@@ -89,7 +89,11 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
     title: `${project.number} ${project.title}`,
     subtitle: project.category,
     action: () => {
-      router.push(project.caseStudyUrl);
+      if (project.liveUrl) {
+        window.open(project.liveUrl, "_blank");
+      } else {
+        router.push(project.caseStudyUrl);
+      }
       handleClose();
     },
     icon: ExternalLink,
@@ -158,12 +162,12 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
       aria-label="Command Palette"
     >
       <div
-        className="w-full max-w-xl rounded-xl border border-[#20221F]/20 bg-[#E9E7E1] shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200"
+        className="w-full max-w-xl rounded-xl border border-[#20221F]/20 bg-[#E3EBD8] shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
         onKeyDown={handleKeyDown}
       >
         {/* Search Input Bar */}
-        <div className="relative border-b border-[#20221F]/15 px-4 py-3.5 flex items-center gap-3 bg-[#E9E7E1]">
+        <div className="relative border-b border-[#20221F]/15 px-4 py-3.5 flex items-center gap-3 bg-[#E3EBD8]">
           <Search className="w-5 h-5 text-[#73756E]" />
           <input
             ref={inputRef}
@@ -205,14 +209,14 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
                   onMouseEnter={() => setSelectedIndex(index)}
                   className={`flex items-center justify-between p-3 rounded-lg cursor-pointer transition-colors ${
                     isSelected
-                      ? "bg-[#20221F] text-[#E9E7E1]"
+                      ? "bg-[#20221F] text-[#E3EBD8]"
                       : "text-[#20221F] hover:bg-[#20221F]/5"
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <div
                       className={`p-2 rounded-md ${
-                        isSelected ? "bg-[#778A43]/40 text-[#C4E36C]" : "bg-[#20221F]/5 text-[#73756E]"
+                        isSelected ? "bg-[#778A43]/40 text-[#BFDF64]" : "bg-[#20221F]/5 text-[#73756E]"
                       }`}
                     >
                       <Icon className="w-4 h-4" />
@@ -221,7 +225,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
                       <div className="text-sm font-medium">{item.title}</div>
                       <div
                         className={`text-xs ${
-                          isSelected ? "text-[#E9E7E1]/70" : "text-[#73756E]"
+                          isSelected ? "text-[#E3EBD8]/70" : "text-[#73756E]"
                         }`}
                       >
                         {item.subtitle}
@@ -232,7 +236,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
                   <span
                     className={`font-mono text-[10px] uppercase px-2 py-0.5 rounded ${
                       isSelected
-                        ? "bg-[#E9E7E1]/10 text-[#C4E36C]"
+                        ? "bg-[#E3EBD8]/10 text-[#BFDF64]"
                         : "bg-[#20221F]/5 text-[#73756E]"
                     }`}
                   >

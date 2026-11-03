@@ -41,7 +41,7 @@ export function Experience() {
               }}
               className={`px-4 py-1.5 rounded-full transition-all ${
                 activeTab === "roles"
-                  ? "bg-[#20221F] text-[#E9E7E1] font-medium shadow-sm"
+                  ? "bg-[#20221F] text-[#E3EBD8] font-medium shadow-sm"
                   : "text-[#73756E] hover:text-[#20221F]"
               }`}
             >
@@ -55,7 +55,7 @@ export function Experience() {
               }}
               className={`px-4 py-1.5 rounded-full transition-all ${
                 activeTab === "accolades"
-                  ? "bg-[#20221F] text-[#E9E7E1] font-medium shadow-sm"
+                  ? "bg-[#20221F] text-[#E3EBD8] font-medium shadow-sm"
                   : "text-[#73756E] hover:text-[#20221F]"
               }`}
             >
@@ -132,7 +132,7 @@ export function Experience() {
                       </div>
                       <div className="flex items-center gap-2 font-mono text-xs text-[#73756E]">
                         {exp.isCurrent && (
-                          <span className="px-2 py-0.5 rounded-full bg-[#C4E36C]/40 text-[#55642F] font-semibold text-[10px]">
+                          <span className="px-2 py-0.5 rounded-full bg-[#BFDF64]/40 text-[#4D5E26] font-semibold text-[10px]">
                             ACTIVE
                           </span>
                         )}

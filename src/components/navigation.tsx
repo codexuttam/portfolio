@@ -38,7 +38,7 @@ export function Navigation({ onOpenCommandPalette }: NavigationProps) {
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           isScrolled
-            ? "bg-[#E9E7E1]/90 backdrop-blur-md border-b border-[#20221F]/10 py-3.5"
+            ? "bg-[#E3EBD8]/90 backdrop-blur-md border-b border-[#20221F]/10 py-3.5"
             : "bg-transparent py-6"
         }`}
       >
@@ -52,7 +52,7 @@ export function Navigation({ onOpenCommandPalette }: NavigationProps) {
             <span className="font-serif text-2xl font-bold tracking-tight text-[#20221F] group-hover:text-[#778A43] transition-colors">
               {profileData.wordmark}
             </span>
-            <span className="h-1.5 w-1.5 rounded-full bg-[#778A43] group-hover:bg-[#C4E36C] transition-colors" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#778A43] group-hover:bg-[#BFDF64] transition-colors" />
           </Link>
 
           {/* Desktop Nav Items */}
@@ -122,7 +122,7 @@ export function Navigation({ onOpenCommandPalette }: NavigationProps) {
               >
                 <Command className="w-3 h-3" />
                 <span className="hidden xl:inline">Search</span>
-                <kbd className="px-1 py-0.2 bg-[#E9E7E1] rounded border border-[#20221F]/20 text-[10px]">
+                <kbd className="px-1 py-0.2 bg-[#E3EBD8] rounded border border-[#20221F]/20 text-[10px]">
                   ⌘K
                 </kbd>
               </button>
@@ -158,7 +158,7 @@ export function Navigation({ onOpenCommandPalette }: NavigationProps) {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 z-50 md:hidden bg-[#E9E7E1]/98 backdrop-blur-xl flex flex-col px-6 py-8"
+          className="fixed inset-0 z-50 md:hidden bg-[#E3EBD8]/98 backdrop-blur-xl flex flex-col px-6 py-8"
           role="dialog"
           aria-modal="true"
         >

@@ -24,7 +24,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#E9E7E1] text-[#20221F] selection:bg-[#C4E36C] selection:text-[#20221F]">
+    <div className="min-h-screen bg-[#E3EBD8] text-[#1E231B] selection:bg-[#BFDF64] selection:text-[#1E231B]">
       <main className="mx-6 page-init">
         <div className="max-w-158 mx-auto">
           <div className="pt-20 pb-32">
@@ -57,41 +57,36 @@ export default function HomePage() {
                   <h1 className="text-base font-normal font-baskerville text-[#73756E] pb-2">
                     About
                   </h1>
-                  <div className="font-medium pl-4 text-sm space-y-4 leading-6.5">
-                    <p>Hi,</p>
-                    <p>
-                      I&apos;m Uttamraj Singh, an{" "}
+                  <div className="font-medium pl-4 text-sm leading-6.5">
+                    <p className="inline-hoverable-wrapper">
+                      Hi, I&apos;m Uttamraj Singh — an{" "}
                       <span className="italic font-baskerville text-[#20221F]">
                         AI
                       </span>{" "}
-                      and{" "}
+                      &amp;{" "}
                       <span className="font-semibold text-[#20221F]">
-                        software
+                        Software
                       </span>{" "}
-                      engineer.
-                    </p>
-                    <p className="inline-hoverable-wrapper">
-                      Currently working as founding CTO at{" "}
+                      Engineer, currently serving as Founding CTO at{" "}
                       <a
-                        href="https://upchaar360.com"
+                        href="https://www.upchar360.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => soundManager.playClick()}
-                        className="group/curr-company hoverable-wrapper text-[#20221F]/80 underline decoration-[#20221F]/30 hover:decoration-wavy hover:decoration-[#20221F] hover:text-[#20221F] focus:decoration-wavy focus:decoration-[#20221F] focus:text-[#20221F] transition-colors duration-300 ease-out underline-offset-2"
+                        className="group/curr-company hoverable-wrapper text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-wavy hover:decoration-[#20221F] hover:text-[#20221F] focus:decoration-wavy focus:decoration-[#20221F] focus:text-[#20221F] transition-colors duration-300 ease-out underline-offset-2"
                       >
                         Upchaar 360
-                      </a>
-                      , architecting end-to-end patient platforms, and engineering autonomous AI systems at{" "}
+                      </a>{" "}
+                      and building autonomous AI systems at{" "}
                       <a
-                        href="https://bitlance.tech"
+                        href="https://www.bitlancetechhub.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => soundManager.playClick()}
-                        className="group/curr-company hoverable-wrapper text-[#20221F]/80 underline decoration-[#20221F]/30 hover:decoration-wavy hover:decoration-[#20221F] hover:text-[#20221F] focus:decoration-wavy focus:decoration-[#20221F] focus:text-[#20221F] transition-colors duration-300 ease-out underline-offset-2"
+                        className="group/curr-company hoverable-wrapper text-[#20221F] underline decoration-[#20221F]/30 hover:decoration-wavy hover:decoration-[#20221F] hover:text-[#20221F] focus:decoration-wavy focus:decoration-[#20221F] focus:text-[#20221F] transition-colors duration-300 ease-out underline-offset-2"
                       >
                         Bitlance Tech Hub
-                      </a>
-                      .
+                      </a>, with a focus on scalable platforms, intelligent automation, and end-to-end product engineering.
                     </p>
                   </div>
                 </div>
@@ -101,27 +96,27 @@ export default function HomePage() {
                   <h1 className="text-base font-normal font-baskerville text-[#73756E] pb-2">
                     Work
                   </h1>
-                  <div className="font-medium pl-4 text-sm space-y-4 leading-6.5">
-                    <p>
+                  <div className="font-medium pl-4 text-sm leading-6.5">
+                    <p className="pb-1.5">
                       Over the past years, I&apos;ve worked in startups with great
                       teams and built things I care about from zero to one.
                     </p>
-                    <div>
+                    <div className="pt-0.5">
                       {/* Upchaar 360 */}
                       <a
-                        href="https://upchaar360.com"
+                        href="https://www.upchar360.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => soundManager.playClick()}
                         onMouseEnter={() => soundManager.playTick()}
-                        className="group/w-item hoverable-wrapper py-2 text-inherit inline-block w-full no-underline hover:text-[#20221F] hover:pr-4 focus:text-[#20221F] focus:pr-4 transition-all duration-300"
+                        className="group/w-item hoverable-wrapper py-1.5 text-inherit inline-block w-full no-underline hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300"
                       >
                         <div className="flex items-center justify-start gap-2">
                           <span className="inline-block group-hover/w-item:rotate-180 group-hover/w-item:translate-x-1 group-focus/w-item:rotate-180 group-focus/w-item:translate-x-1 leading-3 transition-transform duration-300 ease-out origin-[50%_55%] text-[#778A43]">
                             ✦
                           </span>
                           <p className="text-sm">Upchaar 360</p>
-                          <span className="text-xs ml-auto font-medium text-[#73756E] group-hover/w-item:text-[#20221F] transition-colors duration-300">
+                          <span className="text-xs ml-auto font-mono text-[#73756E] group-hover/w-item:text-[#20221F] transition-colors duration-300 text-right shrink-0">
                             2026
                           </span>
                         </div>
@@ -129,19 +124,19 @@ export default function HomePage() {
 
                       {/* Bitlance Tech Hub */}
                       <a
-                        href="https://bitlance.tech"
+                        href="https://www.bitlancetechhub.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => soundManager.playClick()}
                         onMouseEnter={() => soundManager.playTick()}
-                        className="group/w-item hoverable-wrapper py-2 text-inherit inline-block w-full no-underline hover:text-[#20221F] hover:pr-4 focus:text-[#20221F] focus:pr-4 transition-all duration-300"
+                        className="group/w-item hoverable-wrapper py-1.5 text-inherit inline-block w-full no-underline hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300"
                       >
                         <div className="flex items-center justify-start gap-2">
                           <span className="inline-block group-hover/w-item:rotate-180 group-hover/w-item:translate-x-1 group-focus/w-item:rotate-180 group-focus/w-item:translate-x-1 leading-3 transition-transform duration-300 ease-out origin-[50%_55%] text-[#778A43]">
                             ✦
                           </span>
                           <p className="text-sm">Bitlance Tech Hub</p>
-                          <span className="text-xs ml-auto font-medium text-[#73756E] group-hover/w-item:text-[#20221F] transition-colors duration-300">
+                          <span className="text-xs ml-auto font-mono text-[#73756E] group-hover/w-item:text-[#20221F] transition-colors duration-300 text-right shrink-0">
                             2026
                           </span>
                         </div>
@@ -150,34 +145,36 @@ export default function HomePage() {
                       {/* QUANTA Innovation */}
                       <div
                         onMouseEnter={() => soundManager.playTick()}
-                        className="group/w-item hoverable-wrapper py-2 text-inherit inline-block w-full no-underline hover:text-[#20221F] hover:pr-4 focus:text-[#20221F] focus:pr-4 transition-all duration-300 cursor-default"
+                        className="group/w-item hoverable-wrapper py-1.5 text-inherit inline-block w-full no-underline hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 cursor-default"
                       >
                         <div className="flex items-center justify-start gap-2">
                           <span className="inline-block group-hover/w-item:rotate-180 group-hover/w-item:translate-x-1 group-focus/w-item:rotate-180 group-focus/w-item:translate-x-1 leading-3 transition-transform duration-300 ease-out origin-[50%_55%] text-[#73756E]">
                             ✧
                           </span>
                           <p className="text-sm">QUANTA Innovation</p>
-                          <span className="text-xs ml-auto font-medium text-[#73756E] group-hover/w-item:text-[#20221F] transition-colors duration-300">
+                          <span className="text-xs ml-auto font-mono text-[#73756E] group-hover/w-item:text-[#20221F] transition-colors duration-300 text-right shrink-0">
                             2025
                           </span>
                         </div>
                       </div>
 
-                      {/* Noida International University */}
-                      <div
+                      {/* Freelance Web Developer */}
+                      <a
+                        href="#contact"
+                        onClick={() => soundManager.playClick()}
                         onMouseEnter={() => soundManager.playTick()}
-                        className="group/w-item hoverable-wrapper py-2 text-inherit inline-block w-full no-underline hover:text-[#20221F] hover:pr-4 focus:text-[#20221F] focus:pr-4 transition-all duration-300 cursor-default"
+                        className="group/w-item hoverable-wrapper py-1.5 text-inherit inline-block w-full no-underline hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300"
                       >
                         <div className="flex items-center justify-start gap-2">
-                          <span className="inline-block group-hover/w-item:rotate-180 group-hover/w-item:translate-x-1 group-focus/w-item:rotate-180 group-focus/w-item:translate-x-1 leading-3 transition-transform duration-300 ease-out origin-[50%_55%] text-[#73756E]">
-                            ✧
+                          <span className="inline-block group-hover/w-item:rotate-180 group-hover/w-item:translate-x-1 group-focus/w-item:rotate-180 group-focus/w-item:translate-x-1 leading-3 transition-transform duration-300 ease-out origin-[50%_55%] text-[#778A43]">
+                            ✦
                           </span>
-                          <p className="text-sm">Noida International University</p>
-                          <span className="text-xs ml-auto font-medium text-[#73756E] group-hover/w-item:text-[#20221F] transition-colors duration-300">
-                            2024–2028
+                          <p className="text-sm">Freelance Web Developer</p>
+                          <span className="text-xs ml-auto font-mono text-[#73756E] group-hover/w-item:text-[#20221F] transition-colors duration-300 text-right shrink-0">
+                            2024–Lifetime
                           </span>
                         </div>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -191,35 +188,20 @@ export default function HomePage() {
                     Links
                   </h1>
                   <div className="pl-4 font-medium text-sm">
-                    {/* X (Twitter) */}
+                    {/* LinkedIn */}
                     <div>
                       <a
-                        href="https://x.com/codexuttam"
+                        href="https://www.linkedin.com/in/uttamraj-singh-054593259/"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => soundManager.playClick()}
                         onMouseEnter={() => soundManager.playTick()}
-                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-2"
+                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
                       >
                         <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
                           ✽
                         </span>
-                        <span className="inline-block pl-2">X (twitter)</span>
-                      </a>
-                    </div>
-
-                    {/* Email */}
-                    <div>
-                      <a
-                        href="mailto:uttamraj8299@gmail.com"
-                        onClick={() => soundManager.playClick()}
-                        onMouseEnter={() => soundManager.playTick()}
-                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-2"
-                      >
-                        <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
-                          ✽
-                        </span>
-                        <span className="inline-block pl-2">Email</span>
+                        <span className="inline-block pl-2">LinkedIn</span>
                       </a>
                     </div>
 
@@ -231,7 +213,7 @@ export default function HomePage() {
                         rel="noopener noreferrer"
                         onClick={() => soundManager.playClick()}
                         onMouseEnter={() => soundManager.playTick()}
-                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-2"
+                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
                       >
                         <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
                           ✽
@@ -240,20 +222,35 @@ export default function HomePage() {
                       </a>
                     </div>
 
-                    {/* LinkedIn */}
+                    {/* Email */}
                     <div>
                       <a
-                        href="https://www.linkedin.com/in/uttamraj-singh-054593259/"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="mailto:uttamraj8299@gmail.com"
                         onClick={() => soundManager.playClick()}
                         onMouseEnter={() => soundManager.playTick()}
-                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-2"
+                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
                       >
                         <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
                           ✽
                         </span>
-                        <span className="inline-block pl-2">LinkedIn</span>
+                        <span className="inline-block pl-2">Email</span>
+                      </a>
+                    </div>
+
+                    {/* X (Twitter) */}
+                    <div>
+                      <a
+                        href="https://x.com/codexuttam"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => soundManager.playClick()}
+                        onMouseEnter={() => soundManager.playTick()}
+                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
+                      >
+                        <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
+                          ✽
+                        </span>
+                        <span className="inline-block pl-2">X (twitter)</span>
                       </a>
                     </div>
 
@@ -265,7 +262,7 @@ export default function HomePage() {
                         rel="noopener noreferrer"
                         onClick={() => soundManager.playClick()}
                         onMouseEnter={() => soundManager.playTick()}
-                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-2"
+                        className="hoverable-wrapper group/social-link w-full hover:text-[#20221F] focus:text-[#20221F] transition-colors duration-300 text-inherit no-underline inline-block py-1.5"
                       >
                         <span className="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center text-[#778A43]">
                           ✽

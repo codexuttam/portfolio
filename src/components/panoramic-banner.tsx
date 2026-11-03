@@ -26,8 +26,8 @@ export function PanoramicBanner() {
         />
 
         {/* Bottom minimal location caption (inspired by rahulgg.in's subtle corner caption) */}
-        <div className="absolute bottom-3 right-4 sm:bottom-4 sm:right-6 z-20 flex items-center gap-2 font-mono text-[11px] text-[#E9E7E1]/80 bg-[#141512]/70 backdrop-blur-sm px-3 py-1 rounded border border-[#E9E7E1]/10">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#C4E36C] animate-pulse" />
+        <div className="absolute bottom-3 right-4 sm:bottom-4 sm:right-6 z-20 flex items-center gap-2 font-mono text-[11px] text-[#E3EBD8]/80 bg-[#141512]/70 backdrop-blur-sm px-3 py-1 rounded border border-[#E3EBD8]/10">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#BFDF64] animate-pulse" />
           <span>India // 28°38&apos;N 77°13&apos;E</span>
         </div>
       </div>

@@ -113,7 +113,7 @@ export function About() {
 
             {/* Additional Editorial Dimension Box */}
             <div className="p-6 sm:p-8 rounded-xl border border-[#20221F]/10 bg-[#20221F]/[0.02] flex flex-col sm:flex-row gap-6 items-start">
-              <div className="p-3 rounded-lg bg-[#E9E7E1] border border-[#20221F]/10 text-[#778A43] shrink-0">
+              <div className="p-3 rounded-lg bg-[#E3EBD8] border border-[#20221F]/10 text-[#778A43] shrink-0">
                 <Compass className="w-6 h-6" />
               </div>
               <div className="space-y-2">

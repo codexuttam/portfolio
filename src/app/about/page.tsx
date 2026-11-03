@@ -23,7 +23,7 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#E9E7E1] text-[#20221F] selection:bg-[#C4E36C] selection:text-[#20221F]">
+    <div className="min-h-screen bg-[#E3EBD8] text-[#1E231B] selection:bg-[#BFDF64] selection:text-[#1E231B]">
       <main className="mx-6 page-init">
         <div className="max-w-158 mx-auto">
           <div className="pt-20 pb-32">
