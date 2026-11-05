@@ -43,8 +43,8 @@ export const projectsData: ProjectItem[] = [
     category: "HealthTech | AI | Full-Stack Engineering",
     shortDescription:
       "Architecting an intelligent healthcare platform that simplifies patient journeys through AI-powered clinical navigation, verified specialist discovery, and seamless healthcare coordination.",
-    heroImage: "/images/projects/upchar360.svg",
-    imageAlt: "Upchaar 360 platform architecture and clinical navigation interface",
+    heroImage: "/images/projects/upchar360.jpg",
+    imageAlt: "Upchaar 360 intelligent clinical triage and doctor discovery platform screenshot",
     accentColor: "#C2410C", // Terracotta amber
     accentColorSoft: "rgba(194, 65, 12, 0.12)",
     technologies: [

@@ -177,10 +177,10 @@ export function EditorialProjectsSection() {
           </div>
         </div>
 
-        {/* Selected Side Projects */}
+        {/* All Projects Directory */}
         <div className="font-medium text-sm space-y-3 text-[#20221F]/80 pt-2">
           <p className="text-xs font-mono uppercase tracking-wider text-[#73756E]">
-            Selected Side &amp; Lab Projects
+            All Selected Projects
           </p>
 
           <p className="leading-6.5">
@@ -194,7 +194,7 @@ export function EditorialProjectsSection() {
           </p>
 
           <div className="pt-1">
-            {sideProjects.map((project) => (
+            {projectsData.map((project) => (
               <div key={project.id} className="relative">
                 <a
                   href={project.liveUrl || project.caseStudyUrl}
@@ -223,8 +223,15 @@ export function EditorialProjectsSection() {
                       {project.title}
                     </span>
 
+                    {/* Flagship tag if applicable */}
+                    {project.isFlagship && (
+                      <span className="text-[10px] font-mono uppercase px-1.5 py-0.2 rounded bg-[#C2410C]/10 text-[#C2410C] border border-[#C2410C]/20 shrink-0">
+                        flagship
+                      </span>
+                    )}
+
                     {/* Category Pill for quick context */}
-                    <span className="hidden sm:inline-block text-[11px] font-mono text-[#73756E]/80">
+                    <span className="hidden sm:inline-block text-[11px] font-mono text-[#73756E]/80 truncate">
                       / {project.category.toLowerCase()}
                     </span>
 
