@@ -22,6 +22,8 @@ export interface ProjectItem {
   role: string;
   liveUrl?: string;
   githubUrl?: string;
+  isFlagship?: boolean;
+  keyContributions?: string[];
   caseStudy?: {
     overview: string;
     problem: string;
@@ -34,9 +36,110 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
   {
+    id: "upchaar-360",
+    slug: "upchaar-360",
+    number: "01",
+    title: "Upchaar 360",
+    category: "HealthTech | AI | Full-Stack Engineering",
+    shortDescription:
+      "Architecting an intelligent healthcare platform that simplifies patient journeys through AI-powered clinical navigation, verified specialist discovery, and seamless healthcare coordination.",
+    heroImage: "/images/projects/upchar360.svg",
+    imageAlt: "Upchaar 360 platform architecture and clinical navigation interface",
+    accentColor: "#C2410C", // Terracotta amber
+    accentColorSoft: "rgba(194, 65, 12, 0.12)",
+    technologies: [
+      "AI Clinical Navigation",
+      "Full-Stack Architecture",
+      "API Design",
+      "PostgreSQL",
+      "WebRTC",
+      "Next.js",
+    ],
+    caseStudyUrl: "/work/upchaar-360",
+    liveUrl: "https://www.upchar360.com/",
+    status: "Case Study Available",
+    year: "2026",
+    role: "Founding CTO",
+    isFlagship: true,
+    keyContributions: [
+      "End-to-end product and system architecture.",
+      "AI-powered clinical triage and intelligent patient navigation.",
+      "Patient journey and specialist discovery workflows.",
+      "Backend engineering, API architecture and database design.",
+      "Technical leadership and product engineering.",
+    ],
+    caseStudy: {
+      overview:
+        "Upchaar 360 is an intelligent healthcare platform architected to simplify patient journeys through AI-powered clinical navigation, verified specialist discovery, and seamless healthcare coordination.",
+      problem:
+        "Navigating modern healthcare is fragmented and complex: patients face high friction identifying the right specialists, navigating clinical triaging, and coordinating appointments and confidential records across disjointed health workflows.",
+      solution:
+        "Architected an end-to-end digital health platform combining AI-driven clinical navigation, structured patient triage, and verified specialist discovery workflows to streamline patient care from initial inquiry to specialist consultation.",
+      architectureNotes:
+        "Engineered with a robust backend architecture, scalable database schemas, high-throughput APIs, and strict data confidentiality protocols for real-time patient-provider coordination.",
+      sections: [
+        {
+          title: "End-to-End Product & System Architecture",
+          content:
+            "Led the comprehensive technical architecture from zero to one as Founding CTO, establishing the platform foundation, data models, and service boundaries to support resilient healthcare workflows.",
+          bulletPoints: [
+            "Designed end-to-end platform architecture prioritizing reliability, data integrity, and low-latency interaction",
+            "Structured modular API services connecting patient portals with specialist scheduling systems",
+            "Established engineering standards, CI/CD delivery pipelines, and production infrastructure",
+          ],
+        },
+        {
+          title: "AI-Powered Clinical Triage & Intelligent Patient Navigation",
+          content:
+            "Implemented an intelligent navigation engine that guides patients through structured clinical inquiries and routes them to the appropriate medical domain.",
+          bulletPoints: [
+            "AI-assisted clinical triage assisting patients in articulating symptoms accurately",
+            "Algorithmic specialist matching based on clinical domain, availability, and geographical relevance",
+            "Reduced patient friction and administrative triage bottlenecks across outpatient care",
+          ],
+        },
+        {
+          title: "Patient Journey & Specialist Discovery Workflows",
+          content:
+            "Crafted seamless discovery experiences enabling patients to explore verified practitioner credentials, clinical specializations, and real-time scheduling slots.",
+          bulletPoints: [
+            "Intuitive specialist directory featuring verified credentials and practice domains",
+            "Optimized booking and consultation handoff flows minimizing drop-off across patient journeys",
+            "Integrated coordination mechanisms keeping patients informed at every stage of care",
+          ],
+        },
+        {
+          title: "Backend Engineering, API Architecture & Database Design",
+          content:
+            "Constructed secure API architectures and relational data schemas designed for transaction safety, auditability, and high concurrency.",
+          bulletPoints: [
+            "Scalable relational database schemas modeled for clinical records, auditability, and scheduling",
+            "RESTful and real-time communication APIs delivering sub-100ms response times for slot availability",
+            "Defensive validation and error handling across critical appointment lifecycles",
+          ],
+        },
+        {
+          title: "Technical Leadership & Product Engineering",
+          content:
+            "Directed engineering execution, translating clinical requirements into production-ready software while balancing speed, reliability, and code craft.",
+          bulletPoints: [
+            "Spearheaded technical roadmap, sprint planning, and architectural reviews across the development cycle",
+            "Fostered a product-first engineering culture focused on user empathy, accessibility, and high visual craft",
+            "Maintained continuous alignment between business objectives and technical deliverables",
+          ],
+        },
+      ],
+      keyTakeaways: [
+        "Healthcare systems require extreme architectural clarity where reliability and simplicity directly impact patient outcomes.",
+        "Effective clinical navigation pairs intelligent triage algorithms with frictionless patient discovery workflows.",
+        "Founding CTO leadership requires balancing deep hands-on code craft with strategic platform scalability.",
+      ],
+    },
+  },
+  {
     id: "samadhan-setu",
     slug: "samadhan-setu",
-    number: "01",
+    number: "02",
     title: "Samadhan Setu",
     category: "Civic grievance redressal platform",
     shortDescription:
@@ -94,7 +197,7 @@ export const projectsData: ProjectItem[] = [
   {
     id: "acad-x",
     slug: "acad-x",
-    number: "02",
+    number: "03",
     title: "AcadX",
     category: "Academic knowledge ecosystem",
     shortDescription:
@@ -147,7 +250,7 @@ export const projectsData: ProjectItem[] = [
   {
     id: "iona",
     slug: "iona",
-    number: "03",
+    number: "04",
     title: "IONA",
     category: "Client side project",
     shortDescription:
@@ -199,7 +302,7 @@ export const projectsData: ProjectItem[] = [
   {
     id: "aspirant-saathi",
     slug: "aspirant-saathi",
-    number: "04",
+    number: "05",
     title: "Aspirant Saathi",
     category: "AI examination preparation and answer evaluation",
     shortDescription:
@@ -251,7 +354,7 @@ export const projectsData: ProjectItem[] = [
   {
     id: "quicklearn-ai",
     slug: "quicklearn-ai",
-    number: "05",
+    number: "06",
     title: "Quick Learn AI",
     category: "Interactive LLM learning assistant",
     shortDescription:
