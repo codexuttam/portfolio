@@ -159,7 +159,7 @@ export default function ContactPage() {
                           <Mail className="w-3.5 h-3.5" />
                         </span>
                         <span className="text-[11px] font-mono uppercase text-[#73756E]">
-                          Email
+                          Email &bull; Gmail
                         </span>
                       </div>
                       <button
@@ -170,7 +170,7 @@ export default function ContactPage() {
                             "email"
                           )
                         }
-                        className="text-[11px] font-mono text-[#73756E] hover:text-[#20221F] flex items-center gap-1 transition-colors px-1.5 py-0.5 rounded hover:bg-[#20221F]/5"
+                        className="text-[11px] font-mono text-[#73756E] hover:text-[#20221F] flex items-center gap-1 transition-colors px-1.5 py-0.5 rounded hover:bg-[#20221F]/5 cursor-pointer"
                         title="Copy email to clipboard"
                       >
                         {copiedField === "email" ? (
@@ -188,9 +188,12 @@ export default function ContactPage() {
                     </div>
 
                     <a
-                      href="mailto:uttamrajsingh423@gmail.com"
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=uttamrajsingh423@gmail.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={() => soundManager.playClick()}
                       className="text-xs sm:text-sm font-mono text-[#20221F] hover:text-[#778A43] truncate transition-colors flex items-center gap-1"
+                      title="Compose in Gmail"
                     >
                       <span>uttamrajsingh423@gmail.com</span>
                       <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 shrink-0" />
