@@ -13,8 +13,6 @@ import {
   Check,
   Send,
   ArrowUpRight,
-  Sparkles,
-  MessageSquare,
 } from "lucide-react";
 import { LinkedinIcon, GithubIcon, XIcon } from "@/components/icons";
 
@@ -309,14 +307,10 @@ export default function ContactPage() {
 
               {/* Minimalist Message Form */}
               <div className="pt-4 space-y-4 hover-blur">
-                <div className="flex items-center justify-between border-b border-[#20221F]/10 pb-2">
+                <div className="border-b border-[#20221F]/10 pb-2">
                   <p className="text-xs font-mono uppercase tracking-wider text-[#73756E]">
                     Drop a Message
                   </p>
-                  <span className="text-[11px] font-mono text-[#73756E]/80 flex items-center gap-1">
-                    <Sparkles className="w-3 h-3 text-[#778A43]" />
-                    logged securely to CSV
-                  </span>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4 pt-1">
@@ -396,16 +390,13 @@ export default function ContactPage() {
                     <div className="p-3 rounded-lg border border-[#059669]/25 bg-[#059669]/10 text-xs font-mono text-[#047857] animate-in fade-in duration-200 flex items-center gap-2">
                       <Check className="w-4 h-4 shrink-0 text-[#059669]" />
                       <span>
-                        Message saved to CSV. Appreciate you reaching out!
+                        Message sent. Appreciate you reaching out!
                       </span>
                     </div>
                   )}
 
                   {/* Submit Button */}
-                  <div className="flex items-center justify-between pt-1">
-                    <span className="text-[11px] font-mono text-[#73756E]">
-                      Response time: &lt; 24h
-                    </span>
+                  <div className="flex items-center justify-end pt-1">
                     <button
                       type="submit"
                       disabled={isSubmitting}
@@ -425,14 +416,6 @@ export default function ContactPage() {
                     </button>
                   </div>
                 </form>
-              </div>
-
-              {/* Bottom Subtle Signature */}
-              <div className="pt-6 border-t border-[#20221F]/10 text-xs text-[#73756E] flex flex-wrap items-center justify-between gap-2">
-                <span>Location: Greater Noida / Delhi NCR, India</span>
-                <span className="font-mono text-[11px]">
-                  UTC+5:30 (IST)
-                </span>
               </div>
             </div>
           </div>
