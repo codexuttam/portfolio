@@ -71,7 +71,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
       title: "Contact // Let's Connect",
       subtitle: "Collaboration, opportunities, and discussions",
       action: () => {
-        router.push("#contact");
+        router.push("/contact");
         handleClose();
       },
       icon: Mail,

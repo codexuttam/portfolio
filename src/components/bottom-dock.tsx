@@ -21,6 +21,7 @@ export function BottomDock({ onOpenCommandPalette }: BottomDockProps) {
 
   const isProfileActive = pathname === "/" || pathname === "";
   const isAboutActive = pathname === "/about";
+  const isContactActive = pathname === "/contact";
 
   return (
     <nav
@@ -75,6 +76,30 @@ export function BottomDock({ onOpenCommandPalette }: BottomDockProps) {
               ⟁
             </span>
             <span>About</span>
+          </Link>
+
+          {/* Contact Route Link */}
+          <Link
+            href="/contact"
+            onClick={() => soundManager.playClick()}
+            onMouseEnter={() => soundManager.playTick()}
+            data-status={isContactActive ? "active" : "inactive"}
+            className={`group flex items-center justify-start gap-1.5 px-4 italic no-underline transition-colors duration-300 py-[0.5ch] ${
+              isContactActive
+                ? "text-[#20221F] font-medium"
+                : "text-[#73756E] hover:text-[#20221F]"
+            }`}
+          >
+            <span
+              className={`relative -top-px font-sans text-xs transition-opacity duration-300 ${
+                isContactActive
+                  ? "opacity-100 animate-text-cycle"
+                  : "opacity-0 group-hover:opacity-60"
+              }`}
+            >
+              ⟁
+            </span>
+            <span>Contact</span>
           </Link>
 
           {/* Right Action Controls: Audio Feedback & Command Palette */}
