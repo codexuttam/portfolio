@@ -265,13 +265,13 @@ export default function ContactPage() {
                       </span>
                       <HeartHover>
                         <a
-                          href="https://www.linkedin.com/in/uttamraj-singh-054593259/"
+                          href="https://www.linkedin.com/in/contactuttamraj/"
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={() => soundManager.playClick()}
                           className="text-xs font-mono font-medium text-[#20221F] hover:text-[#0A66C2] transition-colors inline-flex items-center gap-1"
                         >
-                          <span>linkedin.com/in/uttamraj-singh</span>
+                          <span>linkedin.com/in/contactuttamraj</span>
                           <ArrowUpRight className="w-3 h-3" />
                         </a>
                       </HeartHover>

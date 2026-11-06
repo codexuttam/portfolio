@@ -214,7 +214,7 @@ export const profileData: ProfileData = {
     phone: "+91 8318768905",
     email: "uttamrajsingh423@gmail.com",
     github: "https://github.com/codexuttam",
-    linkedin: "https://linkedin.com/in/contactuttamraj",
+    linkedin: "https://www.linkedin.com/in/contactuttamraj/",
     resumeUrl: "/resume.pdf",
     note: "Official curriculum vitae synchronized with Uttam (2).pdf.",
   },

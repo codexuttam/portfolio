@@ -214,7 +214,7 @@ export default function HomePage() {
                     <div>
                       <HeartHover className="w-full block">
                         <a
-                          href="https://www.linkedin.com/in/uttamraj-singh-054593259/"
+                          href="https://www.linkedin.com/in/contactuttamraj/"
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={() => soundManager.playClick()}
